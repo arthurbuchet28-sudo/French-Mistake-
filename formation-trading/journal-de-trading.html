@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Journal de trading · Formation Trading</title>
+<meta name="description" content="Formation complète et gratuite pour apprendre le trading, du niveau débutant au niveau intermédiaire.">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/print.css" media="print">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%231f5f8b'/%3E%3Cpath d='M3 11l3-3 2 2 5-5' stroke='white' stroke-width='1.8' fill='none'/%3E%3C/svg%3E">
+<script>try{var t=localStorage.getItem("ft-theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
+</head>
+<body class="page-journal" data-root="">
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="barre">
+<button type="button" class="btn-menu" aria-controls="sidebar" aria-expanded="false" aria-label="Ouvrir le menu">☰</button>
+<a class="logo" href="index.html"><span class="logo-icone" aria-hidden="true">📈</span> Formation Trading</a>
+<div class="barre-actions">
+<a class="barre-lien" href="glossaire.html" title="Glossaire">📖<span class="sr"> Glossaire</span></a>
+<button type="button" class="btn-theme" aria-label="Basculer le mode sombre" title="Mode clair / sombre">◐</button>
+</div>
+</header>
+<div class="cadre">
+<nav class="sidebar" id="sidebar" aria-label="Menu principal">
+<p class="nav-titre">Démarrer</p><ul>
+<li><a href="index.html">🏠 Accueil &amp; progression</a></li>
+<li><a href="a-propos.html">ℹ️ À propos &amp; méthode</a></li>
+</ul>
+<p class="nav-titre">Modules</p><ul class="nav-modules"><li data-module="00"><a href="modules/module-00.html"><span class="num">0</span><span class="lib">Avant de commencer</span><span class="etat" aria-hidden="true"></span></a></li></ul>
+<p class="nav-titre">S'entraîner</p><ul>
+<li><a href="outils.html">🧮 Calculateurs &amp; simulateur</a></li>
+<li><a href="journal-de-trading.html" aria-current="page">📓 Journal de trading</a></li>
+<li><a href="examen-final.html">🎓 Examen final (40 questions)</a></li>
+</ul>
+<p class="nav-titre">Référence</p><ul>
+<li><a href="glossaire.html">📖 Glossaire</a></li>
+</ul>
+</nav>
+<div class="voile" hidden></div>
+<div class="colonne">
+<main id="contenu" class="contenu" tabindex="-1">
+<article class="journal">
+<p class="fil"><a href="index.html">Accueil</a> › Journal de trading</p>
+<h1>Journal de trading : modèle à utiliser</h1>
+<p class="chapeau">Le journal est l'outil le plus sous-estimé du trader. Il transforme des impressions (« j'ai l'impression de perdre surtout le vendredi ») en faits mesurables. Il est présenté en détail dans le <a href="modules/module-11.html">module 11</a>. Cette page propose trois formats : un journal interactif dans le navigateur, un fichier CSV pour un tableur, et un modèle papier imprimable.</p>
+
+<div class="bloc bloc-info"><h3 class="bloc-titre">ℹ️ Ce qu'il faut noter, et pourquoi</h3>
+<ul>
+<li><strong>Avant le trade</strong> : instrument, sens, setup (le nom de la règle de votre plan qui justifie le trade), entrée, stop, objectif, taille, <strong>risque initial en €</strong>. Si vous ne savez pas remplir la case « setup », c'est que le trade n'est pas dans votre plan.</li>
+<li><strong>Après le trade</strong> : prix de sortie, résultat en €, résultat en <strong>R</strong> (résultat ÷ risque initial), respect du plan (oui/non), émotion dominante, ce que vous referiez différemment.</li>
+<li><strong>Chaque semaine</strong> : relire, calculer les statistiques, chercher <em>une</em> amélioration concrète.</li>
+</ul></div>
+
+<section class="outil" id="journal-interactif">
+<h2>📓 Journal interactif</h2>
+<p>Les trades saisis sont enregistrés uniquement dans ce navigateur (localStorage). Exportez régulièrement en CSV pour ne rien perdre : vider le cache du navigateur effacerait le journal.</p>
+<form id="j-form" class="form-grille">
+<div class="champ"><label for="j-date">Date</label><input id="j-date" type="date" required></div>
+<div class="champ"><label for="j-inst">Instrument</label><input id="j-inst" type="text" placeholder="ex. EUR/USD, action X" required></div>
+<div class="champ"><label for="j-sens">Sens</label><select id="j-sens"><option>Achat</option><option>Vente</option></select></div>
+<div class="champ"><label for="j-setup">Setup (règle du plan)</label><input id="j-setup" type="text" placeholder="ex. Pullback sur EMA 20"></div>
+<div class="champ"><label for="j-entree">Entrée</label><input id="j-entree" type="number" step="any"></div>
+<div class="champ"><label for="j-stop">Stop initial</label><input id="j-stop" type="number" step="any"></div>
+<div class="champ"><label for="j-obj">Objectif</label><input id="j-obj" type="number" step="any"></div>
+<div class="champ"><label for="j-sortie">Sortie</label><input id="j-sortie" type="number" step="any"></div>
+<div class="champ"><label for="j-risque">Risque initial (€)</label><input id="j-risque" type="number" step="any" min="0" required></div>
+<div class="champ"><label for="j-res">Résultat net de frais (€)</label><input id="j-res" type="number" step="any" required></div>
+<div class="champ"><label for="j-plan">Plan respecté ?</label><select id="j-plan"><option>Oui</option><option>Non</option></select></div>
+<div class="champ"><label for="j-emo">Émotion dominante</label><select id="j-emo"><option>Calme</option><option>Impatience</option><option>Peur</option><option>Avidité</option><option>FOMO</option><option>Frustration / revanche</option><option>Euphorie</option><option>Fatigue</option></select></div>
+<div class="champ" style="grid-column: 1 / -1"><label for="j-notes">Notes / leçon</label><input id="j-notes" type="text" placeholder="Ce que j'ai bien fait, ce que je changerais"></div>
+</form>
+<div class="actions">
+<button type="submit" form="j-form" class="btn btn-principal">➕ Ajouter le trade</button>
+<button type="button" class="btn" id="j-export">⬇️ Exporter en CSV</button>
+<button type="button" class="btn" id="j-modele">⬇️ Télécharger un modèle CSV vide</button>
+<button type="button" class="btn" id="j-exemple">Charger des exemples fictifs</button>
+<button type="button" class="btn btn-danger" id="j-vider">🗑️ Vider le journal</button>
+</div>
+<p id="j-avert" class="alerte" hidden>⚠️ Le stockage local n'est pas disponible dans ce navigateur (navigation privée ou fichier local sous Firefox) : les trades seront perdus en quittant la page. Exportez en CSV.</p>
+<div class="resultat" id="j-stats" aria-live="polite"></div>
+<div class="tableau-defile"><table id="j-table"><thead><tr><th>Date</th><th>Instrument</th><th>Sens</th><th>Setup</th><th class="n">Entrée</th><th class="n">Stop</th><th class="n">Sortie</th><th class="n">Risque €</th><th class="n">Résultat €</th><th class="n">R</th><th>Plan</th><th>Émotion</th><th>Notes</th><th></th></tr></thead><tbody></tbody></table></div>
+</section>
+
+<section class="zone-impression" id="modele-papier">
+<h2>🖨️ Modèle papier imprimable</h2>
+<p class="ecran"><button type="button" class="btn btn-principal" onclick="window.print()">🖨️ Imprimer le modèle</button> (seul ce modèle est imprimé, en mode paysage de préférence)</p>
+<div class="tableau-defile"><table class="modele-imprimable">
+<thead><tr><th>Date</th><th>Instrument</th><th>Sens</th><th>Setup</th><th>Entrée</th><th>Stop</th><th>Objectif</th><th>Taille</th><th>Risque €</th><th>Sortie</th><th>Résultat €</th><th>R</th><th>Plan ✓</th><th>Émotion</th><th>Leçon</th></tr></thead>
+<tbody>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</tbody></table></div>
+<h3>Revue hebdomadaire</h3>
+<div class="tableau-defile"><table class="modele-imprimable"><tbody>
+<tr><th style="width:45%">Nombre de trades / gagnants / perdants</th><td></td></tr>
+<tr><th>Résultat total en R et en € · espérance par trade (R)</th><td></td></tr>
+<tr><th>Trades hors plan : combien, et quel résultat ?</th><td></td></tr>
+<tr><th>Meilleur trade (pourquoi ?) · pire trade (pourquoi ?)</th><td></td></tr>
+<tr><th>Émotion la plus fréquente avant les pertes</th><td></td></tr>
+<tr><th>Règle respectée dont je suis fier / règle enfreinte</th><td></td></tr>
+<tr><th>UNE seule amélioration pour la semaine prochaine</th><td></td></tr>
+</tbody></table></div>
+</section>
+</article>
+
+</main>
+<footer class="pied">
+<p><strong>Avertissement sur les risques.</strong> Le trading d'instruments financiers comporte un risque élevé de perte en capital. Les produits à effet de levier (CFD, Forex, futures, options, turbos, warrants…) peuvent faire perdre très rapidement tout le capital engagé, et certains produits (futures, vente d'options, vente à découvert) peuvent entraîner des pertes supérieures à la mise initiale. Une majorité de particuliers perd de l'argent en tradant des CFD. Ce site est un support pédagogique général : il ne constitue ni un conseil en investissement, ni une recommandation personnalisée, ni une incitation à acheter ou vendre un instrument financier. Les performances passées ne préjugent pas des performances futures. N'investissez que de l'argent dont la perte n'affecterait pas votre niveau de vie.</p>
+<p class="pied-liens"><a href="a-propos.html">À propos &amp; sources</a> · <a href="glossaire.html">Glossaire</a> · Contenu à jour à la date de rédaction : vérifiez toujours les règles en vigueur (AMF, impots.gouv.fr).</p>
+</footer>
+</div>
+</div>
+<script src="assets/js/nav-data.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/journal.js"></script>
+</body>
+</html>

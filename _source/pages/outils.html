@@ -1,0 +1,107 @@
+<article class="outils">
+<p class="fil"><a href="index.html">Accueil</a> › Calculateurs &amp; simulateur</p>
+<h1>Calculateurs &amp; simulateur</h1>
+<p class="chapeau">Trois outils pour mettre en pratique le <a href="modules/module-09.html">module 9 (gestion du risque)</a>. Tous les calculs se font dans votre navigateur : rien n'est envoyé nulle part. Les résultats sont des ordres de grandeur pédagogiques, qui ne remplacent pas les calculs de votre plateforme (frais réels, conversions de devises, tailles minimales, règles de marge du courtier).</p>
+<nav class="onglets" aria-label="Accès aux outils">
+<a class="btn" href="#taille">📏 Taille de position</a>
+<a class="btn" href="#rr">⚖️ Risque/rendement &amp; espérance</a>
+<a class="btn" href="#levier">🔥 Effet de levier</a>
+<a class="btn" href="#series">📉 Séries de pertes</a>
+<a class="btn" href="#montecarlo">🎲 Simulation de trajectoires</a>
+</nav>
+
+<!-- ================= TAILLE DE POSITION ================= -->
+<section class="outil" id="taille">
+<h2>📏 Calculateur de taille de position</h2>
+<p>Principe : on fixe d'abord <strong>combien on accepte de perdre</strong> si le stop est touché (un pourcentage du capital), puis on en déduit <strong>la quantité</strong> à acheter ou vendre. La taille découle du stop, jamais l'inverse.</p>
+<div class="formule">Taille = (Capital × % de risque − frais) ÷ (Distance au stop × Valeur d'une unité de mouvement)</div>
+<form id="f-taille" class="form-grille" onsubmit="return false">
+<div class="champ"><label for="t-type">Type d'instrument</label>
+<select id="t-type">
+<option value="actions">Actions / ETF (quantité de titres)</option>
+<option value="forex">Forex (lots)</option>
+<option value="points">Indice, CFD ou future (valeur du point)</option>
+</select></div>
+<div class="champ"><label for="t-capital">Capital du compte (€)</label><input id="t-capital" type="number" min="0" step="any" value="10000"></div>
+<div class="champ"><label for="t-risque">Risque par trade (% du capital)</label><input id="t-risque" type="number" min="0" max="100" step="0.1" value="1"><small>Repère courant : 0,5 à 2 %</small></div>
+<div class="champ"><label for="t-entree">Prix d'entrée</label><input id="t-entree" type="number" step="any" value="50"></div>
+<div class="champ"><label for="t-stop">Prix du stop loss</label><input id="t-stop" type="number" step="any" value="48"></div>
+<div class="champ"><label for="t-frais">Frais estimés aller-retour (€)</label><input id="t-frais" type="number" min="0" step="any" value="0"><small>Commissions, spread estimé… déduits du budget de risque</small></div>
+<div class="champ t-forex" hidden><label for="t-pip">Taille d'un pip</label><select id="t-pip"><option value="0.0001">0,0001 (EUR/USD, GBP/USD…)</option><option value="0.01">0,01 (paires en JPY)</option></select></div>
+<div class="champ t-forex" hidden><label for="t-vpip">Valeur d'un pip pour 1 lot standard (€)</label><input id="t-vpip" type="number" step="any" value="9.2"><small>10 $ pour EUR/USD = environ 9,2 € si 1 € = 1,087 $ (à recalculer avec le cours du jour)</small></div>
+<div class="champ t-points" hidden><label for="t-vpoint">Valeur d'un point pour 1 contrat (€)</label><input id="t-vpoint" type="number" step="any" value="1"><small>Dépend du produit : vérifiez la fiche du contrat</small></div>
+<div class="champ"><label for="t-pas">Arrondi de la taille (pas minimal)</label><input id="t-pas" type="number" min="0" step="any" value="1"><small>1 action, 0,01 lot, 1 contrat…</small></div>
+<div class="champ"><label for="t-levier">Levier maximal disponible (facultatif)</label><input id="t-levier" type="number" min="1" step="any" value="1"><small>Pour estimer la marge immobilisée</small></div>
+</form>
+<div class="resultat" id="r-taille" aria-live="polite"></div>
+</section>
+
+<!-- ================= RISQUE / RENDEMENT ================= -->
+<section class="outil" id="rr">
+<h2>⚖️ Ratio risque/rendement et espérance mathématique</h2>
+<h3>1. Ratio d'un trade prévu</h3>
+<form class="form-grille" onsubmit="return false">
+<div class="champ"><label for="rr-entree">Prix d'entrée</label><input id="rr-entree" type="number" step="any" value="100"></div>
+<div class="champ"><label for="rr-stop">Stop loss</label><input id="rr-stop" type="number" step="any" value="96"></div>
+<div class="champ"><label for="rr-obj">Objectif (take profit)</label><input id="rr-obj" type="number" step="any" value="110"></div>
+<div class="champ"><label for="rr-win">Taux de réussite estimé (%)</label><input id="rr-win" type="number" min="0" max="100" step="any" value="40"><small>Idéalement mesuré sur un historique, pas deviné</small></div>
+<div class="champ"><label for="rr-montant">Montant risqué par trade (€)</label><input id="rr-montant" type="number" min="0" step="any" value="100"></div>
+<div class="champ"><label for="rr-frais">Frais par trade (€)</label><input id="rr-frais" type="number" min="0" step="any" value="5"></div>
+</form>
+<div class="resultat" id="r-rr" aria-live="polite"></div>
+<h3>2. À partir de vos statistiques réelles</h3>
+<form class="form-grille" onsubmit="return false">
+<div class="champ"><label for="st-n">Nombre de trades</label><input id="st-n" type="number" min="1" step="1" value="60"></div>
+<div class="champ"><label for="st-g">Nombre de trades gagnants</label><input id="st-g" type="number" min="0" step="1" value="27"></div>
+<div class="champ"><label for="st-mg">Gain moyen d'un gagnant (€)</label><input id="st-mg" type="number" min="0" step="any" value="180"></div>
+<div class="champ"><label for="st-mp">Perte moyenne d'un perdant (€)</label><input id="st-mp" type="number" min="0" step="any" value="100"><small>En valeur positive</small></div>
+</form>
+<div class="resultat" id="r-stats" aria-live="polite"></div>
+</section>
+
+<!-- ================= LEVIER ================= -->
+<section class="outil" id="levier">
+<h2>🔥 Simulateur : l'effet du levier</h2>
+<p>Hypothèse simplifiée : toute la position est financée avec le capital indiqué comme marge, sans frais. Le levier multiplie l'exposition ; un mouvement du marché est donc multiplié d'autant sur votre capital, <strong>dans les deux sens</strong>.</p>
+<form class="form-grille" onsubmit="return false">
+<div class="champ"><label for="lv-capital">Capital engagé (€)</label><input id="lv-capital" type="number" min="0" step="any" value="1000"></div>
+<div class="champ"><label for="lv-levier">Levier : <output id="lv-levier-v">10</output>×</label><input id="lv-levier" type="range" min="1" max="30" step="1" value="10"></div>
+<div class="champ"><label for="lv-var">Variation du marché : <output id="lv-var-v">−3</output> %</label><input id="lv-var" type="range" min="-15" max="15" step="0.5" value="-3"></div>
+</form>
+<div class="resultat" id="r-levier" aria-live="polite"></div>
+<canvas class="sim" id="c-levier" aria-label="Graphique : résultat en pourcentage du capital selon la variation du marché, pour plusieurs leviers"></canvas>
+<p><small>Lecture : chaque droite donne le résultat (en % du capital engagé) en fonction de la variation du sous-jacent. La zone sous −100 % correspond à la perte totale du capital engagé. En pratique, le courtier ferme la position avant ce seuil (<a href="glossaire.html#appel-de-marge">appel de marge</a>, liquidation), et un gap peut faire perdre davantage sur les produits sans protection contre le solde négatif.</small></p>
+</section>
+
+<!-- ================= SÉRIES DE PERTES ================= -->
+<section class="outil" id="series">
+<h2>📉 Simulateur : séries de pertes et remontée</h2>
+<p>Une série de pertes consécutives arrive à tous les traders, même avec une stratégie gagnante. Ce simulateur montre ce qu'il reste du capital et l'effort nécessaire pour revenir au point de départ.</p>
+<form class="form-grille" onsubmit="return false">
+<div class="champ"><label for="se-capital">Capital de départ (€)</label><input id="se-capital" type="number" min="0" step="any" value="10000"></div>
+<div class="champ"><label for="se-risque">Risque par trade (% du capital courant)</label><input id="se-risque" type="number" min="0" max="100" step="0.1" value="2"></div>
+<div class="champ"><label for="se-n">Nombre de pertes consécutives</label><input id="se-n" type="number" min="1" max="60" step="1" value="10"></div>
+<div class="champ"><label for="se-win">Taux de réussite de la stratégie (%)</label><input id="se-win" type="number" min="0" max="99" step="any" value="45"><small>Pour estimer la probabilité d'une telle série</small></div>
+</form>
+<div class="resultat" id="r-series" aria-live="polite"></div>
+<canvas class="sim" id="c-series" aria-label="Graphique : capital restant après chaque perte, pour plusieurs niveaux de risque"></canvas>
+</section>
+
+<!-- ================= MONTE CARLO ================= -->
+<section class="outil" id="montecarlo">
+<h2>🎲 Simulation de trajectoires (Monte-Carlo simplifié)</h2>
+<p>On rejoue au hasard, de nombreuses fois, une même stratégie (taux de réussite et ratio fixes). Toutes les courbes ont <strong>exactement la même espérance</strong> : leurs écarts montrent seulement le rôle de la chance à court terme et l'effet de la taille du risque. Le modèle est volontairement simple : trades indépendants, résultats toujours de +R ou −1R, sans frais ni slippage.</p>
+<form class="form-grille" onsubmit="return false">
+<div class="champ"><label for="mc-capital">Capital de départ (€)</label><input id="mc-capital" type="number" min="1" step="any" value="10000"></div>
+<div class="champ"><label for="mc-win">Taux de réussite (%)</label><input id="mc-win" type="number" min="1" max="99" step="any" value="45"></div>
+<div class="champ"><label for="mc-rr">Ratio gain/perte (R)</label><input id="mc-rr" type="number" min="0.1" step="0.1" value="1.5"></div>
+<div class="champ"><label for="mc-risque">Risque par trade (%)</label><input id="mc-risque" type="number" min="0.1" max="100" step="0.1" value="2"></div>
+<div class="champ"><label for="mc-n">Nombre de trades</label><input id="mc-n" type="number" min="10" max="2000" step="10" value="200"></div>
+<div class="champ"><label for="mc-sims">Nombre de simulations</label><input id="mc-sims" type="number" min="1" max="500" step="1" value="100"></div>
+</form>
+<div class="actions"><button type="button" class="btn btn-principal" id="mc-go">🎲 Lancer / relancer</button></div>
+<div class="resultat" id="r-mc" aria-live="polite"></div>
+<canvas class="sim" id="c-mc" aria-label="Graphique : évolution du capital pour chaque simulation"></canvas>
+<p><small>Essayez : même stratégie (45 %, R = 1,5), risque de 1 % puis de 10 %. L'espérance par trade en R ne change pas ; la dispersion et les ruines, si. Un taux de réussite « estimé » trop optimiste rend toutes ces courbes fausses : seules des statistiques mesurées sur un échantillon suffisant ont un sens (module 10).</small></p>
+</section>
+</article>

@@ -1,0 +1,30 @@
+/* Impression : fiches, journal, modules */
+@page { size: A4; margin: 14mm 13mm; }
+:root, :root[data-theme="dark"] {
+  --fond: #fff; --surface: #fff; --surface-2: #f2f2f2; --bord: #bbb; --texte: #000; --texte-2: #222; --discret: #555;
+  --accent: #134a6e; --accent-fort: #134a6e; --accent-doux: #eef4f8;
+  --haus: #11663a; --bais: #9a1d16; --haus-doux: #eef7f1; --bais-doux: #fbeeed;
+  --orange-doux: #fdf5ea; --violet-doux: #f4f1fb; --jaune-doux: #fbf8e8; --code: #f2f2f2;
+  color-scheme: light;
+}
+body { font-size: 10.5pt; line-height: 1.45; background: #fff; }
+.barre, .sidebar, .voile, .precsuiv, .fil, .ecran, .fin-module .actions, .btn, .quiz-barre, .glo-outils, .evitement { display: none !important; }
+.cadre { display: block; }
+.contenu { max-width: none; padding: 0; }
+.pied { background: none; border-top: 1px solid #999; padding: 6pt 0 0; font-size: 7.5pt; }
+.pied-liens { display: none; }
+a { color: inherit; text-decoration: none; }
+a.terme { text-decoration: none; }
+.correction[hidden] { display: block !important; }
+.correction::before { content: "Correction"; font-weight: 700; display: block; }
+.bloc, figure.schema, table, .encadre { break-inside: avoid; }
+h1 { font-size: 18pt; margin: 0 0 4pt; }
+h2 { font-size: 13pt; break-after: avoid; }
+.page-fiche .pied { display: none; }
+.fiche-corps { columns: 2; column-gap: 8mm; font-size: 9.5pt; }
+.fiche-corps h2 { font-size: 11pt; }
+.fiche-corps .encadre { padding: 4pt 7pt 0; margin-bottom: 6pt; }
+.fiche-corps .tableau-defile { overflow: visible; }
+.fiche-corps table { font-size: 8.5pt; }
+.page-journal .contenu > :not(.zone-impression) { display: none; }
+.modele-imprimable { font-size: 8pt; }
