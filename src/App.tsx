@@ -1,5 +1,5 @@
 import { HashRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { Header } from './components/layout/Header';
 import { MobileNav, SideNav } from './components/layout/Nav';
 import { SimulationBanner } from './components/layout/SimulationBanner';
@@ -7,16 +7,21 @@ import { Toasts } from './components/layout/Toasts';
 import { TutorialOverlay } from './components/onboarding/TutorialOverlay';
 import { GlobalModals } from './components/progression/GlobalModals';
 import { useGameLoop } from './store/useGameLoop';
-import Dashboard from './pages/Dashboard';
-import Market from './pages/Market';
-import StockDetail from './pages/StockDetail';
-import Portfolio from './pages/Portfolio';
-import History from './pages/History';
-import Journal from './pages/Journal';
-import Stats from './pages/Stats';
-import Glossary from './pages/Glossary';
-import Progression from './pages/Progression';
-import Settings from './pages/Settings';
+// Chaque page est chargée à la demande pour alléger le premier affichage
+const Dashboard = lazy(() => import('./pages/Dashboard'));
+const Market = lazy(() => import('./pages/Market'));
+const StockDetail = lazy(() => import('./pages/StockDetail'));
+const Portfolio = lazy(() => import('./pages/Portfolio'));
+const History = lazy(() => import('./pages/History'));
+const Journal = lazy(() => import('./pages/Journal'));
+const Stats = lazy(() => import('./pages/Stats'));
+const Glossary = lazy(() => import('./pages/Glossary'));
+const Progression = lazy(() => import('./pages/Progression'));
+const Settings = lazy(() => import('./pages/Settings'));
+
+function Loading() {
+  return <div className="py-16 text-center text-sm text-slate-500">Chargement…</div>;
+}
 
 function ScrollTop() {
   const { pathname } = useLocation();
@@ -36,6 +41,7 @@ function Shell() {
         <SideNav />
         <main className="min-w-0 flex-1">
           <MobileNav />
+          <Suspense fallback={<Loading />}>
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/marche" element={<Market />} />
@@ -49,6 +55,7 @@ function Shell() {
             <Route path="/reglages" element={<Settings />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
+          </Suspense>
         </main>
       </div>
       <GlobalModals />

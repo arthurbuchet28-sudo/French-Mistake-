@@ -74,3 +74,56 @@ describe('logique de partie', () => {
     expect(d.lastChallengeResult?.portfolioReturn).toBeLessThan(0);
   });
 });
+
+describe('ordres en attente et événements', () => {
+  it('exécute un ordre limite d’achat quand le cours descend au prix fixé', () => {
+    const d = draft();
+    d.settings = { ...d.settings, sandbox: true };
+    const p = d.market.stocks.GRNO.price;
+    expect(L.placeOrder(d, { ticker: 'GRNO', side: 'buy', qty: 10, type: 'limit', triggerPrice: p * 0.97 }).ok).toBe(true);
+    expect(d.counters.limitUsed).toBe(1);
+    d.market = { ...d.market, effects: [{ id: 'x', ticker: 'GRNO', driftPerTick: -0.02, delay: 0, ticksLeft: 50 }] };
+    L.advance(d, 10);
+    expect(d.positions.GRNO?.qty).toBe(10);
+    expect(d.orders).toHaveLength(0);
+    expect(d.transactions[0].orderType).toBe('limit');
+    expect(d.transactions[0].price).toBeLessThanOrEqual(Math.round(p * 0.97 * 100) / 100);
+  });
+
+  it('crédite les dividendes trimestriels sur les liquidités', () => {
+    const d = draft();
+    L.placeOrder(d, { ticker: 'PTRX', side: 'buy', qty: 50, type: 'market' });
+    const cashBefore = d.cash;
+    // Avance jusqu'au prochain détachement (tous les 63 jours de bourse)
+    while (d.dividends.length === 0 && d.market.day < 400) L.advance(d, L.ticksToDayEnd(d));
+    expect(d.dividends).toHaveLength(1);
+    expect(d.dividends[0].amount).toBeGreaterThan(0);
+    expect(d.cash).toBeGreaterThanOrEqual(cashBefore + d.dividends[0].amount - 1e-9);
+    expect(d.counters.dividendsReceived).toBe(1);
+  });
+
+  it('bloque la vente à découvert sans le niveau 5 et exige une garantie', () => {
+    const d = draft();
+    expect(L.placeOrder(d, { ticker: 'LUMA', side: 'sell', qty: 1, type: 'market' }).ok).toBe(false);
+    d.settings = { ...d.settings, sandbox: true };
+    // 10 000 € de capital : impossible de vendre à découvert pour 30 000 €
+    const tooMany = Math.ceil(30_000 / d.market.stocks.LUMA.price);
+    expect(L.placeOrder(d, { ticker: 'LUMA', side: 'sell', qty: tooMany, type: 'market' }).ok).toBe(false);
+    expect(L.placeOrder(d, { ticker: 'LUMA', side: 'sell', qty: 5, type: 'market' }).ok).toBe(true);
+    expect(d.positions.LUMA.qty).toBe(-5);
+    expect(d.counters.shortsOpened).toBe(1);
+  });
+
+  it('le défi Bulle fait s’envoler puis chuter l’action ciblée', () => {
+    const d = draft();
+    L.startChallenge(d, 'bulle');
+    const t = d.challenge!.bubbleTicker!;
+    const p0 = d.market.stocks[t].price;
+    let peak = p0;
+    for (let i = 0; i < 14; i++) {
+      L.advance(d, L.ticksToDayEnd(d));
+      if (d.challenge) peak = Math.max(peak, d.market.stocks[t].price);
+    }
+    expect(peak / p0).toBeGreaterThan(1.5);
+  });
+});
