@@ -271,7 +271,7 @@ V: euronext, seance
 
 ## reglement-livraison | Règlement-livraison | marches | Settlement
 = règlement-livraison
-D: Échange effectif des titres contre l'argent après une transaction : J+1 aux États-Unis depuis 2024, J+2 en Europe (passage à J+1 prévu).
+D: Échange effectif des titres contre l'argent après une transaction : J+1 aux États-Unis depuis 2024, J+2 en Europe (passage à J+1 prévu le 11 octobre 2027).
 E: Une action achetée un lundi sur Euronext est réglée et livrée le mercredi.
 V: action
 
@@ -1767,7 +1767,7 @@ V: regafi
 
 ## mica | MiCA | reglementation | Markets in Crypto-Assets Regulation
 = MiCA
-D: Règlement européen encadrant les cryptoactifs et leurs prestataires, applicable depuis fin 2024 avec des périodes transitoires : agrément obligatoire, règles sur les stablecoins.
+D: Règlement européen encadrant les cryptoactifs et leurs prestataires, applicable depuis le 30 décembre 2024 : agrément obligatoire des prestataires, règles sur les stablecoins. En France, la période transitoire des anciens PSAN s'est achevée le 1er juillet 2026.
 E: Une plateforme de cryptoactifs servant des clients européens doit être agréée au titre de MiCA.
 V: cryptoactif, amf, stablecoin
 

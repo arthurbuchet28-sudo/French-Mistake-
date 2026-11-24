@@ -93,7 +93,7 @@ Sans les impulsifs : +0,8 R par semaine, soit 1,8 R de mieux</div></x-corr></x-e
 </x-simple>
 <x-approfondi>
 <p>Selon la théorie des perspectives (Kahneman et Tversky, 1979), une perte pèse psychologiquement environ <strong>deux fois</strong> plus qu'un gain de même montant (les estimations varient selon les études, souvent entre 1,5 et 2,5). C'est ce qui pousse à refuser de « matérialiser » une perte.</p>
-<p>L'<strong>effet de disposition</strong> a été documenté sur des comptes réels de particuliers : Terrance Odean (1998) a montré que des investisseurs vendaient plus volontiers leurs titres gagnants que leurs perdants, alors que les gagnants vendus ont ensuite fait mieux, sur l'année suivante, que les perdants conservés (d'environ 3,4 points de pourcentage dans son échantillon).</p>
+<p>L'<strong>effet de disposition</strong> a été documenté sur des comptes réels de particuliers : Terrance Odean (1998) a montré que des investisseurs vendaient plus volontiers leurs titres gagnants que leurs perdants, alors que les gagnants vendus ont ensuite continué, dans les mois suivants, à faire mieux que les perdants conservés.</p>
 </x-approfondi>
 <x-exemple>
 <p><strong>Aversion à la perte.</strong> On propose un pari : 50 % de chances de gagner 150 €, 50 % de perdre 100 €.</p>

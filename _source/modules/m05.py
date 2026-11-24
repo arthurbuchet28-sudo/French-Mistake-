@@ -225,6 +225,14 @@ Rapport = 16 ÷ 3,60 ≈ 4,4</div></x-corr></x-exo>
 <li><strong>Recherche académique</strong> : une étude connue (Lo, Mamaysky et Wang, 2000) a trouvé que certaines figures apportent un peu d'information sur les rendements futurs, sans démontrer qu'on peut en tirer un profit après frais. Plusieurs études sur les chandeliers japonais, sur les actions américaines et japonaises, n'ont pas trouvé de rentabilité après coûts.</li></ul>
 <p>Conclusion raisonnable : ces outils servent à <strong>localiser</strong> des zones de décision et à placer des stops logiques. Leur valeur prédictive propre est faible et doit être testée sur votre marché.</p>
 </x-note>
+<x-approfondi>
+<p><strong>Comment tester honnêtement une configuration</strong> :</p>
+<ol><li><strong>La définir par des chiffres</strong> (exemple : « marteau = mèche basse ≥ 2 × corps, mèche haute ≤ 10 % de l'amplitude, après 3 clôtures baissières »).</li>
+<li><strong>Fixer à l'avance</strong> l'entrée, le stop et la sortie (exemple : achat au-dessus du plus haut du marteau, stop sous son plus bas, sortie à 2R ou après 10 bougies).</li>
+<li><strong>Relever toutes les occurrences</strong> sur un historique, sans en écarter aucune « parce qu'elle n'est pas belle ».</li>
+<li><strong>Comparer avec des entrées au hasard</strong> appliquant les mêmes règles de stop et de sortie : si la configuration ne fait pas nettement mieux, elle n'apporte rien.</li>
+<li><strong>Calculer l'espérance après frais</strong> et vérifier la taille de l'échantillon (module 10).</li></ol>
+</x-approfondi>
 <x-exemple>
 <p>Trois configurations mesurées sur 100 occurrences chacune (chiffres illustratifs, en R : multiples du risque initial) :</p>
 <div class="calcul">A : réussite 65 %, gain moyen 1R, perte moyenne 1,5R

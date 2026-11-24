@@ -177,7 +177,7 @@ Taux du marché à 2 % → prix ≈ 1 089,83 € (+9,0 %)</div>
 ("1-3", "Le marché des changes (Forex)", r"""
 <x-obj><ul><li>Lire une paire de devises et une cotation.</li><li>Comprendre ce que signifie acheter ou vendre une paire.</li><li>Calculer un gain en devise de cotation puis en euros.</li></ul></x-obj>
 <x-simple>
-<p>Le <strong>Forex</strong> (FX, foreign exchange) est le marché où s'échangent les devises. C'est le plus grand marché du monde : de l'ordre de 7 500 milliards de dollars échangés <em>par jour</em> selon l'enquête triennale 2022 de la Banque des règlements internationaux (BRI), et davantage encore dans l'enquête 2025. Il fonctionne 24 h/24, du dimanche soir au vendredi soir, de gré à gré (sans bourse centrale).</p>
+<p>Le <strong>Forex</strong> (FX, foreign exchange) est le marché où s'échangent les devises. C'est le plus grand marché du monde : environ 9 600 milliards de dollars échangés <em>par jour</em> en avril 2025 selon l'enquête triennale de la Banque des règlements internationaux (BRI), contre 7 500 milliards en 2022. Il fonctionne 24 h/24, du dimanche soir au vendredi soir, de gré à gré (sans bourse centrale).</p>
 <p>On y traite toujours une <strong>paire</strong> : EUR/USD = 1,0850 signifie que <strong>1 euro vaut 1,0850 dollar</strong>. La première devise est la <strong>devise de base</strong>, la seconde la <strong>devise de cotation</strong>. Acheter EUR/USD, c'est acheter des euros en vendant des dollars : on gagne si l'euro s'apprécie face au dollar.</p>
 </x-simple>
 <x-approfondi>
@@ -250,7 +250,7 @@ Sur 6 mois : 0,9091^6 ≈ 0,564 → environ −43,6 %</div><p>Un contango aussi 
 <li><strong>Stablecoins</strong> : cryptoactifs censés valoir une devise (souvent 1 $). Leur stabilité dépend des réserves de l'émetteur : certains ont perdu leur ancrage (TerraUSD en 2022).</li>
 <li><strong>Manipulation</strong> : sur les petites capitalisations, les opérations de « pump and dump » sont fréquentes.</li>
 <li><strong>Produits dérivés</strong> : de nombreuses plateformes hors UE proposent des « perpétuels » avec des leviers extrêmes (parfois ×100), interdits aux particuliers européens sous forme de CFD au-delà de ×2.</li></ul>
-<p><strong>Réglementation.</strong> Dans l'Union européenne, le règlement <strong>MiCA</strong> (Markets in Crypto-Assets) s'applique depuis fin 2024, avec des périodes transitoires selon les pays : les prestataires doivent être agréés. En France, l'AMF publie la liste des prestataires autorisés et des listes noires de sites non autorisés. Vérifiez sur le site de l'AMF avant toute ouverture de compte (module 12). La fiscalité est spécifique (module 13).</p>
+<p><strong>Réglementation.</strong> Dans l'Union européenne, le règlement <strong>MiCA</strong> (Markets in Crypto-Assets) s'applique depuis le 30 décembre 2024 : les prestataires doivent être agréés. En France, la période transitoire accordée aux anciens « PSAN » enregistrés auprès de l'AMF a pris fin le 1<sup>er</sup> juillet 2026 ; ceux qui n'avaient pas obtenu l'agrément MiCA ont été radiés. En France, l'AMF publie la liste des prestataires autorisés et des listes noires de sites non autorisés. Vérifiez sur le site de l'AMF avant toute ouverture de compte (module 12). La fiscalité est spécifique (module 13).</p>
 </x-approfondi>
 <x-exemple>
 <p>Comparons la volatilité « journalière typique » d'un cryptoactif dont la volatilité annuelle est de 80 % avec celle d'un indice actions à 15 %. On convertit une volatilité annuelle en volatilité journalière en divisant par la racine carrée du nombre de jours de cotation (365 pour une crypto, environ 252 pour un indice) :</p>
@@ -332,7 +332,7 @@ Gain brut = 500 000 × 0,04 = 20 000 €</div>
 <p><strong>New York</strong> (NYSE, Nasdaq) : 9 h 30 – 16 h 00 heure de New York, soit en général <strong>15 h 30 – 22 h 00 à Paris</strong>. Il existe aussi des séances étendues (pré-marché et après-bourse), moins liquides.</p>
 <p><strong>Tokyo</strong> : 9 h 00 – 15 h 30 heure locale (avec une pause déjeuner), soit environ 1 h 00 – 7 h 30 à Paris en hiver.</p>
 <p><strong>Forex</strong> : du dimanche vers 23 h à Paris jusqu'au vendredi vers 23 h, en sessions successives (Asie, Londres, New York). Le chevauchement Londres / New York (environ 14 h – 18 h à Paris) est souvent le plus actif. Les heures exactes et les jours fériés peuvent changer : vérifiez le site de la bourse ou de votre courtier.</p>
-<p><strong>Règlement-livraison</strong> : après un achat d'actions, l'échange effectif titres contre argent intervient à J+1 (États-Unis depuis mai 2024) ou à J+2 (Europe, avec un passage à J+1 prévu en 2027). Cela compte notamment pour les dates de détachement des dividendes.</p>
+<p><strong>Règlement-livraison</strong> : après un achat d'actions, l'échange effectif titres contre argent intervient à J+1 (États-Unis depuis mai 2024) ou à J+2 (Europe, avec un passage à J+1 prévu le 11 octobre 2027). Cela compte notamment pour les dates de détachement des dividendes.</p>
 </x-approfondi>
 <x-fig c="Horaires approximatifs en heure de Paris, en hiver (l'ensemble se décale lors des changements d'heure non simultanés). La zone bleutée marque le chevauchement Paris / New York.">""" + SCHEMA_SESSIONS + r"""</x-fig>
 <x-exemple>
