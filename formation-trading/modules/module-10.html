@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 10 — Construire une stratégie · Formation Trading</title>
+<meta name="description" content="Formation complète et gratuite pour apprendre le trading, du niveau débutant au niveau intermédiaire.">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/print.css" media="print">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%231f5f8b'/%3E%3Cpath d='M3 11l3-3 2 2 5-5' stroke='white' stroke-width='1.8' fill='none'/%3E%3C/svg%3E">
+<script>try{var t=localStorage.getItem("ft-theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}</script>
+</head>
+<body class="page-module" data-root="../">
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header class="barre">
+<button type="button" class="btn-menu" aria-controls="sidebar" aria-expanded="false" aria-label="Ouvrir le menu">☰</button>
+<a class="logo" href="../index.html"><span class="logo-icone" aria-hidden="true">📈</span> Formation Trading</a>
+<div class="barre-actions">
+<a class="barre-lien" href="../glossaire.html" title="Glossaire">📖<span class="sr"> Glossaire</span></a>
+<button type="button" class="btn-theme" aria-label="Basculer le mode sombre" title="Mode clair / sombre">◐</button>
+</div>
+</header>
+<div class="cadre">
+<nav class="sidebar" id="sidebar" aria-label="Menu principal">
+<p class="nav-titre">Démarrer</p><ul>
+<li><a href="../index.html">🏠 Accueil &amp; progression</a></li>
+<li><a href="../a-propos.html">ℹ️ À propos &amp; méthode</a></li>
+</ul>
+<p class="nav-titre">Modules</p><ul class="nav-modules"><li data-module="00"><a href="../modules/module-00.html"><span class="num">0</span><span class="lib">Avant de commencer</span><span class="etat" aria-hidden="true"></span></a></li><li data-module="01"><a href="../modules/module-01.html"><span class="num">1</span><span class="lib">Les marchés financiers</span><span class="etat" aria-hidden="true"></span></a></li><li data-module="02"><a href="../modules/module-02.html"><span class="num">2</span><span class="lib">Fonctionnement d&#x27;un ordre</span><span class="etat" aria-hidden="true"></span></a></li><li data-module="03"><a href="../modules/module-03.html"><span class="num">3</span><span class="lib">Produits et effet de levier</span><span class="etat" aria-hidden="true"></span></a></li><li data-module="04"><a href="../modules/module-04.html"><span class="num">4</span><span class="lib">Analyse technique : les bases</span><span class="etat" aria-hidden="true"></span></a></li><li data-module="05"><a href="../modules/module-05.html"><span class="num">5</span><span class="lib">Chandeliers et figures chartistes</span><span class="etat" aria-hidden="true"></span></a></li><li data-module="06"><a href="../modules/module-06.html"><span class="num">6</span><span class="lib">Indicateurs techniques</span><span class="etat" aria-hidden="true"></span></a></li><li data-module="07"><a href="../modules/module-07.html"><span class="num">7</span><span class="lib">Analyse fondamentale</span><span class="etat" aria-hidden="true"></span></a></li><li data-module="08"><a href="../modules/module-08.html"><span class="num">8</span><span class="lib">Styles de trading</span><span class="etat" aria-hidden="true"></span></a></li><li data-module="09"><a href="../modules/module-09.html"><span class="num">9</span><span class="lib">Gestion du risque</span><span class="etat" aria-hidden="true"></span></a></li><li data-module="10"><a href="../modules/module-10.html" aria-current="page"><span class="num">10</span><span class="lib">Construire une stratégie</span><span class="etat" aria-hidden="true"></span></a></li></ul>
+<p class="nav-titre">S'entraîner</p><ul>
+<li><a href="../outils.html">🧮 Calculateurs &amp; simulateur</a></li>
+<li><a href="../journal-de-trading.html">📓 Journal de trading</a></li>
+<li><a href="../examen-final.html">🎓 Examen final (40 questions)</a></li>
+</ul>
+<p class="nav-titre">Référence</p><ul>
+<li><a href="../glossaire.html">📖 Glossaire</a></li>
+</ul>
+</nav>
+<div class="voile" hidden></div>
+<div class="colonne">
+<main id="contenu" class="contenu" tabindex="-1">
+<article class="module" data-module="10">
+<p class="fil"><a href="../index.html">Accueil</a> › Module 10</p>
+<header class="module-entete">
+<p class="surtitre">Module 10 · 7 leçons · ≈ 2 h 45</p>
+<h1>Construire une stratégie</h1>
+<div class="chapeau"><p>Une <strong>stratégie</strong> n'est pas une intuition ni une collection d'indicateurs : c'est un ensemble de <strong>règles écrites, précises et testables</strong> qui disent quand entrer, où sortir, combien risquer. Ce module montre comment en construire une, comment la tester honnêtement, et comment éviter de se mentir avec des statistiques.</p></div>
+</header>
+<nav class="sommaire" aria-label="Sommaire du module"><h2>Sommaire</h2><ol><li><a href="#lecon-10-1">10.1 Anatomie d&#x27;une stratégie</a></li><li><a href="#lecon-10-2">10.2 Écrire des règles testables</a></li><li><a href="#lecon-10-3">10.3 Le backtesting</a></li><li><a href="#lecon-10-4">10.4 Le forward testing</a></li><li><a href="#lecon-10-5">10.5 Les biais du backtest</a></li><li><a href="#lecon-10-6">10.6 Les statistiques de performance</a></li><li><a href="#lecon-10-7">10.7 Taille d&#x27;échantillon : pourquoi 30 trades ne prouvent rien</a></li></ol></nav>
+<section class="lecon" id="lecon-10-1">
+<h2><span class="lecon-num">10.1</span> Anatomie d&#x27;une stratégie</h2>
+
+<div class="bloc bloc-obj"><h3 class="bloc-titre">🎯 Objectifs de la leçon</h3><ul><li>Connaître les composantes d'une stratégie complète.</li><li>Distinguer une stratégie d'un simple signal.</li></ul></div>
+<div class="bloc bloc-simple"><h3 class="bloc-titre">💡 L'explication simple</h3>
+<p>Une stratégie complète répond à toutes ces questions, <strong>par écrit</strong> :</p>
+<ol><li><strong>Marché et unité de temps</strong> : quoi, et sur quel graphique ?</li>
+<li><strong>Contexte</strong> : dans quelles conditions la stratégie est-elle active (tendance, volatilité, horaires) ?</li>
+<li><strong>Entrée</strong> : quel événement précis déclenche l'ordre, et quel type d'ordre ?</li>
+<li><strong>Stop</strong> : où, et comment est-il calculé ?</li>
+<li><strong>Sortie en gain</strong> : objectif, trailing, sortie partielle, sortie au temps ?</li>
+<li><strong>Taille</strong> : quel risque par trade ?</li>
+<li><strong>Gestion</strong> : déplace-t-on le stop ? Que fait-on avant une annonce ou le week-end ?</li>
+<li><strong>Filtres et limites</strong> : nombre maximal de positions, limites de perte (module 9).</li></ol>
+</div>
+<figure class="schema"><svg class="graph" viewBox="0 0 680 206" role="img" aria-label="Le cycle de développement d&#x27;une stratégie" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"><defs><marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="g-fleche-tete"/></marker></defs><rect x="20" y="16" width="190" height="56" rx="8" class="g-rect-a"/><text x="115.0" y="40.0" class="g-txt g-fort" text-anchor="middle">1. Idée</text><text x="115.0" y="58.0" class="g-txt g-petit" text-anchor="middle">observation, hypothèse</text><rect x="245" y="16" width="190" height="56" rx="8" class="g-rect-a"/><text x="340.0" y="40.0" class="g-txt g-fort" text-anchor="middle">2. Règles écrites</text><text x="340.0" y="58.0" class="g-txt g-petit" text-anchor="middle">entrée, sortie, taille</text><rect x="470" y="16" width="190" height="56" rx="8" class="g-rect-a"/><text x="565.0" y="40.0" class="g-txt g-fort" text-anchor="middle">3. Backtest</text><text x="565.0" y="58.0" class="g-txt g-petit" text-anchor="middle">données passées, frais inclus</text><rect x="20" y="112" width="190" height="56" rx="8" class="g-rect-a"/><text x="115.0" y="136.0" class="g-txt g-fort" text-anchor="middle">4. Test hors échantillon</text><text x="115.0" y="154.0" class="g-txt g-petit" text-anchor="middle">données jamais utilisées</text><rect x="245" y="112" width="190" height="56" rx="8" class="g-rect-a"/><text x="340.0" y="136.0" class="g-txt g-fort" text-anchor="middle">5. Forward test</text><text x="340.0" y="154.0" class="g-txt g-petit" text-anchor="middle">démo ou temps réel</text><rect x="470" y="112" width="190" height="56" rx="8" class="g-rect-h"/><text x="565.0" y="136.0" class="g-txt g-fort" text-anchor="middle">6. Réel, petite taille</text><text x="565.0" y="154.0" class="g-txt g-petit" text-anchor="middle">journal, suivi des écarts</text><line x1="210.0" y1="44.0" x2="245.0" y2="44.0" class="g-fleche" marker-end="url(#fl)"/><line x1="435.0" y1="44.0" x2="470.0" y2="44.0" class="g-fleche" marker-end="url(#fl)"/><line x1="565.0" y1="72.0" x2="115.0" y2="112.0" class="g-fleche" marker-end="url(#fl)"/><line x1="210.0" y1="140.0" x2="245.0" y2="140.0" class="g-fleche" marker-end="url(#fl)"/><line x1="435.0" y1="140.0" x2="470.0" y2="140.0" class="g-fleche" marker-end="url(#fl)"/><text x="340.0" y="196.0" class="g-txt g-petit" text-anchor="middle">Échec à n&#x27;importe quelle étape → retour à l&#x27;idée, sans « ajuster » jusqu&#x27;à ce que ça marche.</text></svg><figcaption>Le cycle de développement : chaque étape peut invalider l'idée. C'est normal, et c'est même le but.</figcaption></figure>
+<div class="bloc bloc-approfondi"><h3 class="bloc-titre">🔬 Explication approfondie</h3>
+<p>« Acheter quand le RSI passe sous 30 » est un <strong>signal</strong>, pas une stratégie : il manque le contexte, le stop, la sortie, la taille. Deux traders appliquant le même signal avec des sorties différentes auront des résultats complètement différents. Souvent, la sortie et la gestion du risque comptent davantage que l'entrée.</p>
+</div>
+<div class="bloc bloc-exemple"><h3 class="bloc-titre">🧮 Exemple chiffré pas à pas</h3>
+<p>Calcul de cohérence d'une stratégie avant même de la tester : stop moyen de 1,5 ATR, objectif à 2R, coûts estimés à 0,1R par trade.</p>
+<div class="calcul">Gain net d'un gagnant = 2 − 0,1 = 1,9 R ; perte nette = 1 + 0,1 = 1,1 R
+Taux de réussite minimal = 1,1 ÷ (1,9 + 1,1) ≈ 36,7 %
+Question à se poser : est-il plausible d'atteindre un objectif de 3 ATR (2 × 1,5 ATR) avant un stop de 1,5 ATR plus d'une fois sur trois ? Le backtest répondra.</div>
+</div>
+<div class="bloc bloc-erreurs"><h3 class="bloc-titre">⚠️ Erreurs fréquentes des débutants</h3><ul><li>Confondre signal et stratégie.</li><li>Garder des règles floues (« si le marché a l'air fort ») impossibles à tester.</li><li>Ne pas prévoir les cas particuliers (gap au-delà du stop, annonce, jour férié).</li></ul></div>
+<div class="bloc bloc-cles"><h3 class="bloc-titre">📌 Points clés à retenir</h3><ul><li>Stratégie = marché, contexte, entrée, stop, sortie, taille, gestion, limites.</li><li>Un signal seul ne fait pas une stratégie.</li><li>Calculez le taux de réussite minimal avant de tester.</li></ul></div>
+<div class="bloc bloc-exo"><h3 class="bloc-titre">✍️ Exercice pratique</h3><p>Complétez ce signal pour en faire une stratégie : « Acheter quand le prix clôture au-dessus du plus haut des 20 derniers jours ».</p>
+<button type="button" class="btn btn-corr" aria-expanded="false">Voir la correction</button><div class="correction" hidden><p>Exemple : <em>Marché</em> : un indice actions, graphique journalier. <em>Contexte</em> : prix au-dessus de la moyenne mobile 200 jours. <em>Entrée</em> : achat à l'ouverture suivante si la clôture dépasse le plus haut des 20 jours. <em>Stop</em> : 2 ATR sous l'entrée. <em>Sortie</em> : clôture sous le plus bas des 10 derniers jours (trailing). <em>Taille</em> : 1 % de risque. <em>Gestion</em> : pas de nouvelle position si 3 positions sont déjà ouvertes ; stop non déplacé avant 1R de gain. Toutes ces règles sont testables.</p></div></div>
+
+</section><section class="lecon" id="lecon-10-2">
+<h2><span class="lecon-num">10.2</span> Écrire des règles testables</h2>
+
+<div class="bloc bloc-obj"><h3 class="bloc-titre">🎯 Objectifs de la leçon</h3><ul><li>Transformer une idée en règles sans ambiguïté.</li><li>Vérifier qu'une règle est testable.</li></ul></div>
+<div class="bloc bloc-simple"><h3 class="bloc-titre">💡 L'explication simple</h3>
+<p>Une règle est <strong>testable</strong> si deux personnes différentes, ou un ordinateur, l'appliquant aux mêmes données, prennent exactement les mêmes décisions. Test simple : pourriez-vous la programmer ?</p>
+</div>
+<div class="bloc bloc-approfondi"><h3 class="bloc-titre">🔬 Explication approfondie</h3>
+<div class="tableau-defile"><table class="tableau"><thead><tr><th>Règle floue</th><th>Règle testable</th></tr></thead><tbody><tr><td>Acheter en tendance haussière</td><td>Clôture au-dessus de la SMA 50, et SMA 50 plus haute qu'il y a 10 jours</td></tr><tr><td>Acheter sur un repli</td><td>Le prix touche l'EMA 20 (plus bas ≤ EMA 20) après au moins 3 clôtures au-dessus</td></tr><tr><td>Stop sous le support</td><td>Stop = plus bas des 5 dernières bougies − 0,5 ATR 14</td></tr><tr><td>Sortir quand ça ralentit</td><td>Sortie à la clôture si le RSI 14 repasse sous 50, ou objectif à 2R</td></tr><tr><td>Éviter les annonces</td><td>Pas d'entrée entre 30 min avant et 30 min après une publication classée 3 étoiles</td></tr></tbody></table></div>
+<p>Précisez aussi : à quel moment la condition est-elle vérifiée (clôture de la bougie ou en cours de bougie) ? À quel prix l'ordre est-il exécuté (ouverture suivante, ordre stop, ordre limité) ? Ces détails changent fortement les résultats d'un test.</p>
+</div>
+<div class="bloc bloc-exemple"><h3 class="bloc-titre">🧮 Exemple chiffré pas à pas</h3>
+<p>Une même règle « acheter quand le prix casse le plus haut de la veille » testée de deux façons :</p>
+<div class="calcul">Version A : achat à la clôture du jour de cassure → prix moyen d'entrée = clôture
+Version B : ordre stop d'achat 0,05 € au-dessus du plus haut de la veille → entrée pendant la séance
+Sur une cassure : plus haut de la veille 50,00 ; la séance monte à 51,20 et clôture à 50,40
+A : entrée 50,40 ; B : entrée 50,05 (+ slippage éventuel)
+Écart = 0,35 € ; avec un stop à 1,00 €, c'est 0,35R de différence sur ce seul trade</div>
+</div>
+<div class="bloc bloc-erreurs"><h3 class="bloc-titre">⚠️ Erreurs fréquentes des débutants</h3><ul><li>Laisser une part d'appréciation dans les règles (« si le contexte est bon »).</li><li>Ne pas préciser le moment de vérification et le prix d'exécution.</li></ul></div>
+<div class="bloc bloc-cles"><h3 class="bloc-titre">📌 Points clés à retenir</h3><ul><li>Une règle testable donne toujours la même décision avec les mêmes données.</li><li>Préciser : condition, moment de vérification, type d'ordre, prix d'exécution.</li></ul></div>
+<div class="bloc bloc-exo"><h3 class="bloc-titre">✍️ Exercice pratique</h3><p>Rendez testable : « Je vends quand le marché est suracheté sur une résistance. »</p>
+<button type="button" class="btn btn-corr" aria-expanded="false">Voir la correction</button><div class="correction" hidden><p>Exemple : « Vente à découvert à l'ouverture suivante si : (1) le RSI 14 clôture au-dessus de 70 ; (2) le plus haut du jour est à moins de 0,5 ATR d'un sommet des 60 derniers jours ; (3) le prix est sous sa SMA 200. Stop : plus haut du jour + 0,5 ATR. Sortie : objectif 1,5R ou clôture après 10 jours. » Ce n'est pas forcément une bonne stratégie, mais elle est testable.</p></div></div>
+
+</section><section class="lecon" id="lecon-10-3">
+<h2><span class="lecon-num">10.3</span> Le backtesting</h2>
+
+<div class="bloc bloc-obj"><h3 class="bloc-titre">🎯 Objectifs de la leçon</h3><ul><li>Réaliser un backtest manuel ou automatisé.</li><li>Intégrer frais et slippage, et éviter les erreurs classiques.</li></ul></div>
+<div class="bloc bloc-simple"><h3 class="bloc-titre">💡 L'explication simple</h3>
+<p>Le <strong>backtest</strong> consiste à appliquer ses règles sur des données passées, comme si l'on avait tradé à l'époque, et à enregistrer chaque trade. On peut le faire à la main (faire défiler un graphique bougie par bougie, sans regarder la suite) ou par programme (tableur, langage de script des plateformes, Python…).</p>
+</div>
+<div class="bloc bloc-approfondi"><h3 class="bloc-titre">🔬 Explication approfondie</h3>
+<p>Points d'attention :</p>
+<ul><li><strong>Données de qualité</strong> : ajustées des divisions d'actions et dividendes, sans trous, couvrant plusieurs régimes de marché (hausse, baisse, range, crise).</li>
+<li><strong>Frais et slippage réalistes</strong>, voire pessimistes.</li>
+<li><strong>Exécution réaliste</strong> : on ne peut pas acheter au plus bas d'une bougie qu'on vient de voir se former.</li>
+<li><strong>Nombre suffisant de trades</strong> (leçon 10.7).</li>
+<li><strong>Biais</strong> (leçon 10.5) : look-ahead, survivant, surapprentissage.</li></ul>
+<p>En backtest manuel, notez chaque trade dans un tableau (date, entrée, stop, sortie, résultat en R). C'est long, mais extrêmement formateur : vous apprenez à reconnaître vos setups.</p>
+</div>
+<div class="bloc bloc-exemple"><h3 class="bloc-titre">🧮 Exemple chiffré pas à pas</h3>
+<p>Un backtest de 150 trades donne une espérance brute de +0,25R. Coûts estimés : spread et commission = 0,06R, slippage = 0,02R par trade.</p>
+<div class="calcul">Espérance nette = 0,25 − 0,06 − 0,02 = +0,17 R
+Sur 150 trades : 150 × 0,17 = 25,5 R au lieu de 37,5 R brut, soit 32 % de moins
+Si les coûts réels sont deux fois plus élevés (0,16R) : 0,25 − 0,16 = +0,09 R</div>
+<p>Une stratégie dont l'avantage brut est faible devient vite neutre ou perdante en conditions réelles.</p>
+</div>
+<div class="bloc bloc-erreurs"><h3 class="bloc-titre">⚠️ Erreurs fréquentes des débutants</h3><ul><li>Tester sans frais.</li><li>Faire un backtest manuel en voyant la suite du graphique.</li><li>Tester sur une seule période favorable (par exemple uniquement un marché haussier).</li></ul></div>
+<div class="bloc bloc-cles"><h3 class="bloc-titre">📌 Points clés à retenir</h3><ul><li>Backtest = application honnête des règles sur le passé.</li><li>Données propres, frais et slippage inclus, plusieurs régimes de marché.</li><li>Un avantage brut faible disparaît souvent après coûts.</li></ul></div>
+<div class="bloc bloc-exo"><h3 class="bloc-titre">✍️ Exercice pratique</h3><p>Backtest de 80 trades : 30 gagnants à +2,2R, 50 perdants à −1R. Coûts de 0,1R par trade. Calculez l'espérance brute et nette.</p>
+<button type="button" class="btn btn-corr" aria-expanded="false">Voir la correction</button><div class="correction" hidden><div class="calcul">Brute = (30 × 2,2 − 50 × 1) ÷ 80 = (66 − 50) ÷ 80 = +0,20 R
+Nette = 0,20 − 0,10 = +0,10 R</div></div></div>
+
+</section><section class="lecon" id="lecon-10-4">
+<h2><span class="lecon-num">10.4</span> Le forward testing</h2>
+
+<div class="bloc bloc-obj"><h3 class="bloc-titre">🎯 Objectifs de la leçon</h3><ul><li>Comprendre l'intérêt du test en temps réel.</li><li>Comparer résultats de backtest et de forward test.</li></ul></div>
+<div class="bloc bloc-simple"><h3 class="bloc-titre">💡 L'explication simple</h3>
+<p>Le <strong>forward test</strong> (ou paper trading) consiste à appliquer la stratégie <strong>en temps réel</strong>, sur un compte de démonstration ou avec de très petites positions, sans connaître la suite. Il révèle ce que le backtest ne montre pas : exécution réelle, disponibilité, discipline, émotions.</p>
+</div>
+<div class="bloc bloc-approfondi"><h3 class="bloc-titre">🔬 Explication approfondie</h3>
+<p>Comparez les statistiques du forward test à celles du backtest : taux de réussite, gain et perte moyens, espérance, drawdown. Un écart modéré est normal ; un écart important signale un problème : surapprentissage, coûts sous-estimés, règles mal appliquées. Notez aussi les trades « manqués » (signal présent, mais vous n'étiez pas là) et les trades « hors plan » : ils font partie de la performance réelle.</p>
+<p>Limite du compte démo : l'exécution y est souvent meilleure que la réalité, et l'absence d'argent réel supprime une grande partie de la pression émotionnelle (module 12).</p>
+</div>
+<div class="bloc bloc-exemple"><h3 class="bloc-titre">🧮 Exemple chiffré pas à pas</h3>
+<div class="tableau-defile"><table class="tableau"><thead><tr><th>Statistique</th><th>Backtest (150 trades)</th><th>Forward test (40 trades)</th></tr></thead><tbody><tr><td>Taux de réussite</td><td>42 %</td><td>38 %</td></tr><tr><td>Gain moyen</td><td>+2,0 R</td><td>+1,8 R</td></tr><tr><td>Perte moyenne</td><td>−1,0 R</td><td>−1,1 R</td></tr><tr><td>Espérance</td><td>+0,26 R</td><td>?</td></tr></tbody></table></div>
+<div class="calcul">Espérance du forward test = 0,38 × 1,8 − 0,62 × 1,1 = 0,684 − 0,682 ≈ 0 R
+Les gains moyens plus faibles et les pertes plus fortes (slippage, sorties anticipées ?) effacent l'avantage.
+Avec seulement 40 trades, l'écart peut être dû au hasard, mais il faut enquêter : comparer trade par trade.</div>
+</div>
+<div class="bloc bloc-erreurs"><h3 class="bloc-titre">⚠️ Erreurs fréquentes des débutants</h3><ul><li>Sauter le forward test parce que le backtest est « excellent ».</li><li>Ne pas noter les trades manqués ou hors plan.</li><li>Conclure trop vite sur 10 ou 20 trades.</li></ul></div>
+<div class="bloc bloc-cles"><h3 class="bloc-titre">📌 Points clés à retenir</h3><ul><li>Forward test = application en temps réel, en démo ou en très petite taille.</li><li>Comparer ses statistiques au backtest et enquêter sur les écarts.</li><li>La démo surestime souvent l'exécution et sous-estime les émotions.</li></ul></div>
+<div class="bloc bloc-exo"><h3 class="bloc-titre">✍️ Exercice pratique</h3><p>Forward test : 50 trades, 21 gagnants à +1,9R en moyenne, 29 perdants à −1,05R. Calculez l'espérance.</p>
+<button type="button" class="btn btn-corr" aria-expanded="false">Voir la correction</button><div class="correction" hidden><div class="calcul">p = 21 ÷ 50 = 42 %
+E = 0,42 × 1,9 − 0,58 × 1,05 = 0,798 − 0,609 ≈ +0,19 R</div></div></div>
+
+</section><section class="lecon" id="lecon-10-5">
+<h2><span class="lecon-num">10.5</span> Les biais du backtest</h2>
+
+<div class="bloc bloc-obj"><h3 class="bloc-titre">🎯 Objectifs de la leçon</h3><ul><li>Reconnaître le surapprentissage, le biais du survivant, le biais d'anticipation et le biais de sélection.</li><li>Appliquer des parades simples.</li></ul></div>
+<div class="bloc bloc-simple"><h3 class="bloc-titre">💡 L'explication simple</h3>
+<ul><li><strong>Surapprentissage</strong> (overfitting) : ajuster les paramètres jusqu'à ce que la stratégie colle parfaitement au passé. Elle a alors appris le bruit, pas un phénomène reproductible.</li>
+<li><strong>Biais du survivant</strong> : tester uniquement sur les actifs qui existent aujourd'hui (les « survivants »), en oubliant ceux qui ont disparu (faillites, sorties d'indice).</li>
+<li><strong>Biais d'anticipation</strong> (look-ahead) : utiliser une information qui n'était pas disponible au moment de la décision.</li>
+<li><strong>Biais de sélection</strong> : ne retenir que la période, le marché ou la version qui donne de bons résultats.</li></ul>
+</div>
+<figure class="schema"><svg class="graph" viewBox="0 0 640 260" role="img" aria-label="Une stratégie suroptimisée brille sur la période d&#x27;optimisation puis stagne sur des données nouvelles" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"><defs><marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="g-fleche-tete"/></marker></defs><line x1="52.0" y1="211.5" x2="624.0" y2="211.5" class="g-grille"/><text x="46.0" y="215.5" class="g-txt g-petit" text-anchor="end">0 R</text><line x1="52.0" y1="158.0" x2="624.0" y2="158.0" class="g-grille"/><text x="46.0" y="162.0" class="g-txt g-petit" text-anchor="end">+20 R</text><line x1="52.0" y1="104.4" x2="624.0" y2="104.4" class="g-grille"/><text x="46.0" y="108.4" class="g-txt g-petit" text-anchor="end">+40 R</text><line x1="52.0" y1="50.8" x2="624.0" y2="50.8" class="g-grille"/><text x="46.0" y="54.8" class="g-txt g-petit" text-anchor="end">+60 R</text><line x1="52.0" y1="226.0" x2="52.0" y2="230.0" class="g-axe"/><text x="52.0" y="242.0" class="g-txt g-petit" text-anchor="middle">0</text><line x1="210.9" y1="226.0" x2="210.9" y2="230.0" class="g-axe"/><text x="210.9" y="242.0" class="g-txt g-petit" text-anchor="middle">50</text><line x1="369.8" y1="226.0" x2="369.8" y2="230.0" class="g-axe"/><text x="369.8" y="242.0" class="g-txt g-petit" text-anchor="middle">100</text><line x1="528.7" y1="226.0" x2="528.7" y2="230.0" class="g-axe"/><text x="528.7" y="242.0" class="g-txt g-petit" text-anchor="middle">150</text><line x1="52.0" y1="16.0" x2="52.0" y2="226.0" class="g-axe"/><line x1="52.0" y1="226.0" x2="624.0" y2="226.0" class="g-axe"/><line x1="52.0" y1="211.5" x2="624.0" y2="211.5" class="g-axe g-zero"/><line x1="433.3" y1="16.0" x2="433.3" y2="226.0" class="g-l3"/><text x="437.3" y="76.0" class="g-txt g-petit" text-anchor="start">Données jamais vues</text><polyline points="52.0,211.5 55.2,209.6 58.4,201.9 61.5,198.0 64.7,194.1 67.9,191.4 71.1,189.4 74.2,186.7 77.4,185.7 80.6,186.7 83.8,188.0 87.0,190.1 90.1,188.2 93.3,185.5 96.5,179.9 99.7,177.3 102.8,175.3 106.0,172.2 109.2,171.0 112.4,174.9 115.6,170.8 118.7,170.9 121.9,169.0 125.1,168.5 128.3,159.3 131.4,154.9 134.6,152.5 137.8,154.4 141.0,150.8 144.2,152.0 147.3,147.6 150.5,150.5 153.7,149.5 156.9,145.7 160.0,146.8 163.2,145.2 166.4,143.6 169.6,139.7 172.8,139.8 175.9,136.6 179.1,129.6 182.3,132.5 185.5,133.6 188.6,131.0 191.8,131.6 195.0,134.1 198.2,128.8 201.4,124.9 204.5,120.5 207.7,116.2 210.9,112.9 214.1,113.9 217.2,119.3 220.4,116.6 223.6,118.3 226.8,116.8 230.0,114.5 233.1,116.7 236.3,116.3 239.5,110.2 242.7,106.7 245.8,109.9 249.0,109.2 252.2,107.9 255.4,105.0 258.6,101.6 261.7,100.5 264.9,99.8 268.1,96.1 271.3,98.8 274.4,94.3 277.6,92.1 280.8,92.2 284.0,92.5 287.2,90.6 290.3,93.4 293.5,98.7 296.7,96.4 299.9,91.1 303.0,90.3 306.2,89.0 309.4,87.8 312.6,89.3 315.8,87.0 318.9,83.5 322.1,82.3 325.3,78.6 328.5,80.3 331.6,78.5 334.8,79.4 338.0,79.6 341.2,77.8 344.4,76.2 347.5,72.7 350.7,69.7 353.9,71.9 357.1,67.2 360.2,70.5 363.4,69.7 366.6,67.8 369.8,67.0 373.0,64.6 376.1,63.5 379.3,65.2 382.5,61.9 385.7,61.1 388.8,62.7 392.0,61.5 395.2,60.6 398.4,58.7 401.6,59.4 404.7,58.0 407.9,57.5 411.1,52.2 414.3,52.2 417.4,47.8 420.6,47.0 423.8,43.0 427.0,35.7 430.2,35.8 433.3,34.4" class="g-l1"/><polyline points="433.3,34.4 436.5,36.9 439.7,38.8 442.9,40.4 446.0,40.1 449.2,37.6 452.4,35.1 455.6,36.5 458.8,36.0 461.9,40.0 465.1,38.4 468.3,39.1 471.5,42.1 474.6,44.0 477.8,42.5 481.0,42.2 484.2,40.4 487.4,41.7 490.5,41.2 493.7,41.9 496.9,46.0 500.1,46.5 503.2,46.8 506.4,48.7 509.6,46.6 512.8,40.7 516.0,36.8 519.1,36.7 522.3,39.9 525.5,40.4 528.7,42.1 531.8,41.7 535.0,38.4 538.2,38.6 541.4,42.5 544.6,38.8 547.7,38.6 550.9,34.9 554.1,37.3 557.3,30.5 560.4,33.8 563.6,33.4 566.8,31.2 570.0,38.3 573.2,40.4 576.3,44.8 579.5,40.1 582.7,38.2 585.9,40.8 589.0,45.5 592.2,50.3 595.4,49.8 598.6,52.0 601.8,51.0 604.9,52.5 608.1,57.1 611.3,52.2 614.5,50.8 617.6,52.7 620.8,53.7 624.0,50.1" class="g-lb"/><text x="338.0" y="256.0" class="g-txt g-petit" text-anchor="middle">Trades</text><line x1="60.0" y1="22.0" x2="80.0" y2="22.0" class="g-l1"/><text x="84.0" y="26.0" class="g-txt g-petit" text-anchor="start">Période d&#x27;optimisation (dans l&#x27;échantillon)</text><line x1="60.0" y1="37.0" x2="80.0" y2="37.0" class="g-lb"/><text x="84.0" y="41.0" class="g-txt g-petit" text-anchor="start">Période de test (hors échantillon)</text></svg><figcaption>Simulation : sur la période d'optimisation, la stratégie semble excellente ; sur des données nouvelles, son avantage disparaît. C'est la signature typique du surapprentissage.</figcaption></figure>
+<div class="bloc bloc-approfondi"><h3 class="bloc-titre">🔬 Explication approfondie</h3>
+<p><strong>Parades</strong> :</p>
+<ul><li>Peu de règles et peu de paramètres ; des paramètres « ronds » et logiques plutôt qu'optimisés au dixième.</li>
+<li>Réserver des données <strong>hors échantillon</strong>, jamais utilisées pendant la conception, pour un test final unique.</li>
+<li>Vérifier la <strong>robustesse</strong> : la stratégie doit rester correcte si l'on change un peu les paramètres (SMA 45 ou 55 au lieu de 50). Si seul « 50 » fonctionne, c'est suspect.</li>
+<li>Tester sur d'autres marchés et d'autres périodes.</li>
+<li>Utiliser des listes historiques de composants d'indice (qui incluent les sociétés disparues).</li>
+<li>Compter <strong>combien de variantes</strong> ont été essayées (module 4 : avec assez d'essais, on trouve toujours une « pépite » par hasard).</li></ul>
+</div>
+<div class="bloc bloc-exemple"><h3 class="bloc-titre">🧮 Exemple chiffré pas à pas</h3>
+<p>Vous testez une stratégie avec 3 paramètres, chacun avec 10 valeurs possibles.</p>
+<div class="calcul">Nombre de combinaisons = 10 × 10 × 10 = 1 000
+Au seuil de 5 %, combinaisons « significatives » attendues par hasard ≈ 1 000 × 5 % = 50
+La meilleure des 1 000 sera presque toujours excellente sur le passé, même sans aucun avantage réel.</div>
+<p>Biais du survivant (illustration chiffrée hypothétique) : un backtest sur les 40 valeurs actuelles d'un indice donne +11 % par an ; refait avec la composition historique réelle, incluant les sociétés sorties de l'indice après de fortes baisses, il ne donne plus que +7 %. Les 4 points d'écart viennent uniquement du choix des données.</p>
+</div>
+<div class="bloc bloc-erreurs"><h3 class="bloc-titre">⚠️ Erreurs fréquentes des débutants</h3><ul><li>Optimiser chaque paramètre au maximum.</li><li>Regarder les données « hors échantillon » plusieurs fois et réajuster à chaque fois (elles deviennent alors « dans l'échantillon »).</li><li>Utiliser la clôture du jour pour décider d'une entrée à l'ouverture du même jour.</li></ul></div>
+<div class="bloc bloc-cles"><h3 class="bloc-titre">📌 Points clés à retenir</h3><ul><li>Surapprentissage, survivant, anticipation, sélection : quatre façons de se tromper avec un backtest.</li><li>Peu de paramètres, test hors échantillon unique, robustesse, autres marchés.</li><li>Compter les essais effectués.</li></ul></div>
+<div class="bloc bloc-exo"><h3 class="bloc-titre">✍️ Exercice pratique</h3><p>Une stratégie donne un profit factor de 2,4 avec une SMA de 37 jours, mais de 1,0 avec 35 et de 0,9 avec 40. Qu'en concluez-vous ?</p>
+<button type="button" class="btn btn-corr" aria-expanded="false">Voir la correction</button><div class="correction" hidden><p>La performance dépend d'une valeur très précise et s'effondre avec des valeurs voisines : c'est un signe fort de <strong>surapprentissage</strong>. Le « 37 » a capturé un hasard du passé. Une stratégie robuste donne des résultats proches sur une plage de paramètres voisins.</p></div></div>
+
+</section><section class="lecon" id="lecon-10-6">
+<h2><span class="lecon-num">10.6</span> Les statistiques de performance</h2>
+
+<div class="bloc bloc-obj"><h3 class="bloc-titre">🎯 Objectifs de la leçon</h3><ul><li>Calculer taux de réussite, gain et perte moyens, espérance, profit factor et drawdown maximal.</li><li>Découvrir le ratio de Sharpe.</li></ul></div>
+<div class="bloc bloc-simple"><h3 class="bloc-titre">💡 L'explication simple</h3>
+<p>Voici un échantillon de 20 trades (en R) : +1,8 ; −1 ; −1 ; +2,4 ; −1 ; +0,6 ; −1 ; +2,1 ; −1 ; −0,5 ; +3,0 ; −1 ; −1 ; +1,5 ; −1 ; +2,2 ; −1 ; −1 ; +0,9 ; −1.</p>
+</div>
+<figure class="schema"><svg class="graph" viewBox="0 0 640 260" role="img" aria-label="Échantillon de 20 trades : résultat de chaque trade et courbe cumulée" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet"><defs><marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="g-fleche-tete"/></marker></defs><line x1="52.0" y1="181.6" x2="624.0" y2="181.6" class="g-grille"/><text x="46.0" y="185.6" class="g-txt g-petit" text-anchor="end">0 R</text><line x1="52.0" y1="122.5" x2="624.0" y2="122.5" class="g-grille"/><text x="46.0" y="126.5" class="g-txt g-petit" text-anchor="end">+2 R</text><line x1="52.0" y1="63.3" x2="624.0" y2="63.3" class="g-grille"/><text x="46.0" y="67.3" class="g-txt g-petit" text-anchor="end">+4 R</text><line x1="52.0" y1="226.0" x2="52.0" y2="230.0" class="g-axe"/><text x="52.0" y="242.0" class="g-txt g-petit" text-anchor="middle">0</text><line x1="195.0" y1="226.0" x2="195.0" y2="230.0" class="g-axe"/><text x="195.0" y="242.0" class="g-txt g-petit" text-anchor="middle">5</text><line x1="338.0" y1="226.0" x2="338.0" y2="230.0" class="g-axe"/><text x="338.0" y="242.0" class="g-txt g-petit" text-anchor="middle">10</text><line x1="481.0" y1="226.0" x2="481.0" y2="230.0" class="g-axe"/><text x="481.0" y="242.0" class="g-txt g-petit" text-anchor="middle">15</text><line x1="624.0" y1="226.0" x2="624.0" y2="230.0" class="g-axe"/><text x="624.0" y="242.0" class="g-txt g-petit" text-anchor="middle">20</text><line x1="52.0" y1="16.0" x2="52.0" y2="226.0" class="g-axe"/><line x1="52.0" y1="226.0" x2="624.0" y2="226.0" class="g-axe"/><line x1="52.0" y1="181.6" x2="624.0" y2="181.6" class="g-axe g-zero"/><rect x="71.6" y="128.4" width="18.0" height="53.2" class="g-barre-h"/><rect x="100.2" y="181.6" width="18.0" height="29.6" class="g-barre-b"/><rect x="128.8" y="181.6" width="18.0" height="29.6" class="g-barre-b"/><rect x="157.4" y="110.6" width="18.0" height="71.0" class="g-barre-h"/><rect x="186.0" y="181.6" width="18.0" height="29.6" class="g-barre-b"/><rect x="214.6" y="163.9" width="18.0" height="17.7" class="g-barre-h"/><rect x="243.2" y="181.6" width="18.0" height="29.6" class="g-barre-b"/><rect x="271.8" y="119.5" width="18.0" height="62.1" class="g-barre-h"/><rect x="300.4" y="181.6" width="18.0" height="29.6" class="g-barre-b"/><rect x="329.0" y="181.6" width="18.0" height="14.8" class="g-barre-b"/><rect x="357.6" y="92.9" width="18.0" height="88.7" class="g-barre-h"/><rect x="386.2" y="181.6" width="18.0" height="29.6" class="g-barre-b"/><rect x="414.8" y="181.6" width="18.0" height="29.6" class="g-barre-b"/><rect x="443.4" y="137.3" width="18.0" height="44.4" class="g-barre-h"/><rect x="472.0" y="181.6" width="18.0" height="29.6" class="g-barre-b"/><rect x="500.6" y="116.6" width="18.0" height="65.1" class="g-barre-h"/><rect x="529.2" y="181.6" width="18.0" height="29.6" class="g-barre-b"/><rect x="557.8" y="181.6" width="18.0" height="29.6" class="g-barre-b"/><rect x="586.4" y="155.0" width="18.0" height="26.6" class="g-barre-h"/><rect x="615.0" y="181.6" width="18.0" height="29.6" class="g-barre-b"/><polyline points="52.0,181.6 80.6,128.4 109.2,158.0 137.8,187.5 166.4,116.6 195.0,146.1 223.6,128.4 252.2,158.0 280.8,95.9 309.4,125.4 338.0,140.2 366.6,51.5 395.2,81.1 423.8,110.6 452.4,66.3 481.0,95.9 509.6,30.8 538.2,60.4 566.8,89.9 595.4,63.3 624.0,92.9" class="g-l1"/><text x="338.0" y="256.0" class="g-txt g-petit" text-anchor="middle">Numéro du trade</text><rect x="62" y="17" width="14" height="9" class="g-barre-h"/><text x="84.0" y="26.0" class="g-txt g-petit" text-anchor="start">Résultat de chaque trade (R)</text><line x1="60.0" y1="37.0" x2="80.0" y2="37.0" class="g-l1"/><text x="84.0" y="41.0" class="g-txt g-petit" text-anchor="start">Résultat cumulé (R)</text></svg><figcaption>Les barres montrent chaque trade, la courbe le résultat cumulé : malgré 60 % de trades perdants, le total est positif.</figcaption></figure>
+<div class="bloc bloc-exemple"><h3 class="bloc-titre">🧮 Exemple chiffré pas à pas</h3>
+<div class="calcul">Gagnants : 8 (1,8 + 2,4 + 0,6 + 2,1 + 3,0 + 1,5 + 2,2 + 0,9 = 14,5 R)
+Perdants : 12 (11 × −1 et 1 × −0,5 = −11,5 R)
+Taux de réussite = 8 ÷ 20 = 40 %
+Gain moyen = 14,5 ÷ 8 ≈ 1,81 R ; perte moyenne = 11,5 ÷ 12 ≈ 0,96 R
+Espérance = 3,0 ÷ 20 = +0,15 R par trade (ou 0,40 × 1,81 − 0,60 × 0,96 ≈ 0,15)
+Profit factor = gains bruts ÷ pertes brutes = 14,5 ÷ 11,5 ≈ 1,26
+Courbe cumulée : 0 ; 1,8 ; 0,8 ; −0,2 ; 2,2 ; … plus haut 5,1 au trade 16, puis 3,0 au trade 18
+Drawdown maximal = 5,1 − 3,0 = 2,1 R
+Plus longue série de pertes : 2</div>
+</div>
+<div class="bloc bloc-approfondi"><h3 class="bloc-titre">🔬 Explication approfondie</h3>
+<p><strong>Profit factor</strong> : au-dessus de 1, la stratégie gagne ; les valeurs supérieures à 2 sont rares sur de longues périodes et doivent rendre méfiant (surapprentissage ?).</p>
+<p><strong>Ratio de Sharpe</strong> (introduction) : rendement moyen au-dessus du taux sans risque, divisé par la volatilité des rendements. Il mesure le rendement par unité de risque.</p>
+<div class="formule">Sharpe = (Rendement moyen − Taux sans risque) ÷ Écart-type des rendements</div>
+<p>Il se calcule sur des rendements périodiques (mensuels, par exemple) et s'annualise en multipliant par √12 pour des données mensuelles. Limites : il pénalise autant la volatilité à la hausse qu'à la baisse, suppose des rendements « normaux » et peut être flatté par des stratégies qui vendent des risques extrêmes rares. Des variantes existent (Sortino, ratio de Calmar = rendement annuel ÷ drawdown maximal).</p>
+<div class="calcul">12 rendements mensuels (%) : 1,2 ; −0,8 ; 2,1 ; 0,5 ; −1,5 ; 1,8 ; 0,9 ; −0,4 ; 1,1 ; 2,4 ; −0,6 ; 1,3
+Moyenne = 8,0 ÷ 12 ≈ 0,667 % ; écart-type ≈ 1,239 %
+Taux sans risque mensuel supposé = 0,25 % (≈ 3 % par an)
+Sharpe mensuel = (0,667 − 0,25) ÷ 1,239 ≈ 0,336 → annualisé ≈ 0,336 × √12 ≈ 1,16</div>
+</div>
+<div class="bloc bloc-erreurs"><h3 class="bloc-titre">⚠️ Erreurs fréquentes des débutants</h3><ul><li>Ne regarder que le taux de réussite ou que le résultat total.</li><li>Ignorer le drawdown maximal, qui dit si vous supporterez la stratégie.</li><li>Calculer un Sharpe sur 3 mois et l'annualiser.</li></ul></div>
+<div class="bloc bloc-cles"><h3 class="bloc-titre">📌 Points clés à retenir</h3><ul><li>Taux de réussite, gain et perte moyens, espérance, profit factor, drawdown maximal, plus longue série de pertes.</li><li>Profit factor = gains bruts ÷ pertes brutes.</li><li>Sharpe = (rendement − taux sans risque) ÷ volatilité ; à manier avec précaution.</li></ul></div>
+<div class="bloc bloc-exo"><h3 class="bloc-titre">✍️ Exercice pratique</h3><p>10 trades : +2 ; −1 ; −1 ; +1,5 ; −1 ; −1 ; +3 ; −1 ; −1 ; +0,5. Calculez le taux de réussite, l'espérance, le profit factor et le drawdown maximal en R.</p>
+<button type="button" class="btn btn-corr" aria-expanded="false">Voir la correction</button><div class="correction" hidden><div class="calcul">Gagnants : 4 → 2 + 1,5 + 3 + 0,5 = 7 R ; perdants : 6 → −6 R
+Taux de réussite = 40 % ; espérance = 1 ÷ 10 = +0,1 R ; profit factor = 7 ÷ 6 ≈ 1,17
+Cumul : 2 ; 1 ; 0 ; 1,5 ; 0,5 ; −0,5 ; 2,5 ; 1,5 ; 0,5 ; 1
+Drawdown max : du pic 2,0 au creux −0,5 = 2,5 R</div></div></div>
+
+</section><section class="lecon" id="lecon-10-7">
+<h2><span class="lecon-num">10.7</span> Taille d&#x27;échantillon : pourquoi 30 trades ne prouvent rien</h2>
+
+<div class="bloc bloc-obj"><h3 class="bloc-titre">🎯 Objectifs de la leçon</h3><ul><li>Estimer l'incertitude sur une espérance mesurée.</li><li>Évaluer le nombre de trades nécessaire pour conclure.</li></ul></div>
+<div class="bloc bloc-simple"><h3 class="bloc-titre">💡 L'explication simple</h3>
+<p>Une espérance mesurée sur un petit nombre de trades est <strong>très incertaine</strong>. La chance peut facilement faire paraître gagnante une stratégie neutre, ou perdante une stratégie gagnante. Plus l'échantillon est grand, plus la mesure est fiable.</p>
+</div>
+<div class="bloc bloc-approfondi"><h3 class="bloc-titre">🔬 Explication approfondie</h3>
+<div class="formule">Erreur type de l'espérance ≈ écart-type des résultats ÷ √(nombre de trades)</div>
+<div class="formule">Intervalle de confiance à 95 % ≈ espérance ± 1,96 × erreur type</div>
+<p>Cette approximation suppose des trades indépendants et un nombre de trades suffisant ; elle donne un ordre de grandeur utile. Conséquence : pour distinguer une petite espérance (+0,1 à +0,2R) de zéro, il faut souvent <strong>plusieurs centaines de trades</strong>.</p>
+</div>
+<div class="bloc bloc-exemple"><h3 class="bloc-titre">🧮 Exemple chiffré pas à pas</h3>
+<p>Reprenons les 20 trades de la leçon précédente : espérance +0,15R, écart-type des résultats ≈ 1,48R.</p>
+<div class="calcul">Erreur type = 1,48 ÷ √20 = 1,48 ÷ 4,47 ≈ 0,33 R
+Intervalle à 95 % ≈ 0,15 ± 1,96 × 0,33 = 0,15 ± 0,65 → de −0,50 R à +0,80 R
+→ Impossible de dire si la stratégie est gagnante, neutre ou perdante.
+Nombre de trades pour que l'intervalle exclue zéro si l'espérance vraie est 0,2 R (écart-type 1,48 R) :
+n > (1,96 × 1,48 ÷ 0,2)² ≈ 210 trades</div>
+</div>
+<div class="bloc bloc-erreurs"><h3 class="bloc-titre">⚠️ Erreurs fréquentes des débutants</h3><ul><li>Déclarer une stratégie gagnante après 20 ou 30 trades.</li><li>Abandonner une stratégie après 10 pertes alors qu'elles sont compatibles avec ses statistiques.</li><li>Ignorer que le marché change : un très long historique peut aussi mélanger des régimes différents.</li></ul></div>
+<div class="bloc bloc-cles"><h3 class="bloc-titre">📌 Points clés à retenir</h3><ul><li>Erreur type ≈ écart-type ÷ √n ; intervalle ≈ ± 1,96 erreur type.</li><li>Une petite espérance exige des centaines de trades pour être démontrée.</li><li>Jugez une stratégie sur un échantillon suffisant, pas sur une impression.</li></ul></div>
+<div class="bloc bloc-exo"><h3 class="bloc-titre">✍️ Exercice pratique</h3><p>100 trades, espérance mesurée +0,25R, écart-type 1,5R. Calculez l'intervalle de confiance à 95 %. Peut-on conclure que l'espérance est positive ?</p>
+<button type="button" class="btn btn-corr" aria-expanded="false">Voir la correction</button><div class="correction" hidden><div class="calcul">Erreur type = 1,5 ÷ √100 = 0,15 R
+Intervalle = 0,25 ± 1,96 × 0,15 = 0,25 ± 0,294 → de −0,044 R à +0,544 R</div><p>L'intervalle contient zéro (de justesse) : on ne peut pas encore conclure avec ce niveau de confiance, même si les résultats sont encourageants. Il faut plus de trades.</p></div></div>
+
+</section>
+<section class="fin-module">
+<h2>Fin du module 10</h2>
+<p>Vous avez terminé la lecture ? Marquez le module comme lu, puis vérifiez vos acquis avec le quiz.</p>
+<div class="actions">
+<button type="button" class="btn btn-principal btn-lu" data-module="10">✓ Marquer ce module comme lu</button>
+<a class="btn" href="../quiz/quiz-10.html">📝 Faire le quiz (12 questions)</a>
+<a class="btn" href="../fiches/fiche-10.html">🗂️ Fiche récapitulative</a>
+</div>
+</section>
+<nav class="precsuiv" aria-label="Navigation entre modules"><a class="pn pn-prec" href="module-09.html"><small>← Précédent</small><span>Module 9 · Gestion du risque</span></a><span></span></nav>
+</article>
+</main>
+<footer class="pied">
+<p><strong>Avertissement sur les risques.</strong> Le trading d'instruments financiers comporte un risque élevé de perte en capital. Les produits à effet de levier (CFD, Forex, futures, options, turbos, warrants…) peuvent faire perdre très rapidement tout le capital engagé, et certains produits (futures, vente d'options, vente à découvert) peuvent entraîner des pertes supérieures à la mise initiale. Une majorité de particuliers perd de l'argent en tradant des CFD. Ce site est un support pédagogique général : il ne constitue ni un conseil en investissement, ni une recommandation personnalisée, ni une incitation à acheter ou vendre un instrument financier. Les performances passées ne préjugent pas des performances futures. N'investissez que de l'argent dont la perte n'affecterait pas votre niveau de vie.</p>
+<p class="pied-liens"><a href="../a-propos.html">À propos &amp; sources</a> · <a href="../glossaire.html">Glossaire</a> · Contenu à jour à la date de rédaction : vérifiez toujours les règles en vigueur (AMF, impots.gouv.fr).</p>
+</footer>
+</div>
+</div>
+<script src="../assets/js/nav-data.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/glossaire-data.js"></script>
+<script src="../assets/js/glossaire-infobulle.js"></script>
+</body>
+</html>
