@@ -32,7 +32,7 @@ export type Draft = PersistedState & { toasts: Toast[] };
 
 let toastId = 1;
 export function pushToast(d: Draft, t: Omit<Toast, 'id'>) {
-  d.toasts = [...d.toasts, { ...t, id: toastId++ }].slice(-6);
+  d.toasts = [...d.toasts, { ...t, id: toastId++ }].slice(-4);
 }
 
 export function newGameData(seed = randomSeed()): GameData {

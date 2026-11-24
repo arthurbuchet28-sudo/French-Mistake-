@@ -14,7 +14,7 @@ export const TICK_DT = 1 / TICKS_PER_DAY;
 /** Part de variance expliquée par le secteur */
 export const SECTOR_VARIANCE_SHARE = 0.25;
 /** Part maximale de variance expliquée par le marché (pour beta = 1) */
-export const MARKET_VARIANCE_SHARE = 0.45;
+export const MARKET_VARIANCE_SHARE = 0.35;
 
 export function gbmStep(price: number, mu: number, sigma: number, dt: number, z: number): number {
   return price * Math.exp((mu - 0.5 * sigma * sigma) * dt + sigma * Math.sqrt(dt) * z);
