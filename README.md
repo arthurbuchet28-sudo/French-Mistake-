@@ -6,7 +6,7 @@ Formation complète et gratuite pour apprendre le trading, en français, du nive
 
 ## Contenu
 
-- **14 modules** (0 à 13), soit 96 leçons. Chacune contient : objectifs, explication simple puis approfondie, exemple chiffré pas à pas, schéma (SVG), erreurs fréquentes, points clés, exercice avec correction masquée.
+- **14 modules** (0 à 13), soit 96 leçons. Chacune contient : objectifs, explication simple puis approfondie, exemple chiffré pas à pas, schéma SVG quand il est utile, erreurs fréquentes, points clés, exercice avec correction masquée.
 - **14 quiz** (164 questions), avec correction et explications, et un **examen final** de 40 questions avec un bilan par module.
 - **14 fiches récapitulatives** imprimables (A4).
 - **Glossaire de 341 termes** : recherche instantanée sans accents, filtre par catégorie, équivalent anglais, termes associés, et les modules où chaque terme apparaît. Les termes techniques des leçons renvoient automatiquement au glossaire, avec une infobulle au survol.
