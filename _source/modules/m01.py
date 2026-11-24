@@ -107,7 +107,7 @@ LECONS = [
 
 <x-simple>
 <p>Une <strong>action</strong> est une part du capital d'une entreprise. L'actionnaire est copropriétaire : il peut recevoir une part des bénéfices (le <strong>dividende</strong>, si l'entreprise en verse) et voter en assemblée générale. Le prix d'une action varie selon l'offre et la demande, qui reflètent les anticipations des investisseurs sur les bénéfices futurs, les taux d'intérêt et le climat général.</p>
-<p>Un <strong>indice</strong> est un « panier » d'actions qui résume l'évolution d'un marché : CAC 40 (40 grandes valeurs françaises), Euro Stoxx 50 (zone euro), DAX (Allemagne), S&amp;P 500 (500 grandes entreprises américaines), Nasdaq 100 (grandes valeurs non financières du Nasdaq, très technologique), Nikkei 225 (Japon)… Un indice ne s'achète pas directement : on le trade via des ETF, des futures ou des CFD.</p>
+<p>Un <strong>indice</strong> est un « panier » d'actions qui résume l'évolution d'un marché : CAC 40 (40 grandes valeurs françaises), Euro Stoxx 50 (zone euro), DAX (Allemagne), [[S&amp;P 500|sp-500]] (500 grandes entreprises américaines), Nasdaq 100 (grandes valeurs non financières du Nasdaq, très technologique), Nikkei 225 (Japon)… Un indice ne s'achète pas directement : on le trade via des ETF, des futures ou des CFD.</p>
 </x-simple>
 
 <x-approfondi>

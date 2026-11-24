@@ -1,0 +1,2048 @@
+% Glossaire de la formation trading
+% Format :
+% ## slug | Terme | catégorie | équivalent anglais
+% = alias utilisés pour les liens automatiques (séparés par ;), "-" = aucun lien automatique
+% D: définition   E: exemple   V: termes associés (slugs)
+
+% ===================================================================== MARCHÉS
+## action | Action | marches | Share / Stock
+= action; actions
+D: Titre de propriété représentant une part du capital d'une entreprise. Il peut donner droit à une part des bénéfices (dividende) et à un droit de vote.
+E: Détenir 100 actions d'une société qui en compte 10 millions, c'est en posséder 0,001 %.
+V: dividende, capitalisation-boursiere, indice-boursier, per
+
+## indice-boursier | Indice boursier | marches | Stock index
+= indice; indices; indice boursier
+D: Panier d'actions dont la valeur résume l'évolution d'un marché ou d'un secteur. Il se trade via des ETF, des futures ou des CFD, pas directement.
+E: Le CAC 40 regroupe 40 grandes valeurs cotées à Paris, pondérées par leur capitalisation flottante.
+V: cac-40, sp-500, etf, ponderation-capitalisation
+
+## cac-40 | CAC 40 | marches | CAC 40
+= CAC 40
+D: Principal indice de la Bourse de Paris, composé de 40 grandes sociétés, pondéré par la capitalisation flottante avec un plafond de 15 % par valeur. C'est un indice de prix (dividendes non réinvestis).
+E: Si le CAC 40 passe de 7 500 à 7 605 points, il progresse de 1,4 %.
+V: indice-boursier, euronext, indice-dividendes-reinvestis
+
+## sp-500 | S&P 500 | marches | S&P 500
+= -
+D: Indice des 500 plus grandes entreprises américaines cotées, pondéré par la capitalisation flottante. Référence mondiale des actions.
+E: Le VIX mesure la volatilité implicite des options sur le S&P 500.
+V: indice-boursier, vix, nasdaq
+
+## euro-stoxx-50 | Euro Stoxx 50 | marches | Euro Stoxx 50
+D: Indice de 50 grandes sociétés de la zone euro. Il sert de sous-jacent à des contrats à terme très échangés (10 € par point).
+E: 1 future Euro Stoxx 50 à 5 000 points représente une exposition de 50 000 €.
+V: indice-boursier, contrat-a-terme, multiplicateur
+
+## dax | DAX | marches | DAX
+= DAX
+D: Principal indice de la Bourse de Francfort (40 valeurs allemandes). Contrairement au CAC 40, c'est un indice de rendement (dividendes réinvestis).
+E: Le future DAX standard vaut 25 € par point ; des versions mini et micro existent.
+V: indice-boursier, indice-dividendes-reinvestis
+
+## nasdaq | Nasdaq | marches | Nasdaq
+D: Bourse électronique américaine très orientée technologie, et par extension ses indices (Nasdaq Composite, Nasdaq 100).
+E: Le Nasdaq 100 regroupe les 100 plus grandes valeurs non financières cotées au Nasdaq.
+V: nyse, sp-500, indice-boursier
+
+## nyse | NYSE | marches | New York Stock Exchange
+= NYSE
+D: New York Stock Exchange, la plus grande bourse d'actions du monde par capitalisation. Séance principale de 9 h 30 à 16 h, heure de New York.
+E: L'ouverture du NYSE correspond généralement à 15 h 30 à Paris.
+V: nasdaq, seance, euronext
+
+## euronext | Euronext | marches | Euronext
+D: Opérateur boursier européen qui gère notamment les bourses de Paris, Amsterdam, Bruxelles, Lisbonne, Dublin, Oslo et Milan.
+E: À Paris, la cotation en continu sur Euronext va de 9 h à 17 h 30, encadrée par des enchères.
+V: fixing, seance, cac-40
+
+## indice-dividendes-reinvestis | Indice dividendes réinvestis | marches | Total return index
+= indice dividendes réinvestis; dividendes réinvestis
+D: Version d'un indice qui réinvestit les dividendes versés, et mesure donc le rendement total. Variantes : brut (GR) ou net de retenues fiscales (NR).
+E: Sur des décennies, l'écart entre le CAC 40 (prix) et le CAC 40 GR se compte en dizaines de points de pourcentage.
+V: indice-boursier, dividende
+
+## ponderation-capitalisation | Pondération par la capitalisation | marches | Market-cap weighting
+= pondérés par la capitalisation; pondéré par la capitalisation
+D: Méthode de construction d'indice où chaque société pèse en proportion de sa capitalisation boursière (souvent flottante). Les plus grosses dominent.
+E: Une société représentant 60 % de l'indice qui monte de 2 % contribue pour +1,2 % à l'indice.
+V: indice-boursier, capitalisation-boursiere
+
+## obligation | Obligation | marches | Bond
+= obligations; emprunts d'État
+D: Titre de dette : l'émetteur emprunte, verse des intérêts (coupons) et rembourse le nominal à l'échéance. Son prix varie à l'inverse des taux d'intérêt.
+E: Une obligation de 1 000 € à 3 % verse 30 € par an ; si les taux montent, son prix baisse.
+V: coupon, nominal, duration, rendement-obligataire
+
+## coupon | Coupon | marches | Coupon
+= coupon; coupons
+D: Intérêt périodique versé au porteur d'une obligation, exprimé en pourcentage du nominal.
+E: Coupon de 3 % sur 1 000 € de nominal : 30 € par an.
+V: obligation, nominal
+
+## nominal | Nominal (valeur nominale) | marches | Face value / Par value
+= nominal; valeur nominale
+D: Montant de référence d'une obligation, remboursé à l'échéance et servant au calcul des coupons.
+E: Nominal de 1 000 € : c'est la somme rendue par l'émetteur à l'échéance.
+V: obligation, coupon
+
+## rendement-obligataire | Rendement obligataire | marches | Bond yield
+= rendement obligataire; rendements obligataires; rendements des emprunts d'État
+D: Taux de rendement d'une obligation compte tenu de son prix de marché, de ses coupons et de son remboursement. Il évolue à l'inverse du prix.
+E: Une obligation achetée 990,38 € qui rembourse 1 030 € dans un an rapporte 4 %.
+V: obligation, duration, oat-bund
+
+## duration | Duration | marches | Duration
+D: Mesure de la sensibilité du prix d'une obligation aux variations de taux, liée à sa durée de vie moyenne. Plus elle est longue, plus le prix réagit.
+E: Une hausse d'un point des taux fait baisser bien plus une obligation à 10 ans qu'une obligation à 1 an.
+V: obligation, rendement-obligataire
+
+## oat-bund | OAT et Bund | marches | OAT / Bund
+= OAT; Bund
+D: OAT : obligations assimilables du Trésor, emprunts de l'État français. Bund : emprunts de l'État allemand, référence de la zone euro. Leur écart de rendement est suivi comme mesure du risque perçu.
+E: Si l'OAT 10 ans rapporte 0,7 point de plus que le Bund, on parle d'un spread OAT-Bund de 70 points de base.
+V: obligation, rendement-obligataire
+
+## etf | ETF (tracker) | marches | Exchange Traded Fund
+= ETF; tracker; trackers
+D: Fonds coté en bourse qui réplique un indice, avec des frais généralement faibles. Il s'achète et se vend comme une action.
+E: Un ETF sur le S&P 500 permet d'être exposé aux 500 sociétés en une seule ligne.
+V: replication-synthetique, ter, etf-levier, ucits
+
+## replication-synthetique | Réplication physique / synthétique | marches | Physical / synthetic replication
+= réplication physique; réplication synthétique
+D: Physique : l'ETF détient les titres de l'indice. Synthétique : il détient un autre panier et échange sa performance contre celle de l'indice via un swap avec une banque.
+E: Certains ETF « monde » éligibles au PEA sont synthétiques : ils détiennent des actions européennes et un swap sur l'indice mondial.
+V: etf, swap, pea
+
+## ter | Frais courants (TER) | marches | Total Expense Ratio
+= TER
+D: Frais annuels d'un fonds, exprimés en pourcentage de l'actif, prélevés automatiquement sur sa valeur.
+E: Un TER de 0,20 % coûte 20 € par an sur 10 000 € investis.
+V: etf, ecart-de-suivi
+
+## ecart-de-suivi | Écart de suivi | marches | Tracking difference / Tracking error
+= écart de suivi; tracking difference
+D: Différence entre la performance d'un fonds indiciel et celle de son indice, due aux frais, à la fiscalité des dividendes et à la méthode de réplication.
+E: Indice +8,0 %, ETF +7,8 % : l'écart de suivi est de −0,2 point.
+V: etf, ter
+
+## capitalisant-distribuant | Capitalisant / distribuant | marches | Accumulating / Distributing
+= capitalisant; distribuant
+D: Un fonds capitalisant réinvestit les dividendes reçus ; un fonds distribuant les verse aux porteurs.
+E: Sur un ETF capitalisant, le dividende n'est pas versé : il augmente la valeur de la part.
+V: etf, dividende
+
+## etf-levier | ETF à levier / inverse | marches | Leveraged / Inverse ETF
+= ETF à levier; ETF inverse
+D: ETF qui vise un multiple (2×, 3×) ou l'inverse (−1×) de la performance QUOTIDIENNE d'un indice. Sur plusieurs jours, la performance diverge, surtout dans les marchés qui oscillent.
+E: Indice +10 % puis −10 % : −1 % ; ETF 2× : −4 %.
+V: etf, effet-de-levier, volatilite
+
+## forex | Forex (marché des changes) | marches | Foreign exchange (FX)
+= Forex; marché des changes
+D: Marché mondial, de gré à gré, où s'échangent les devises, 24 h/24 du dimanche soir au vendredi soir. C'est le plus grand marché financier du monde.
+E: Acheter EUR/USD, c'est acheter des euros en vendant des dollars.
+V: paire-de-devises, pip, lot, seance
+
+## paire-de-devises | Paire de devises | marches | Currency pair
+= paire de devises; paires de devises; paire; paires
+D: Cotation d'une devise (de base) dans une autre (de cotation). Le cours indique combien d'unités de la devise de cotation vaut une unité de la devise de base.
+E: EUR/USD = 1,0850 : 1 euro vaut 1,0850 dollar.
+V: devise-de-base, forex, paires-majeures
+
+## devise-de-base | Devise de base / de cotation | marches | Base / Quote currency
+= devise de base; devise de cotation
+D: Dans une paire, la première devise est la devise de base, la seconde la devise de cotation. Gains et pertes sont exprimés dans la devise de cotation.
+E: Sur GBP/USD, la livre est la devise de base ; un gain s'exprime en dollars.
+V: paire-de-devises, pip
+
+## paires-majeures | Paires majeures, croisées, exotiques | marches | Majors, crosses, exotics
+= majeures; croisées; exotiques
+D: Majeures : grandes devises contre le dollar (EUR/USD, USD/JPY…). Croisées : sans le dollar (EUR/GBP). Exotiques : une devise majeure contre une devise émergente, avec des spreads larges.
+E: USD/TRY est une paire exotique : spread élevé, mouvements brutaux.
+V: paire-de-devises, spread, liquidite
+
+## matieres-premieres | Matières premières | marches | Commodities
+= matières premières; matière première
+D: Ressources physiques échangées sur les marchés : énergie, métaux précieux, métaux industriels, produits agricoles. Surtout tradées via des contrats à terme.
+E: Pétrole, or, cuivre, blé et café sont des matières premières.
+V: contrat-a-terme, contango, brent-wti
+
+## brent-wti | Brent et WTI | marches | Brent / WTI
+= Brent; WTI
+D: Deux qualités de pétrole brut servant de référence mondiale : le Brent (mer du Nord) et le WTI (West Texas Intermediate, États-Unis).
+E: Le 20 avril 2020, le contrat WTI échéance mai a clôturé à −37,63 $.
+V: matieres-premieres, contrat-a-terme, livraison-physique
+
+## contango | Contango | marches | Contango
+D: Situation où les contrats à terme à échéance lointaine sont plus chers que les proches. Rouler ses positions coûte alors de l'argent.
+E: Pétrole M1 à 80 $, M2 à 81,50 $ : chaque roll coûte environ 1,8 %.
+V: deport, roll, contrat-a-terme
+
+## deport | Déport | marches | Backwardation
+= déport; backwardation
+D: Situation inverse du contango : les échéances proches sont plus chères que les lointaines, souvent lors d'une pénurie immédiate.
+E: Gaz à 40 € sur le mois prochain et 36 € à six mois : le marché est en déport.
+V: contango, roll
+
+## roll | Roll (roulement) | marches | Roll / Rollover
+= roll; roule; rouler
+D: Passage d'un contrat à terme qui arrive à échéance au contrat suivant, pour maintenir une exposition. Peut coûter ou rapporter selon la forme de la courbe.
+E: Avant l'échéance de mars, un trader revend mars et achète juin.
+V: contango, deport, echeance
+
+## cryptoactif | Cryptoactif (cryptomonnaie) | marches | Crypto-asset / Cryptocurrency
+= cryptoactif; cryptoactifs; cryptomonnaie; cryptomonnaies; cryptos
+D: Actif numérique enregistré sur une blockchain, échangé sur des plateformes 24 h/24. Valeur très volatile et largement fondée sur l'offre et la demande. Encadré en Europe par MiCA.
+E: Une volatilité annuelle de 80 % correspond à environ 4,2 % de mouvement typique par jour.
+V: blockchain, stablecoin, mica, cle-privee
+
+## blockchain | Blockchain | marches | Blockchain
+D: Registre numérique partagé, sécurisé par cryptographie, où sont enregistrées les transactions d'un cryptoactif.
+E: Chaque transfert de cryptoactif est inscrit dans un bloc ajouté à la chaîne.
+V: cryptoactif, cle-privee
+
+## stablecoin | Stablecoin | marches | Stablecoin
+= stablecoin; stablecoins
+D: Cryptoactif conçu pour garder une valeur stable, souvent 1 dollar. Sa stabilité dépend des réserves et du mécanisme de l'émetteur.
+E: En 2022, le stablecoin TerraUSD a perdu son ancrage et s'est effondré.
+V: cryptoactif, mica
+
+## cle-privee | Clé privée / portefeuille | marches | Private key / Wallet
+= clé privée; clés privées
+D: Code secret qui permet de disposer de cryptoactifs. Qui détient la clé détient les fonds ; la perdre, c'est perdre les fonds.
+E: Laisser ses cryptos sur une plateforme, c'est lui confier la clé privée et dépendre de sa solidité.
+V: cryptoactif, blockchain
+
+## market-maker | Teneur de marché | marches | Market maker
+= teneur de marché; teneurs de marché; market maker; market makers
+D: Intervenant qui affiche en permanence un prix d'achat et un prix de vente, fournit la liquidité et se rémunère principalement sur le spread.
+E: Coter 99,98 / 100,02 et traiter 500 000 titres de chaque côté rapporte 20 000 € bruts.
+V: spread, liquidite, hft
+
+## hft | Trading haute fréquence | marches | High-Frequency Trading (HFT)
+= HFT; haute fréquence
+D: Trading automatisé qui exécute un très grand nombre d'ordres en millisecondes, souvent comme teneur de marché ou arbitragiste.
+E: Un scalper humain ne peut pas rivaliser en vitesse avec un algorithme à haute fréquence.
+V: market-maker, scalp
+
+## institutionnels | Investisseurs institutionnels | marches | Institutional investors
+= institutionnels; investisseurs institutionnels
+D: Grands gestionnaires de capitaux : fonds de pension, assureurs, sociétés de gestion, fonds souverains. Ils représentent l'essentiel des volumes.
+E: Un fonds de pension qui achète progressivement des actions pendant des semaines.
+V: hedge-fund, vwap
+
+## hedge-fund | Hedge fund | marches | Hedge fund
+= hedge fund; hedge funds
+D: Fonds d'investissement aux stratégies variées (macro, arbitrage, quantitatif…), souvent avec effet de levier et vente à découvert.
+E: Un fonds « macro » parie sur les écarts de taux entre pays.
+V: institutionnels, vente-a-decouvert
+
+## liquidite | Liquidité | marches | Liquidity
+= liquidité; liquide; liquides
+D: Facilité à acheter ou vendre rapidement une quantité importante sans faire bouger le prix. Se mesure par le spread, le volume et la profondeur du carnet.
+E: EUR/USD est très liquide ; une petite capitalisation avec 1 % de spread ne l'est pas.
+V: spread, volume, profondeur-de-marche
+
+## volatilite | Volatilité | marches | Volatility
+= volatilité; volatil; volatils; volatile
+D: Ampleur des variations de prix, souvent mesurée par l'écart-type des rendements (annualisé). Ni bonne ni mauvaise : elle crée opportunités et risque.
+E: Volatilité journalière de 1 % ≈ 15,9 % annualisée (× √252).
+V: ecart-type, atr, volatilite-implicite, vix
+
+## sous-jacent | Sous-jacent | marches | Underlying
+= sous-jacent; sous-jacents
+D: Actif dont dépend la valeur d'un produit dérivé (action, indice, devise, matière première…).
+E: Le sous-jacent d'une option sur le CAC 40 est l'indice CAC 40.
+V: produit-derive, option, cfd
+
+## seance | Séance et sessions | marches | Trading session
+= séance; sessions; session
+D: Période de cotation d'une bourse. Sur le Forex, on parle de sessions (Asie, Londres, New York), plus ou moins actives.
+E: Le chevauchement des sessions de Londres et New York (environ 14 h – 18 h à Paris) est souvent le plus actif.
+V: forex, fixing, liquidite
+
+## fixing | Fixing (enchère d'ouverture ou de clôture) | marches | Opening / closing auction
+= fixing; enchères; enchère
+D: Phase où les ordres s'accumulent sans être exécutés, puis sont confrontés pour déterminer un prix unique. À Paris, à l'ouverture (9 h) et à la clôture (17 h 30 – 17 h 35).
+E: Un ordre passé à 8 h 50 sur Euronext est exécuté au fixing d'ouverture.
+V: euronext, seance
+
+## reglement-livraison | Règlement-livraison | marches | Settlement
+= règlement-livraison
+D: Échange effectif des titres contre l'argent après une transaction : J+1 aux États-Unis depuis 2024, J+2 en Europe (passage à J+1 prévu).
+E: Une action achetée un lundi sur Euronext est réglée et livrée le mercredi.
+V: action
+
+## gre-a-gre | Gré à gré (OTC) | marches | Over-the-counter (OTC)
+= gré à gré; OTC
+D: Transaction conclue directement entre deux parties, hors d'une bourse organisée. Le Forex au comptant et les CFD sont négociés de gré à gré.
+E: Avec un CFD, votre contrepartie est généralement le courtier lui-même.
+V: cfd, forex, risque-de-contrepartie
+
+## dark-pool | Dark pool | marches | Dark pool
+= dark pools
+D: Plateforme de négociation où les ordres ne sont pas affichés publiquement avant exécution, utilisée par les gros intervenants pour limiter leur impact de marché.
+E: Une partie des échanges d'actions se fait hors du carnet d'ordres visible de la bourse.
+V: carnet-d-ordres, impact-de-marche
+
+## etc | ETC (Exchange Traded Commodity) | marches | Exchange Traded Commodity
+= ETC
+D: Titre coté qui réplique le prix d'une matière première (or physique, pétrole via des futures…). Juridiquement, c'est souvent un titre de dette de l'émetteur.
+E: Un ETC sur le pétrole qui roule des futures en contango sous-performe le prix affiché du baril.
+V: matieres-premieres, etf, contango
+
+## msci | Indices MSCI | marches | MSCI indices
+= MSCI
+D: Famille d'indices internationaux calculés par la société MSCI (MSCI World, MSCI Emerging Markets…), très utilisés comme référence par les ETF.
+E: Le MSCI World regroupe plusieurs milliers de grandes et moyennes capitalisations des pays développés.
+V: indice-boursier, etf
+
+% ===================================================================== ORDRES
+## bid | Bid (prix acheteur) | ordres | Bid
+= bid
+D: Meilleur prix auquel un intervenant accepte d'acheter. C'est le prix auquel VOUS pouvez vendre immédiatement.
+E: Cotation 49,95 / 50,05 : le bid est 49,95 €.
+V: ask, spread, carnet-d-ordres
+
+## ask | Ask (prix vendeur) | ordres | Ask / Offer
+= ask
+D: Meilleur prix auquel un intervenant accepte de vendre. C'est le prix auquel VOUS pouvez acheter immédiatement.
+E: Cotation 49,95 / 50,05 : l'ask est 50,05 €.
+V: bid, spread
+
+## spread | Spread (écart acheteur-vendeur) | ordres | Bid-ask spread
+= spread; spreads; fourchette
+D: Écart entre l'ask et le bid. C'est un coût implicite payé à chaque aller-retour, plus large quand la liquidité baisse ou que la volatilité monte.
+E: Bid 49,95, ask 50,05 : spread de 0,10 €, soit 0,2 % du prix ; 200 actions achetées et revendues coûtent 20 €.
+V: bid, ask, liquidite, frais-de-transaction
+
+## carnet-d-ordres | Carnet d'ordres | ordres | Order book
+= carnet d'ordres; carnet
+D: Liste des ordres à cours limité en attente, à l'achat et à la vente, avec prix et quantités.
+E: Un ordre d'achat au marché de 1 500 titres consomme les offres de vente niveau par niveau.
+V: profondeur-de-marche, ordre-a-cours-limite, impact-de-marche
+
+## profondeur-de-marche | Profondeur de marché | ordres | Market depth (Level 2)
+= profondeur de marché; profondeur
+D: Quantités disponibles à chaque niveau de prix du carnet d'ordres. Elle indique combien on peut échanger sans trop faire bouger le prix.
+E: 400 titres à 50,05 puis 300 à 50,06 : la profondeur est faible au-delà.
+V: carnet-d-ordres, liquidite
+
+## impact-de-marche | Impact de marché | ordres | Market impact
+= impact de marché
+D: Variation de prix provoquée par l'exécution de son propre ordre, quand il consomme plusieurs niveaux du carnet.
+E: Prix moyen de 50,072 € au lieu de 50,05 € pour un gros ordre au marché : 33 € d'impact.
+V: carnet-d-ordres, slippage
+
+## ordre-au-marche | Ordre au marché | ordres | Market order
+= ordre au marché; ordres au marché
+D: Ordre exécuté immédiatement au meilleur prix disponible. Exécution quasi certaine sur un marché liquide, prix non garanti.
+E: Acheter au marché une action cotée 50,00 / 50,05 : exécution à 50,05 € (ou plus si la quantité est grande).
+V: ordre-a-cours-limite, slippage
+
+## ordre-a-cours-limite | Ordre à cours limité | ordres | Limit order
+= ordre à cours limité; ordres à cours limité; ordre limité; ordres limités; ordre limite
+D: Ordre d'achat à un prix maximal ou de vente à un prix minimal. Prix garanti (ou mieux), exécution non garantie.
+E: Achat limité à 49,50 € : exécuté seulement si le prix descend à 49,50 € ou moins.
+V: ordre-au-marche, carnet-d-ordres, priorite-prix-temps
+
+## ordre-stop | Ordre stop | ordres | Stop order
+= ordre stop; ordres stop; stop au marché; stop d'achat; stop de vente
+D: Ordre dormant qui devient un ordre au marché quand le prix atteint un niveau de déclenchement. Sert de stop loss ou d'entrée sur cassure.
+E: Stop de vente à 47 € : si le prix touche 47 €, la position est vendue au marché.
+V: stop-loss, stop-limite, slippage, gap
+
+## stop-limite | Ordre stop-limite | ordres | Stop-limit order
+= stop-limite
+D: Ordre stop qui, une fois déclenché, devient un ordre à cours limité. Prix plafonné, mais risque de non-exécution si le marché saute la limite.
+E: Déclenchement à 47 €, limite à 46,80 € : si le prix chute à 45 €, rien n'est vendu.
+V: ordre-stop, ordre-a-cours-limite
+
+## trailing-stop | Trailing stop (stop suiveur) | ordres | Trailing stop
+= trailing stop; trailing stops; stop suiveur
+D: Stop qui suit automatiquement le prix dans le sens favorable à distance fixe, sans jamais reculer. Il protège un gain tout en laissant courir la tendance.
+E: Achat à 100 €, trailing de 5 € : si le prix monte à 112, le stop passe à 107.
+V: ordre-stop, stop-loss
+
+## stop-garanti | Stop garanti | ordres | Guaranteed stop-loss order (GSLO)
+= stop garanti
+D: Stop proposé par certains courtiers en CFD, exécuté exactement à son niveau même en cas de gap, moyennant une prime.
+E: Stop garanti à 47 € : même si l'action ouvre à 44 €, la sortie se fait à 47 €.
+V: ordre-stop, gap, cfd
+
+## oco | OCO (l'un annule l'autre) | ordres | One-Cancels-the-Other
+= OCO
+D: Paire d'ordres liés : l'exécution de l'un annule automatiquement l'autre. Typiquement un objectif et un stop sur la même position.
+E: Achat à 50 € avec OCO : vente limitée à 56 € et stop à 47 €.
+V: take-profit, stop-loss, ordre-lie
+
+## ordre-lie | Ordre lié (bracket) | ordres | Bracket order
+= ordres liés; bracket
+D: Ensemble d'ordres saisis ensemble : une entrée, un stop et un objectif, ces deux derniers liés en OCO.
+E: Ordre lié : achat limité à 50 €, stop 48 €, objectif 56 €.
+V: oco
+
+## validite-ordre | Durée de validité d'un ordre | ordres | Time in force (Day, GTC, GTD, IOC, FOK)
+= GTC; GTD; IOC; FOK; à révocation
+D: Durée pendant laquelle un ordre reste actif : jour, à révocation (GTC), à date (GTD), exécuter ou annuler (IOC), tout ou rien (FOK).
+E: Un ordre « jour » non exécuté expire à la clôture de la séance.
+V: ordre-a-cours-limite, oco
+
+## priorite-prix-temps | Priorité prix-temps | ordres | Price-time priority
+= priorité prix-temps
+D: Règle d'exécution des ordres limités en bourse : d'abord le meilleur prix, puis, à prix égal, l'ordre arrivé en premier.
+E: Deux achats limités à 50 € : celui saisi le premier est servi le premier.
+V: carnet-d-ordres, ordre-a-cours-limite
+
+## ordre-iceberg | Ordre iceberg | ordres | Iceberg order
+= ordres iceberg; iceberg
+D: Ordre de grande taille dont seule une petite partie est visible dans le carnet ; la suite apparaît au fur et à mesure.
+E: Un fonds affiche 500 titres à vendre mais en a 50 000 derrière.
+V: carnet-d-ordres, institutionnels
+
+## slippage | Slippage (glissement) | ordres | Slippage
+= slippage; glissement
+D: Différence entre le prix attendu et le prix réellement obtenu, fréquente sur les stops, lors des annonces et sur les titres peu liquides.
+E: Stop à 47,00 € exécuté à 46,85 € : slippage de 0,15 €.
+V: gap, ordre-stop, liquidite
+
+## gap | Gap | ordres | Gap
+= gap; gaps
+D: Écart entre deux cotations successives sans échange intermédiaire, souvent entre la clôture et l'ouverture suivante. Un stop situé dans le gap est exécuté bien au-delà de son niveau.
+E: Clôture à 51 €, ouverture à 44 € : le stop à 47 € est exécuté vers 44 €.
+V: slippage, stop-garanti, resultats-entreprise
+
+## position-longue | Position longue | ordres | Long position
+= position longue; positions longues; position acheteuse
+D: Position qui gagne quand le prix monte : on achète d'abord, on vend ensuite. Perte maximale : la mise (pour un achat sans levier).
+E: Achat de 100 actions à 50 €, revente à 56 € : +600 €.
+V: position-courte, long
+
+## position-courte | Position courte | ordres | Short position
+= position courte; positions courtes; position vendeuse
+D: Position qui gagne quand le prix baisse : on vend d'abord, on rachète ensuite. Perte théoriquement illimitée.
+E: Vente à 50 €, rachat à 44 € : +6 € par action.
+V: vente-a-decouvert, position-longue, short-squeeze
+
+## vente-a-decouvert | Vente à découvert | ordres | Short selling
+= vente à découvert; ventes à découvert; vendre à découvert; vendeur à découvert; vendeurs à découvert
+D: Vente d'un actif que l'on ne possède pas (emprunté), dans le but de le racheter moins cher. Implique des frais d'emprunt et le reversement des dividendes.
+E: Vente à découvert de 100 actions à 50 €, rachat à 80 € : −3 000 €.
+V: position-courte, frais-d-emprunt, short-squeeze, srd
+
+## frais-d-emprunt | Frais d'emprunt de titres | ordres | Borrow fee
+= frais d'emprunt
+D: Coût payé pour emprunter les titres vendus à découvert, plus élevé pour les titres difficiles à emprunter.
+E: Une vente à découvert de 40 actions pendant un mois coûte 15 € de frais d'emprunt.
+V: vente-a-decouvert
+
+## short-squeeze | Short squeeze | ordres | Short squeeze
+= short squeeze
+D: Hausse brutale provoquée par les rachats forcés ou précipités de nombreux vendeurs à découvert, qui alimentent eux-mêmes la hausse.
+E: L'épisode GameStop de janvier 2021.
+V: vente-a-decouvert, position-courte
+
+## execution-partielle | Exécution partielle | ordres | Partial fill
+= exécution partielle; exécuté partiellement
+D: Exécution d'une partie seulement d'un ordre, faute de contrepartie suffisante au prix demandé.
+E: Achat limité de 1 000 titres : 600 exécutés, 400 restent en attente.
+V: ordre-a-cours-limite, liquidite
+
+## avis-d-opere | Avis d'opéré | ordres | Trade confirmation
+= avis d'opéré
+D: Document émis par le courtier après chaque transaction : date, quantité, prix, frais. Justificatif utile pour la fiscalité.
+E: Conserver les avis d'opéré permet de recalculer le prix moyen d'acquisition.
+V: ifu, prix-moyen-pondere
+
+## srd | SRD (service de règlement différé) | ordres | Deferred settlement service
+= SRD
+D: Service proposé sur les valeurs françaises les plus liquides, permettant de différer le règlement à la fin du mois et d'utiliser un effet de levier, y compris pour vendre à découvert.
+E: Une vente à découvert via le SRD est dénouée en fin de mois ou prorogée moyennant des frais.
+V: vente-a-decouvert, effet-de-levier
+
+% ===================================================================== PRODUITS
+## comptant | Comptant | produits | Spot / Cash market
+= au comptant; comptant
+D: Achat ou vente de l'actif lui-même, payé en totalité et livré (après le délai de règlement). S'oppose aux produits dérivés.
+E: Acheter 100 actions à 50 € au comptant coûte 5 000 €, et vous en êtes propriétaire.
+V: produit-derive, action
+
+## produit-derive | Produit dérivé | produits | Derivative
+= produit dérivé; produits dérivés; dérivé; dérivés
+D: Contrat dont la valeur dépend du prix d'un autre actif, le sous-jacent. Il permet de se couvrir ou de spéculer, souvent avec effet de levier.
+E: CFD, futures, options, warrants et turbos sont des produits dérivés.
+V: sous-jacent, cfd, contrat-a-terme, option
+
+## cfd | CFD (contrat sur différence) | produits | Contract for Difference
+= CFD
+D: Contrat de gré à gré avec un courtier, par lequel on échange la différence de prix d'un actif entre ouverture et clôture, sans le posséder, avec une marge. Encadré en Europe pour les particuliers (leviers plafonnés, protection contre le solde négatif).
+E: CFD sur 100 actions à 50 € avec 20 % de marge : 1 000 € immobilisés pour 5 000 € d'exposition.
+V: effet-de-levier, marge, financement-overnight, protection-solde-negatif
+
+## contrat-a-terme | Contrat à terme (future) | produits | Futures contract
+= contrat à terme; contrats à terme; future; futures
+D: Engagement standardisé, négocié en bourse, d'acheter ou de vendre un actif à un prix fixé aujourd'hui pour une date future. Garanti par une chambre de compensation, avec appels de marge quotidiens.
+E: 1 future à 10 € le point acheté à 5 000 et revendu à 5 010 : +100 €.
+V: multiplicateur, depot-de-garantie, chambre-de-compensation, echeance
+
+## forward | Contrat à terme de gré à gré (forward) | produits | Forward contract
+= forward
+D: Contrat à terme non standardisé, conclu directement entre deux parties, souvent utilisé par les entreprises pour se couvrir.
+E: Une entreprise vend à terme 10 millions de dollars qu'elle recevra dans 6 mois.
+V: contrat-a-terme, couverture
+
+## chambre-de-compensation | Chambre de compensation | produits | Clearing house
+= chambre de compensation
+D: Organisme qui s'interpose entre acheteurs et vendeurs de contrats en bourse et garantit leur bonne exécution, en exigeant des dépôts de garantie.
+E: Si un acheteur de future fait défaut, la chambre de compensation assure le paiement au vendeur.
+V: contrat-a-terme, depot-de-garantie
+
+## depot-de-garantie | Dépôt de garantie | produits | Initial margin
+= dépôt de garantie
+D: Somme exigée pour ouvrir une position sur un contrat à terme, fixée par la chambre de compensation selon la volatilité.
+E: Dépôt de garantie de 4 000 € pour un future représentant 50 000 € d'exposition.
+V: marge, contrat-a-terme, appel-de-marge
+
+## mark-to-market | Évaluation quotidienne (mark-to-market) | produits | Mark-to-market
+= mark-to-market
+D: Réévaluation quotidienne des positions au prix du marché, avec crédit ou débit immédiat des gains et pertes.
+E: Un future qui perd 50 points un jour entraîne un débit de 500 € le soir même (à 10 € le point).
+V: contrat-a-terme, appel-de-marge
+
+## multiplicateur | Multiplicateur (valeur du point) | produits | Contract multiplier / Point value
+= multiplicateur; valeur du point
+D: Montant gagné ou perdu pour une variation d'un point du prix d'un contrat.
+E: Future Euro Stoxx 50 : 10 € par point ; E-mini S&P 500 : 50 $ par point.
+V: tick, contrat-a-terme, taille-de-contrat
+
+## taille-de-contrat | Taille de contrat | produits | Contract size
+= taille de contrat
+D: Quantité de sous-jacent représentée par un contrat (nombre d'actions pour une option, unités de devise pour un lot, valeur du point pour un future).
+E: Un contrat d'option sur action porte souvent sur 100 actions.
+V: lot, multiplicateur
+
+## micro-contrat | Micro-contrat | produits | Micro contract
+= micro-contrat; micro-contrats; micro-futures; micro-future
+D: Version réduite d'un contrat à terme (souvent 1/10 du contrat « mini »), adaptée aux petits comptes.
+E: Micro-future sur le S&P 500 : 5 $ par point au lieu de 50 $.
+V: contrat-a-terme, taille-de-position
+
+## echeance | Échéance | produits | Expiry / Maturity
+= échéance; échéances
+D: Date à laquelle un contrat à terme ou une option expire, ou à laquelle une obligation est remboursée.
+E: Les futures sur indices ont souvent des échéances trimestrielles (mars, juin, septembre, décembre).
+V: roll, option, contrat-a-terme
+
+## livraison-physique | Livraison physique / règlement en espèces | produits | Physical delivery / Cash settlement
+= livraison physique; règlement en espèces
+D: À l'échéance, certains contrats se dénouent par la livraison de la marchandise, d'autres par le paiement de la différence en argent.
+E: Un particulier ne doit jamais laisser arriver à livraison un contrat de pétrole à livraison physique.
+V: contrat-a-terme, echeance
+
+## option | Option | produits | Option
+= options; option d'achat; option de vente
+D: Contrat donnant à son acheteur le droit, mais pas l'obligation, d'acheter (call) ou de vendre (put) un actif à un prix fixé (strike) jusqu'à une date donnée, contre une prime.
+E: Call de strike 100, prime 4 : à l'échéance, avec l'action à 110, gain de 6 par action.
+V: call, put, prime, strike, grecques
+
+## call | Call (option d'achat) | produits | Call option
+= call
+D: Option donnant le droit d'acheter le sous-jacent au prix d'exercice. Son acheteur gagne si le prix monte au-delà de strike + prime.
+E: Call strike 100, prime 4 : point mort à 104.
+V: option, put, strike
+
+## put | Put (option de vente) | produits | Put option
+= put
+D: Option donnant le droit de vendre le sous-jacent au prix d'exercice. Son acheteur gagne si le prix baisse sous strike − prime ; sert aussi d'assurance.
+E: Put strike 100, prime 3 : point mort à 97.
+V: option, call, strike
+
+## prime | Prime (d'une option) | produits | Premium
+= prime
+D: Prix payé par l'acheteur d'une option au vendeur. C'est la perte maximale de l'acheteur et le gain maximal du vendeur.
+E: Prime de 4 € sur un contrat de 100 actions : 400 €.
+V: option, valeur-temps, valeur-intrinseque
+
+## strike | Prix d'exercice (strike) | produits | Strike price
+= prix d'exercice; strike
+D: Prix auquel l'acheteur d'une option peut acheter (call) ou vendre (put) le sous-jacent.
+E: Un call de strike 100 permet d'acheter à 100 même si l'action vaut 110.
+V: option, dans-la-monnaie
+
+## option-europeenne-americaine | Option européenne / américaine | produits | European / American option
+= option européenne; option américaine
+D: Une option européenne ne s'exerce qu'à l'échéance ; une option américaine à tout moment jusqu'à l'échéance. Les noms ne désignent pas des lieux.
+E: Les options sur indices sont souvent de type européen.
+V: option, echeance
+
+## valeur-intrinseque | Valeur intrinsèque | produits | Intrinsic value
+= valeur intrinsèque
+D: Ce que rapporterait une option si on l'exerçait immédiatement : max(S − K ; 0) pour un call, max(K − S ; 0) pour un put.
+E: Call strike 100, action à 105 : valeur intrinsèque de 5.
+V: valeur-temps, prime, dans-la-monnaie
+
+## valeur-temps | Valeur temps | produits | Time value / Extrinsic value
+= valeur temps
+D: Part de la prime d'une option au-delà de sa valeur intrinsèque ; elle diminue avec le temps (thêta) et s'annule à l'échéance.
+E: Prime 7,50, valeur intrinsèque 5 : valeur temps de 2,50.
+V: valeur-intrinseque, theta, volatilite-implicite
+
+## dans-la-monnaie | Dans / à / hors de la monnaie | produits | In / At / Out of the money (ITM, ATM, OTM)
+= dans la monnaie; à la monnaie; hors de la monnaie
+D: Une option est dans la monnaie si elle a une valeur intrinsèque, à la monnaie si le prix du sous-jacent est proche du strike, hors de la monnaie sinon.
+E: Action à 105 : le call 100 est dans la monnaie, le call 110 hors de la monnaie.
+V: valeur-intrinseque, strike
+
+## grecques | Grecques | produits | Greeks
+= grecques
+D: Mesures de sensibilité de la prime d'une option : delta (prix du sous-jacent), gamma (variation du delta), thêta (temps), vega (volatilité implicite), rhô (taux).
+E: Delta 0,60 : si l'action monte de 1 €, la prime monte d'environ 0,60 €.
+V: delta, theta, vega, gamma
+
+## delta | Delta | produits | Delta
+D: Variation approximative de la prime d'une option pour 1 unité de variation du sous-jacent ; entre 0 et 1 pour un call, entre −1 et 0 pour un put.
+E: Call de delta 0,5 : l'action monte de 2 €, la prime d'environ 1 €.
+V: grecques, gamma
+
+## gamma | Gamma | produits | Gamma
+D: Vitesse de variation du delta quand le sous-jacent bouge ; élevé pour les options à la monnaie proches de l'échéance.
+E: Un gamma élevé signifie que le delta change vite : la position est plus instable.
+V: delta, grecques
+
+## theta | Thêta | produits | Theta
+= thêta
+D: Perte de valeur d'une option par jour qui passe, toutes choses égales par ailleurs. Négatif pour l'acheteur, l'érosion s'accélère près de l'échéance.
+E: Thêta de −0,05 : sans mouvement, la prime perd 0,50 € en 10 jours.
+V: valeur-temps, grecques
+
+## vega | Vega | produits | Vega
+D: Variation de la prime d'une option pour un point de volatilité implicite.
+E: Après des résultats, la volatilité implicite chute : la prime baisse même si le prix va dans le bon sens.
+V: volatilite-implicite, grecques
+
+## black-scholes | Modèle de Black-Scholes | produits | Black-Scholes model
+= Black-Scholes
+D: Modèle mathématique de valorisation des options (1973), fondé sur des hypothèses simplificatrices (volatilité constante, rendements log-normaux). Base du calcul des grecques.
+E: Les plateformes affichent des grecques calculées par ce type de modèle.
+V: grecques, volatilite-implicite
+
+## warrant | Warrant | produits | Warrant
+= warrant; warrants
+D: Produit coté émis par une banque, qui fonctionne comme une option (call ou put) avec une échéance, une prime et une sensibilité au temps et à la volatilité.
+E: Un warrant call sur une action se négocie en bourse comme une action.
+V: option, turbo
+
+## turbo | Turbo | produits | Turbo / Knock-out certificate
+= turbo; turbos
+D: Produit coté à effet de levier, émis par une banque, avec une barrière désactivante : si le sous-jacent la touche, le turbo est désactivé (perte totale ou presque).
+E: Turbo call strike 7 000 sur un indice à 7 500, parité 100 : prix ≈ 5 €, levier ≈ 15.
+V: barriere-desactivante, parite, effet-de-levier
+
+## barriere-desactivante | Barrière désactivante | produits | Knock-out barrier
+= barrière désactivante; barrière; knock-out
+D: Niveau de prix qui, s'il est touché, met fin au produit (turbo). La désactivation est définitive, même si le prix revient ensuite.
+E: Turbo call avec barrière à 7 000 : un passage à 6 999 suffit à le désactiver.
+V: turbo
+
+## parite | Parité | produits | Ratio / Parity
+= parité
+D: Nombre de warrants ou de turbos nécessaires pour représenter une unité de sous-jacent.
+E: Parité de 100 : 100 turbos correspondent à un point d'indice par point.
+V: turbo, warrant
+
+## effet-de-levier | Effet de levier | produits | Leverage
+= effet de levier; levier; leviers
+D: Rapport entre l'exposition et le capital engagé. Il multiplie gains et pertes : avec un levier de 10, un mouvement de 1 % fait varier le capital de 10 %.
+E: Avec un levier effectif de 20, une baisse de 5 % efface tout le capital.
+V: levier-effectif, marge, appel-de-marge, liquidation
+
+## levier-effectif | Levier effectif | produits | Effective leverage
+= levier effectif
+D: Exposition totale réellement prise divisée par le capital du compte, à distinguer du levier maximal autorisé par le courtier.
+E: 60 000 € d'exposition pour 5 000 € de capital : levier effectif de 12.
+V: effet-de-levier, exposition
+
+## marge | Marge | produits | Margin
+= marge requise; marge minimale; marge immobilisée; niveau de marge; marge utilisée
+D: Somme bloquée par le courtier en garantie d'une position à effet de levier. Marge = exposition ÷ levier maximal.
+E: 50 000 € d'exposition avec un levier de 30 : marge de 1 666,67 €.
+V: appel-de-marge, effet-de-levier, depot-de-garantie
+
+## appel-de-marge | Appel de marge | produits | Margin call
+= appel de marge; appels de marge
+D: Demande du courtier de remettre des fonds ou de réduire ses positions quand les pertes font tomber le compte sous le niveau de marge requis.
+E: Le niveau de marge passe de 120 % à 60 % : le courtier alerte avant la clôture forcée.
+V: marge, liquidation
+
+## liquidation | Liquidation (clôture forcée) | produits | Liquidation / Margin close-out
+= liquidation; liquide automatiquement; clôture forcée; clôture automatique
+D: Fermeture automatique des positions par le courtier quand le niveau de marge atteint un seuil (50 % pour les CFD des particuliers en Europe), au prix du marché.
+E: Compte de 2 000 € et marge utilisée de 1 666,67 € : clôture forcée quand les fonds propres tombent à 833,33 €.
+V: appel-de-marge, marge, protection-solde-negatif
+
+## pip | Pip | produits | Pip (percentage in point)
+= pip; pips
+D: Unité standard de variation sur le Forex : 0,0001 pour la plupart des paires, 0,01 pour les paires en yen.
+E: EUR/USD qui passe de 1,0850 à 1,0920 a monté de 70 pips.
+V: pipette, lot, valeur-du-pip
+
+## pipette | Pipette | produits | Pipette / Fractional pip
+D: Dixième de pip, correspondant à la décimale supplémentaire affichée par beaucoup de plateformes.
+E: 1,08495 : le dernier chiffre (5) représente des pipettes.
+V: pip
+
+## valeur-du-pip | Valeur du pip | produits | Pip value
+= valeur du pip; valeur d'un pip
+D: Gain ou perte pour une variation d'un pip, selon la taille de la position, exprimé d'abord dans la devise de cotation.
+E: 1 lot d'EUR/USD : 10 $ par pip, soit environ 9,20 € avec 1 € = 1,087 $.
+V: pip, lot, taille-de-position
+
+## lot | Lot | produits | Lot
+= lot; lots; lot standard; mini-lot; micro-lot; micro-lots
+D: Unité de taille des positions sur le Forex : lot standard = 100 000 unités de la devise de base ; mini-lot = 10 000 ; micro-lot = 1 000.
+E: 0,3 lot d'EUR/USD = 30 000 € de position.
+V: pip, valeur-du-pip, taille-de-contrat
+
+## tick | Tick | produits | Tick
+= tick; ticks
+D: Plus petite variation de prix possible d'un instrument ; sa valeur monétaire = taille du tick × multiplicateur.
+E: E-mini S&P 500 : tick de 0,25 point × 50 $ = 12,50 $.
+V: multiplicateur, pip
+
+## notionnel | Notionnel (valeur de la position) | produits | Notional value
+= notionnel
+D: Valeur totale de l'exposition d'une position à effet de levier, sur laquelle se calculent les gains, les pertes et souvent les frais de financement.
+E: 2 contrats CFD à 5 € le point sur un indice à 8 000 : notionnel de 80 000 €.
+V: effet-de-levier, marge
+
+## exposition | Exposition | produits | Exposure
+= exposition; exposition totale
+D: Montant total soumis aux variations de prix sur une position ou un compte. C'est elle, rapportée au capital, qui mesure le risque.
+E: Avec 1 000 € de marge et un levier de 10, l'exposition est de 10 000 €.
+V: notionnel, levier-effectif
+
+## financement-overnight | Financement overnight | produits | Overnight financing
+= financement overnight; frais de financement; financement
+D: Intérêt facturé (ou parfois versé) chaque nuit sur une position à effet de levier conservée, calculé sur le notionnel.
+E: 10 000 € à 6 % par an pendant 5 nuits : 10 000 × 6 % × 5 ÷ 365 ≈ 8,22 €.
+V: swap, cfd, notionnel
+
+## swap | Swap | produits | Swap / Rollover
+= swap; swaps; triple swap
+D: 1) Sur le Forex et les CFD : frais (ou crédit) de financement d'une position gardée la nuit, lié à l'écart de taux ; souvent triplé le mercredi. 2) Plus largement : contrat d'échange de flux entre deux parties (utilisé par les ETF synthétiques).
+E: Garder une position EUR/USD acheteuse la nuit peut coûter ou rapporter quelques euros selon les taux.
+V: financement-overnight, carry-trade, replication-synthetique
+
+## commission | Commission | produits | Commission
+= commission; commissions
+D: Frais facturés par le courtier pour exécuter un ordre : montant fixe, pourcentage du montant ou montant par contrat.
+E: Commission de 0,10 % sur un ordre de 3 000 € : 3 €.
+V: frais-de-transaction, spread
+
+## frais-de-transaction | Frais de transaction (coût total) | produits | Transaction costs
+= frais de transaction; coût total
+D: Ensemble des coûts d'un trade : commission, spread, slippage, financement, change et autres frais. Ils pèsent d'autant plus que l'horizon est court.
+E: 200 allers-retours à 10 € sur 10 000 € : 20 % du capital par an.
+V: commission, spread, slippage, financement-overnight
+
+## perpetuel | Contrat perpétuel | produits | Perpetual futures
+= perpétuels
+D: Dérivé sans échéance, courant sur les plateformes de cryptoactifs, dont le prix est rapproché du comptant par des paiements périodiques (« funding »). Souvent proposé avec des leviers extrêmes hors UE.
+E: Un levier ×100 sur un perpétuel : un mouvement de 1 % suffit à liquider la position.
+V: cryptoactif, effet-de-levier
+
+% ===================================================================== ANALYSE TECHNIQUE
+## analyse-technique | Analyse technique | technique | Technical analysis
+= analyse technique
+D: Étude de l'historique des prix et des volumes pour formuler des hypothèses de trading et structurer les décisions (entrées, stops, objectifs). Son pouvoir prédictif est débattu.
+E: Tracer un support et attendre un rebond pour acheter avec un stop sous le support.
+V: theorie-de-dow, efficience-des-marches, analyse-fondamentale
+
+## theorie-de-dow | Théorie de Dow | technique | Dow theory
+= théorie de Dow
+D: Ensemble de principes issus des écrits de Charles Dow (fin du XIXe siècle) : le prix intègre l'information, les marchés évoluent en tendances, les volumes confirment.
+E: Une tendance haussière se définit par des sommets et des creux de plus en plus hauts.
+V: analyse-technique, tendance
+
+## efficience-des-marches | Efficience des marchés | technique | Efficient market hypothesis
+= efficience des marchés; efficience
+D: Hypothèse (Eugene Fama) selon laquelle les prix reflètent l'information disponible, de sorte qu'il est très difficile de battre durablement le marché après frais.
+E: Selon cette hypothèse, les prix passés ne permettent pas de prédire les rendements futurs de façon exploitable.
+V: analyse-technique, momentum
+
+## chandelier | Chandelier japonais (bougie) | technique | Candlestick
+= chandelier; chandeliers; bougie; bougies; chandeliers japonais; chandelier japonais
+D: Représentation d'une période de prix avec un corps (de l'ouverture à la clôture) et des mèches (jusqu'aux extrêmes). Vert/blanc si la clôture dépasse l'ouverture, rouge/noir sinon.
+E: Ouverture 50, plus haut 53, plus bas 49, clôture 52 : bougie haussière, corps de 2.
+V: ohlc, meche, doji
+
+## ohlc | OHLC | technique | Open, High, Low, Close
+= OHLC
+D: Les quatre prix qui résument une période : ouverture (Open), plus haut (High), plus bas (Low), clôture (Close).
+E: Bougie journalière = ouverture de la 1re bougie horaire, max des hauts, min des bas, clôture de la dernière.
+V: chandelier, graphique-en-barres
+
+## graphique-en-barres | Graphique en barres / en ligne | technique | Bar chart / Line chart
+= graphique en barres; graphique en ligne
+D: Graphique en barres : trait vertical du plus bas au plus haut, tirets pour l'ouverture et la clôture. Graphique en ligne : relie les seules clôtures.
+E: Le graphique en ligne est lisible mais masque l'amplitude de chaque séance.
+V: chandelier, ohlc
+
+## meche | Mèche | technique | Wick / Shadow
+= mèche; mèches
+D: Partie fine d'une bougie, entre le corps et le plus haut (mèche haute) ou le plus bas (mèche basse). Elle montre les prix rejetés pendant la période.
+E: Une longue mèche basse indique que les vendeurs ont été repoussés.
+V: chandelier, marteau
+
+## unite-de-temps | Unité de temps | technique | Timeframe
+= unité de temps; unités de temps
+D: Durée représentée par chaque bougie : 1 minute (M1), 1 heure (H1), 1 jour (D1), 1 semaine (W1)… Chaque unité a sa propre tendance.
+E: Contexte en journalier, signal en 4 heures, entrée affinée en 1 heure.
+V: chandelier, tendance
+
+## tendance | Tendance | technique | Trend
+= tendance haussière; tendance baissière; tendances haussières; tendances baissières
+D: Direction dominante des prix : haussière (sommets et creux de plus en plus hauts), baissière (de plus en plus bas), ou absente (range).
+E: Creux à 100, 103, 107 et sommets à 106, 110, 115 : tendance haussière.
+V: structure-de-marche, range, ligne-de-tendance
+
+## structure-de-marche | Structure de marché | technique | Market structure
+= structure de marché; rupture de structure
+D: Succession des sommets et creux qui définit la tendance. Une rupture de structure survient quand le prix casse le dernier creux (ou sommet) significatif.
+E: Dans une hausse dont le dernier creux est à 111,5, une clôture à 111 est une rupture de structure.
+V: tendance, swing
+
+## range | Range (marché latéral) | technique | Range / Sideways market
+= range
+D: Marché sans tendance, qui oscille entre un support et une résistance.
+E: Un prix qui rebondit entre 98 et 106 pendant deux mois est en range.
+V: tendance, support, rectangle
+
+## support | Support | technique | Support
+= support; supports
+D: Zone de prix où la baisse s'est arrêtée plusieurs fois, car des acheteurs y apparaissent. C'est une zone, pas une ligne précise.
+E: Creux à 98,60, 99,10 et 98,80 : zone de support 98,60 – 99,10.
+V: resistance, inversion-des-roles, cassure
+
+## resistance | Résistance | technique | Resistance
+= résistance; résistances
+D: Zone de prix où la hausse s'est arrêtée plusieurs fois, car des vendeurs y apparaissent.
+E: Trois échecs vers 106 : 106 est une résistance.
+V: support, inversion-des-roles, cassure
+
+## inversion-des-roles | Inversion des rôles | technique | Role reversal (polarity)
+= inversion des rôles
+D: Principe selon lequel une résistance cassée devient souvent un support, et un support cassé une résistance.
+E: Résistance à 106 cassée, puis prix qui revient sur 106 et rebondit : elle sert de support.
+V: support, resistance
+
+## cassure | Cassure (breakout) | technique | Breakout
+= cassure; cassures
+D: Franchissement d'un niveau important (résistance, support, ligne de tendance, figure). Peut être fausse si le prix revient rapidement.
+E: Clôture à 54,50 au-dessus d'une résistance à 52,60 avec un volume 2,6 fois supérieur à la moyenne.
+V: breakout, fausse-cassure, volume
+
+## fausse-cassure | Fausse cassure | technique | False breakout / Fakeout
+= fausse cassure; fausses cassures
+D: Cassure suivie d'un retour rapide dans la zone précédente, qui piège ceux qui ont agi sur la cassure.
+E: Le prix dépasse 106 de quelques centimes, déclenche des achats, puis rechute à 103.
+V: cassure, fakeout
+
+## ligne-de-tendance | Ligne de tendance | technique | Trendline
+= ligne de tendance; lignes de tendance
+D: Droite reliant au moins deux creux (tendance haussière) ou deux sommets (baissière), validée au troisième contact.
+E: Creux au jour 5 à 100 € et au jour 20 à 106 € : pente de 0,40 € par jour.
+V: canal, tendance
+
+## canal | Canal | technique | Channel
+= canal; canaux
+D: Couloir formé par une ligne de tendance et une parallèle passant par les extrêmes opposés.
+E: Dans un canal haussier, le prix rebondit sur la ligne basse et bute sur la ligne haute.
+V: ligne-de-tendance
+
+## echelle-logarithmique | Échelle logarithmique | technique | Log scale
+= échelle logarithmique
+D: Échelle de prix où un même écart vertical représente un même pourcentage. Plus pertinente pour les longues périodes ou les fortes hausses.
+E: Passer de 10 à 20 et de 100 à 200 occupe la même hauteur en échelle logarithmique.
+V: ligne-de-tendance
+
+## volume | Volume | technique | Volume
+= volume; volumes
+D: Quantité échangée sur une période (titres ou contrats). Mesure l'intensité de la participation ; sur le Forex au comptant, seul un volume de ticks est disponible.
+E: 3,1 millions de titres un jour de cassure contre 1,2 million en moyenne : ratio de 2,6.
+V: cassure, vwap, volume-de-ticks
+
+## volume-de-ticks | Volume de ticks | technique | Tick volume
+= volume de ticks
+D: Nombre de variations de prix sur une période, utilisé comme indicateur indirect d'activité quand le volume réel n'est pas disponible (Forex).
+E: Les plateformes Forex affichent un volume de ticks, pas le volume mondial échangé.
+V: volume, forex
+
+## pullback | Pullback (repli) | technique | Pullback
+= pullback; pullbacks; repli; replis
+D: Retour temporaire du prix contre la tendance, avant reprise. Aussi : retour sur un niveau cassé.
+E: Dans une hausse, le prix revient sur sa moyenne mobile 20 puis repart.
+V: tendance, inversion-des-roles
+
+## swing | Swing (sommet et creux) | technique | Swing high / Swing low
+= -
+D: Point haut ou bas marquant un retournement local des prix ; la suite des swings définit la structure de marché.
+E: Un sommet défini comme un plus haut supérieur aux 2 bougies avant et après.
+V: structure-de-marche, tendance
+
+## doji | Doji | technique | Doji
+D: Bougie dont l'ouverture et la clôture sont presque égales : indécision.
+E: Ouverture 50,00, clôture 50,05, plus haut 52, plus bas 48.
+V: chandelier, toupie
+
+## marteau | Marteau / pendu | technique | Hammer / Hanging man
+= marteau; pendu
+D: Bougie à petit corps en haut et longue mèche basse (au moins 2 fois le corps). Marteau après une baisse, pendu après une hausse.
+E: Ouverture 49,60, clôture 50,20, plus bas 47,80 : mèche basse de 1,80, 3 fois le corps.
+V: chandelier, etoile-filante
+
+## etoile-filante | Étoile filante / marteau inversé | technique | Shooting star / Inverted hammer
+= étoile filante; marteau inversé
+D: Bougie à petit corps en bas et longue mèche haute. Étoile filante après une hausse (rejet des prix élevés), marteau inversé après une baisse.
+E: Ouverture 72, plus haut 75,10, clôture 71,80 après une hausse.
+V: marteau, chandelier
+
+## toupie | Toupie et marubozu | technique | Spinning top / Marubozu
+= toupie; marubozu
+D: Toupie : petit corps, mèches des deux côtés (indécision). Marubozu : grand corps sans mèches (domination nette d'un camp).
+E: Un marubozu haussier ouvre au plus bas et clôture au plus haut.
+V: doji, chandelier
+
+## avalement | Avalement | technique | Engulfing pattern
+= avalement; avalements
+D: Configuration de deux bougies où le corps de la seconde englobe entièrement celui de la première, en sens inverse. Haussier après une baisse, baissier après une hausse.
+E: Corps 1 de 50,50 à 52,00 (baissier), corps 2 de 50,20 à 52,40 (haussier).
+V: harami, chandelier
+
+## harami | Harami | technique | Harami
+D: Configuration où une petite bougie a son corps contenu dans celui de la grande bougie précédente : essoufflement.
+E: Grand corps haussier de 30 à 33, puis petit corps baissier de 32,40 à 31,20.
+V: avalement
+
+## etoile-du-matin | Étoile du matin / du soir | technique | Morning star / Evening star
+= étoile du matin; étoile du soir; étoiles du matin; étoiles du soir
+D: Configuration de retournement à trois bougies : grande bougie dans le sens de la tendance, petite bougie, puis grande bougie inverse qui pénètre la première.
+E: Étoile du matin : grande bougie rouge, petite toupie, grande bougie verte.
+V: avalement, chandelier
+
+## trois-soldats | Trois soldats blancs / trois corbeaux | technique | Three white soldiers / Three black crows
+= trois soldats; trois corbeaux; trois soldats blancs; trois corbeaux noirs
+D: Trois grandes bougies successives dans le même sens, aux clôtures de plus en plus hautes (soldats) ou basses (corbeaux).
+E: Clôtures à 49,4, 50,8 et 52,2 avec de grands corps haussiers.
+V: chandelier
+
+## figure-chartiste | Figure chartiste | technique | Chart pattern
+= figure chartiste; figures chartistes
+D: Forme dessinée par les prix sur de nombreuses bougies, classée comme figure de retournement ou de continuation. Sa fiabilité est débattue et sa lecture subjective.
+E: Tête-épaules, double sommet, triangle, drapeau.
+V: tete-epaules, double-sommet, triangle, drapeau
+
+## tete-epaules | Tête-épaules | technique | Head and shoulders
+= tête-épaules; têtes-épaules
+D: Figure de retournement à trois sommets, celui du milieu plus haut ; signal à la cassure de la ligne de cou. La version inversée signale un retournement haussier.
+E: Tête à 120, ligne de cou à 110 : objectif théorique à 100.
+V: ligne-de-cou, figure-chartiste, double-sommet
+
+## ligne-de-cou | Ligne de cou | technique | Neckline
+= ligne de cou
+D: Ligne reliant les creux (ou les sommets) d'une tête-épaules ou d'un double sommet ; sa cassure complète la figure.
+E: Double creux à 80 avec un sommet intermédiaire à 90 : ligne de cou à 90.
+V: tete-epaules, double-sommet
+
+## double-sommet | Double sommet / double creux | technique | Double top / Double bottom
+= double sommet; double creux; doubles sommets; triple sommet; triple creux
+D: Figure de retournement formée de deux sommets (ou creux) à peu près au même niveau, confirmée par la cassure du creux (ou sommet) intermédiaire.
+E: Creux à 80 et 80,80, ligne de cou à 90 : objectif théorique à 100.
+V: ligne-de-cou, tete-epaules
+
+## triangle | Triangle | technique | Triangle
+= triangle; triangles
+D: Figure de consolidation à lignes convergentes : symétrique, ascendant (résistance plate, creux montants) ou descendant (support plat, sommets descendants).
+E: Résistance à 100 et creux à 94, 95,6, 97,6 : triangle ascendant.
+V: figure-chartiste, drapeau
+
+## drapeau | Drapeau / fanion | technique | Flag / Pennant
+= drapeau; drapeaux; fanion; fanions
+D: Figure de continuation : après un mouvement rapide (le mât), courte consolidation en petit canal (drapeau) ou petit triangle (fanion), puis reprise.
+E: Mât de 50 à 60, cassure à 58 : objectif théorique 68.
+V: triangle, figure-chartiste
+
+## biseau | Biseau | technique | Wedge
+= biseau; biseaux
+D: Figure à deux lignes convergentes inclinées dans le même sens. Le biseau ascendant est souvent considéré comme baissier, le descendant comme haussier.
+E: Prix qui monte dans un couloir de plus en plus étroit : biseau ascendant.
+V: triangle, figure-chartiste
+
+## rectangle | Rectangle | technique | Rectangle
+= -
+D: Figure de consolidation entre un support et une résistance horizontaux ; objectif théorique égal à sa hauteur.
+E: Range entre 98 et 106 : objectif de 8 points après la cassure.
+V: range, figure-chartiste
+
+## indicateur-technique | Indicateur technique | technique | Technical indicator
+= indicateur technique; indicateurs techniques
+D: Calcul appliqué aux prix et parfois aux volumes pour en extraire une information (tendance, élan, volatilité). Tous sont dérivés du prix et retardés.
+E: Moyenne mobile, RSI, MACD, ATR.
+V: oscillateur, moyenne-mobile, surcharge-indicateurs
+
+## oscillateur | Oscillateur | technique | Oscillator
+= oscillateur; oscillateurs
+D: Indicateur qui évolue entre des bornes ou autour d'une valeur centrale, mesurant l'élan ou la position du prix dans son amplitude récente.
+E: Le RSI (0 à 100) et le stochastique sont des oscillateurs.
+V: rsi, stochastique, momentum
+
+## momentum | Momentum (élan) | technique | Momentum
+= momentum; élan
+D: Vitesse ou force d'un mouvement de prix. En recherche financière, l'effet momentum désigne la tendance des actifs ayant le plus monté à continuer de surperformer sur quelques mois.
+E: Jegadeesh et Titman (1993) ont documenté l'effet momentum sur 3 à 12 mois.
+V: oscillateur, rsi, efficience-des-marches
+
+## moyenne-mobile | Moyenne mobile | technique | Moving average
+= moyenne mobile; moyennes mobiles
+D: Moyenne des derniers prix qui « glisse » à chaque période. Simple (SMA) ou exponentielle (EMA, plus réactive). Sert surtout à filtrer le contexte.
+E: SMA 5 de 10, 11, 12, 11, 13 = 11,40.
+V: sma, ema, croisement-de-moyennes
+
+## sma | SMA (moyenne mobile simple) | technique | Simple Moving Average
+= SMA; moyenne mobile simple; moyennes mobiles simples
+D: Moyenne arithmétique des N dernières clôtures. En tendance régulière, elle est en retard d'environ (N − 1) ÷ 2 périodes.
+E: SMA 20 dans une hausse régulière : retard d'environ 9,5 périodes.
+V: moyenne-mobile, ema
+
+## ema | EMA (moyenne mobile exponentielle) | technique | Exponential Moving Average
+= EMA; moyenne mobile exponentielle; moyennes mobiles exponentielles; moyennes exponentielles
+D: Moyenne qui donne plus de poids aux prix récents : EMA = prix × k + EMA précédente × (1 − k), avec k = 2 ÷ (N + 1).
+E: EMA 5 à 11,40, nouvelle clôture 14 : EMA ≈ 12,27.
+V: sma, moyenne-mobile, macd
+
+## croisement-de-moyennes | Croisement de moyennes (golden cross, death cross) | technique | Moving average crossover
+= croisement; croisements; golden cross; death cross
+D: Passage d'une moyenne mobile courte au-dessus (haussier) ou en dessous (baissier) d'une moyenne longue. Signal tardif, nombreux faux signaux en range.
+E: Golden cross : la moyenne 50 jours passe au-dessus de la moyenne 200 jours.
+V: moyenne-mobile
+
+## macd | MACD | technique | Moving Average Convergence Divergence
+= MACD
+D: Indicateur de tendance et d'élan : ligne MACD = EMA 12 − EMA 26 ; ligne de signal = EMA 9 du MACD ; histogramme = différence entre les deux.
+E: EMA 12 = 105,20, EMA 26 = 103,80 : MACD = +1,40.
+V: ema, divergence
+
+## rsi | RSI | technique | Relative Strength Index
+= RSI
+D: Oscillateur de Wilder (0 à 100) comparant les hausses et les baisses moyennes : RSI = 100 − 100 ÷ (1 + RS). Zones usuelles 70 (surachat) et 30 (survente).
+E: Hausses moyennes 0,90, baisses moyennes 0,60 : RS = 1,5, RSI = 60.
+V: oscillateur, surachat-survente, divergence
+
+## surachat-survente | Surachat / survente | technique | Overbought / Oversold
+= surachat; survente; suracheté; survendu
+D: Zones extrêmes d'un oscillateur (par exemple RSI au-dessus de 70 ou sous 30). Ce ne sont pas des signaux de retournement : en tendance, elles peuvent durer.
+E: Un RSI à 78 dans une forte hausse peut y rester des semaines.
+V: rsi, stochastique
+
+## stochastique | Stochastique | technique | Stochastic oscillator
+= stochastique
+D: Oscillateur de George Lane situant la clôture dans l'amplitude des N dernières périodes : %K = (C − bas) ÷ (haut − bas) × 100 ; %D = moyenne de %K.
+E: Haut 58, bas 50, clôture 56 : %K = 75.
+V: oscillateur, rsi
+
+## bandes-de-bollinger | Bandes de Bollinger | technique | Bollinger Bands
+= bandes de Bollinger; Bollinger
+D: Enveloppe autour d'une moyenne mobile 20, à ± 2 écarts-types. S'écarte quand la volatilité monte, se resserre (squeeze) quand elle baisse.
+E: SMA 20 = 100, écart-type = 2 : bandes à 96 et 104.
+V: ecart-type, volatilite, squeeze
+
+## squeeze | Squeeze (compression) | technique | Squeeze
+= squeeze
+D: Resserrement marqué des bandes de Bollinger, signe d'une volatilité anormalement faible, souvent suivie d'un mouvement plus ample dont le sens est inconnu.
+E: Largeur des bandes tombée à 2 % alors qu'elle était de 8 % le mois précédent.
+V: bandes-de-bollinger, volatilite
+
+## atr | ATR (Average True Range) | technique | Average True Range
+= ATR
+D: Moyenne du « true range » sur N périodes (14 par défaut) : mesure de volatilité en unités de prix, utilisée pour placer les stops et dimensionner les positions.
+E: ATR de 1,20 € : un stop à 2 ATR est placé à 2,40 € de l'entrée.
+V: true-range, volatilite, stop-loss, taille-de-position
+
+## true-range | True Range | technique | True Range
+= true range; TR
+D: Amplitude d'une bougie intégrant les gaps : max(haut − bas ; |haut − clôture précédente| ; |bas − clôture précédente|).
+E: Clôture précédente 50, haut 53, bas 51,50 : true range = 3.
+V: atr, gap
+
+## vwap | VWAP | technique | Volume Weighted Average Price
+= VWAP
+D: Prix moyen pondéré par les volumes depuis le début de la séance. Référence d'exécution des institutionnels et repère intraday.
+E: 2 000 titres à 100, 3 000 à 101 et 1 000 à 99,50 : VWAP ≈ 100,42.
+V: volume, institutionnels, day-trading
+
+## ichimoku | Ichimoku | technique | Ichimoku Kinko Hyo
+= Ichimoku
+D: Système d'indicateurs (Tenkan, Kijun, nuage formé par Senkou A et B projetées 26 périodes en avant, Chikou) résumant tendance, élan et zones de support et résistance.
+E: Prix au-dessus du nuage : contexte haussier.
+V: moyenne-mobile, support, resistance
+
+## fibonacci | Retracements de Fibonacci | technique | Fibonacci retracements
+= Fibonacci; retracements de Fibonacci; retracement
+D: Niveaux de repli possibles d'un mouvement : 23,6 ; 38,2 ; 50 ; 61,8 et 78,6 %. Fondement théorique faible ; utiles surtout comme zones surveillées par beaucoup d'intervenants.
+E: Hausse de 80 à 120 : retracement de 61,8 % à 95,28.
+V: support, pullback
+
+## divergence | Divergence | technique | Divergence
+= divergence; divergences
+D: Désaccord entre le prix et un oscillateur : nouveau sommet du prix sans nouveau sommet de l'oscillateur (divergence baissière), ou l'inverse. Signale un essoufflement, pas un retournement.
+E: Prix 112 puis 113,5 ; RSI 74 puis 63 : divergence baissière.
+V: rsi, macd, oscillateur
+
+## ecart-type | Écart-type | technique | Standard deviation
+= écart-type; écarts-types
+D: Mesure statistique de la dispersion des valeurs autour de leur moyenne. Appliqué aux rendements, il mesure la volatilité.
+E: Rendements de +1 ; −0,5 ; +1,5 ; −1 ; 0 % : écart-type ≈ 1,04 %.
+V: volatilite, bandes-de-bollinger
+
+## surcharge-indicateurs | Surcharge d'indicateurs | technique | Indicator overload
+= surcharge d'indicateurs
+D: Accumulation d'indicateurs redondants sur un graphique, qui donne une fausse impression de confirmation et favorise le surapprentissage.
+E: RSI, stochastique et Williams %R mesurent tous l'élan à partir des mêmes prix.
+V: indicateur-technique, surapprentissage
+
+## obv | OBV (On-Balance Volume) | technique | On-Balance Volume
+= OBV
+D: Indicateur de volume cumulé : on ajoute le volume des séances haussières et on retranche celui des séances baissières. Sert à vérifier si le volume accompagne la tendance.
+E: Prix stable mais OBV en hausse : les volumes des séances haussières dominent.
+V: volume, divergence
+
+## cci-williams | CCI et Williams %R | technique | Commodity Channel Index / Williams %R
+= CCI; Williams %R
+D: Deux oscillateurs d'élan proches du RSI et du stochastique ; les utiliser ensemble crée de la redondance.
+E: Williams %R = −20 correspond à une clôture dans le haut de l'amplitude récente, comme un stochastique à 80.
+V: oscillateur, stochastique, surcharge-indicateurs
+
+## apophenie | Apophénie | technique | Apophenia
+= apophénie
+D: Tendance du cerveau à percevoir des motifs ou des liens dans des données aléatoires.
+E: Voir un « support » solide sur une courbe entièrement tirée au sort.
+V: analyse-technique, biais-retrospectif
+
+% ===================================================================== ANALYSE FONDAMENTALE
+## analyse-fondamentale | Analyse fondamentale | fondamentale | Fundamental analysis
+= analyse fondamentale
+D: Étude des facteurs qui déterminent la valeur d'un actif : situation économique, politique monétaire, résultats et valorisation des entreprises.
+E: Comparer le PER d'une entreprise à celui de son secteur et à sa croissance attendue.
+V: analyse-technique, per, pib
+
+## pib | PIB (produit intérieur brut) | fondamentale | GDP (Gross Domestic Product)
+= PIB
+D: Valeur de la production d'un pays sur une période. Sa croissance mesure l'activité. Publié chaque trimestre (annualisé aux États-Unis, trimestriel brut en zone euro).
+E: +0,5 % sur un trimestre ≈ +2,02 % en rythme annualisé.
+V: inflation, pmi, calendrier-economique
+
+## inflation | Inflation | fondamentale | Inflation
+= inflation
+D: Hausse générale et durable des prix, mesurée notamment par l'indice des prix à la consommation. Les banques centrales visent en général environ 2 % à moyen terme.
+E: IPC passé de 101,6 à 104,2 en un an : inflation ≈ 2,56 %.
+V: ipc, taux-directeur, taux-reel
+
+## ipc | IPC et inflation sous-jacente | fondamentale | CPI (Consumer Price Index) / Core inflation
+= IPC; IPCH; CPI; inflation sous-jacente
+D: Indice des prix à la consommation (IPCH harmonisé en zone euro, CPI aux États-Unis). L'inflation sous-jacente exclut les éléments volatils comme l'énergie et l'alimentation.
+E: Une inflation sous-jacente plus forte que prévu fait craindre des taux plus élevés.
+V: inflation, calendrier-economique
+
+## nfp | Rapport sur l'emploi (NFP) | fondamentale | Non-Farm Payrolls
+= NFP; rapport mensuel sur l'emploi; créations d'emplois
+D: Publication mensuelle américaine des créations d'emplois hors secteur agricole, avec le taux de chômage et les salaires. Très suivie, elle provoque souvent de forts mouvements.
+E: Consensus 180 000, chiffre publié 250 000, mais mois précédent révisé de −50 000.
+V: calendrier-economique, taux-de-chomage, surprise-economique
+
+## taux-de-chomage | Taux de chômage | fondamentale | Unemployment rate
+= taux de chômage
+D: Part de la population active sans emploi et en recherche d'emploi. Indicateur clé du mandat de la Fed.
+E: Un taux de chômage qui passe de 4,1 % à 4,0 % signale un marché du travail solide.
+V: nfp, fed
+
+## pmi | PMI (indice des directeurs d'achat) | fondamentale | Purchasing Managers' Index
+= PMI
+D: Enquête mensuelle auprès des entreprises. Au-dessus de 50 : activité en expansion ; en dessous : en contraction. Publiée tôt, elle anticipe souvent les statistiques officielles.
+E: Un PMI manufacturier à 48,7 signale une contraction de l'industrie.
+V: pib, calendrier-economique
+
+## banque-centrale | Banque centrale | fondamentale | Central bank
+= banque centrale; banques centrales
+D: Institution qui conduit la politique monétaire (taux directeurs, bilan) et veille à la stabilité des prix et du système financier.
+E: La BCE pour la zone euro, la Fed pour les États-Unis.
+V: bce, fed, taux-directeur
+
+## bce | BCE (Banque centrale européenne) | fondamentale | ECB (European Central Bank)
+= BCE
+D: Banque centrale de la zone euro, à Francfort, dont le mandat principal est la stabilité des prix (objectif de 2 % à moyen terme). Elle décide de sa politique monétaire environ toutes les six semaines.
+E: Une décision de la BCE peut faire bouger fortement l'EUR/USD et les obligations européennes.
+V: banque-centrale, fed, taux-directeur
+
+## fed | Fed (Réserve fédérale) | fondamentale | Federal Reserve
+= Fed; Réserve fédérale; FOMC
+D: Banque centrale des États-Unis, au double mandat : stabilité des prix et plein emploi. Son comité, le FOMC, se réunit 8 fois par an et fixe la fourchette cible des fonds fédéraux.
+E: Une conférence de presse du président de la Fed peut provoquer des mouvements violents sur tous les marchés.
+V: banque-centrale, bce, taux-directeur
+
+## taux-directeur | Taux directeur | fondamentale | Policy rate / Key interest rate
+= taux directeur; taux directeurs
+D: Taux d'intérêt de court terme fixé par une banque centrale, qui influence l'ensemble des taux de l'économie.
+E: Relever les taux directeurs renchérit le crédit pour freiner l'inflation.
+V: banque-centrale, taux-reel, hawkish-dovish
+
+## taux-reel | Taux réel | fondamentale | Real interest rate
+= taux réel; taux réels
+D: Taux nominal diminué de l'inflation : il mesure le vrai coût de l'argent.
+E: Taux de 3,50 % et inflation de 2,40 % : taux réel ≈ +1,10 %.
+V: taux-directeur, inflation
+
+## hawkish-dovish | Hawkish / dovish | fondamentale | Hawkish / Dovish
+= hawkish; dovish
+D: Qualifie le ton d'une banque centrale : hawkish (« faucon »), priorité à la lutte contre l'inflation, taux plus hauts ; dovish (« colombe »), priorité au soutien de l'activité.
+E: Un discours plus hawkish que prévu fait souvent monter la devise et baisser les obligations.
+V: banque-centrale, forward-guidance
+
+## qe | Assouplissement quantitatif (QE) | fondamentale | Quantitative easing / tightening (QE / QT)
+= assouplissement quantitatif; QE; QT
+D: Achats massifs de titres (surtout obligations) par une banque centrale pour faire baisser les taux longs ; le resserrement quantitatif (QT) est l'opération inverse.
+E: Pendant les phases de QE, la banque centrale devient un très gros acheteur d'obligations d'État.
+V: banque-centrale, rendement-obligataire
+
+## forward-guidance | Forward guidance | fondamentale | Forward guidance
+= forward guidance
+D: Communication d'une banque centrale sur l'orientation future de sa politique, pour guider les anticipations des marchés.
+E: « Les taux resteront à ce niveau tant que l'inflation ne sera pas revenue vers 2 % ».
+V: banque-centrale, hawkish-dovish
+
+## carry-trade | Carry trade | fondamentale | Carry trade
+= carry trade
+D: Stratégie consistant à emprunter dans une devise à taux bas pour placer dans une devise à taux élevé. Rentable tant que le change reste stable, elle peut se retourner brutalement.
+E: Écart de taux de 2,25 points sur 100 000 € : 2 250 € d'intérêts par an, avant le risque de change.
+V: swap, taux-directeur
+
+## calendrier-economique | Calendrier économique | fondamentale | Economic calendar
+= calendrier économique
+D: Liste des publications économiques et événements à venir, avec heure, importance, chiffre précédent, consensus et chiffre réel.
+E: Vérifier le calendrier chaque matin pour éviter d'être en position pendant une annonce majeure.
+V: consensus, surprise-economique, nfp
+
+## consensus | Consensus | fondamentale | Consensus / Forecast
+= consensus
+D: Prévision moyenne des économistes ou des analystes pour une statistique ou un résultat d'entreprise. Les marchés réagissent à l'écart avec le consensus.
+E: Consensus de BPA à 2,15 €, publié 2,10 € : résultat inférieur aux attentes.
+V: surprise-economique, calendrier-economique, beat-miss
+
+## surprise-economique | Surprise (économique) | fondamentale | Surprise
+= surprise
+D: Écart entre le chiffre publié et le consensus. C'est elle, plus que le chiffre lui-même, qui fait bouger les prix.
+E: Inflation publiée à 3,2 % pour un consensus de 2,9 % : surprise de +0,3 point.
+V: consensus, calendrier-economique
+
+## revision | Révision | fondamentale | Revision
+= révision; révisions; révisé
+D: Correction d'une statistique déjà publiée lors d'une publication ultérieure. Elle peut modifier fortement l'interprétation d'un nouveau chiffre.
+E: Créations d'emplois du mois précédent révisées de 200 000 à 150 000.
+V: nfp, surprise-economique
+
+## resultats-entreprise | Résultats d'entreprise | fondamentale | Earnings
+= résultats d'entreprise; publication de résultats; publications de résultats
+D: Comptes publiés périodiquement par une société cotée : chiffre d'affaires, marges, résultat net, BPA, perspectives. Publiés souvent hors séance, ils provoquent des gaps.
+E: Chiffre d'affaires +10 % mais marge en baisse et BPA sous le consensus : le cours peut baisser.
+V: bpa, guidance, gap, beat-miss
+
+## chiffre-d-affaires | Chiffre d'affaires | fondamentale | Revenue / Sales
+= chiffre d'affaires
+D: Total des ventes d'une entreprise sur une période.
+E: 2 200 M€ de chiffre d'affaires contre 2 000 M€ l'an passé : +10 %.
+V: marge-operationnelle, resultat-net
+
+## marge-operationnelle | Marge opérationnelle / marge nette | fondamentale | Operating margin / Net margin
+= marge opérationnelle; marge nette; marges
+D: Part du chiffre d'affaires qui reste en bénéfice, avant (opérationnelle) ou après (nette) frais financiers et impôts.
+E: Résultat opérationnel 308 M€ pour 2 200 M€ de ventes : marge de 14 %.
+V: chiffre-d-affaires, resultat-net
+
+## resultat-net | Résultat net | fondamentale | Net income
+= résultat net
+D: Bénéfice (ou perte) final d'une entreprise après toutes les charges et les impôts.
+E: Résultat net de 210 M€ pour 100 millions d'actions : BPA de 2,10 €.
+V: bpa, marge-operationnelle
+
+## bpa | BPA (bénéfice par action) | fondamentale | EPS (Earnings Per Share)
+= BPA; bénéfice par action
+D: Résultat net divisé par le nombre d'actions.
+E: 60 M€ de résultat net et 40 millions d'actions : BPA de 1,50 €.
+V: per, resultat-net
+
+## guidance | Guidance (perspectives) | fondamentale | Guidance / Outlook
+= guidance
+D: Prévisions communiquées par la direction d'une entreprise pour les périodes à venir. Elle pèse souvent plus que les résultats passés.
+E: Une entreprise bat le consensus mais abaisse sa guidance : l'action chute.
+V: resultats-entreprise, beat-miss
+
+## beat-miss | Beat / miss | fondamentale | Beat / Miss
+= beat; miss
+D: Jargon : un résultat « beat » dépasse le consensus, un « miss » est inférieur.
+E: BPA de 1,50 € pour un consensus de 1,40 € : beat de 7 %.
+V: consensus, resultats-entreprise
+
+## capitalisation-boursiere | Capitalisation boursière | fondamentale | Market capitalization
+= capitalisation boursière
+D: Valeur en bourse d'une société : cours × nombre d'actions.
+E: 45 € × 200 millions d'actions = 9 milliards €.
+V: per, action
+
+## per | PER (Price Earnings Ratio) | fondamentale | P/E ratio
+= PER
+D: Cours divisé par le BPA : nombre d'années de bénéfices actuels payées par le marché. À comparer au secteur, à l'historique et à la croissance.
+E: Action à 45 € et BPA de 3 € : PER de 15.
+V: bpa, peg, rendement-des-benefices
+
+## peg | PEG | fondamentale | PEG ratio
+= PEG
+D: PER divisé par le taux de croissance annuel attendu du BPA (en %). Tente de tenir compte de la croissance dans la valorisation.
+E: PER 15 et croissance de 10 % par an : PEG = 1,5.
+V: per
+
+## rendement-des-benefices | Rendement des bénéfices | fondamentale | Earnings yield
+= rendement des bénéfices
+D: Inverse du PER (BPA ÷ cours), parfois comparé au rendement des obligations d'État, une comparaison discutée.
+E: PER de 15 : rendement des bénéfices ≈ 6,7 %.
+V: per, rendement-obligataire
+
+## dividende | Dividende | fondamentale | Dividend
+= dividende; dividendes
+D: Part des bénéfices distribuée aux actionnaires. Le jour du détachement, le cours baisse en principe d'autant.
+E: Dividende de 1,35 € par action.
+V: rendement-du-dividende, taux-de-distribution
+
+## rendement-du-dividende | Rendement du dividende | fondamentale | Dividend yield
+= rendement du dividende
+D: Dividende par action divisé par le cours. Un rendement très élevé peut signaler un dividende menacé.
+E: Dividende de 1,35 € pour un cours de 45 € : rendement de 3 %.
+V: dividende, taux-de-distribution
+
+## taux-de-distribution | Taux de distribution | fondamentale | Payout ratio
+= taux de distribution
+D: Part du bénéfice versée en dividendes : dividende ÷ BPA.
+E: Dividende de 1,35 € pour un BPA de 3 € : 45 %.
+V: dividende, bpa
+
+## sentiment-de-marche | Sentiment de marché | fondamentale | Market sentiment
+= sentiment de marché; sentiment
+D: Humeur collective des investisseurs, entre optimisme et peur. Elle peut éloigner durablement les prix de ce que justifient les fondamentaux.
+E: Un VIX qui double signale une montée brutale de la peur.
+V: risk-on-risk-off, vix, cot
+
+## risk-on-risk-off | Risk-on / risk-off | fondamentale | Risk-on / Risk-off
+= risk-on; risk-off
+D: Risk-on : appétit pour le risque (actions, devises cycliques, cryptos recherchées). Risk-off : fuite vers les valeurs refuges.
+E: En risk-off, le yen, le franc suisse et les obligations d'État ont souvent tendance à monter.
+V: valeur-refuge, sentiment-de-marche
+
+## valeur-refuge | Valeur refuge | fondamentale | Safe haven
+= valeur refuge; valeurs refuges
+D: Actif recherché en période de crise ou d'incertitude : or, obligations d'État solides, dollar, yen, franc suisse (le statut n'est jamais garanti).
+E: Lors d'un choc géopolitique, l'or progresse souvent.
+V: risk-on-risk-off
+
+## vix | VIX | fondamentale | VIX (CBOE Volatility Index)
+= VIX; VSTOXX
+D: Indice de volatilité implicite à 30 jours du S&P 500, tiré des prix des options, surnommé « indice de la peur ». Mouvement journalier typique ≈ VIX ÷ √252.
+E: VIX à 20 : environ 1,26 % de mouvement typique par jour.
+V: volatilite-implicite, sentiment-de-marche
+
+## volatilite-implicite | Volatilité implicite | fondamentale | Implied volatility
+= volatilité implicite
+D: Volatilité future anticipée par le marché, déduite des prix des options. Elle monte avant les événements incertains et chute souvent après.
+E: Avant des résultats, la volatilité implicite d'une action peut doubler.
+V: vix, vega, volatilite
+
+## cot | Rapport COT | fondamentale | Commitments of Traders report
+= COT
+D: Rapport hebdomadaire de l'autorité américaine des marchés à terme (CFTC) détaillant les positions sur les futures par catégorie d'intervenants.
+E: Des positions spéculatives acheteuses record sur une devise peuvent signaler un excès d'optimisme.
+V: sentiment-de-marche
+
+## ratio-put-call | Ratio put/call | fondamentale | Put/call ratio
+= ratio put/call
+D: Volume d'options de vente rapporté au volume d'options d'achat ; utilisé comme indicateur de sentiment.
+E: Un ratio élevé signale beaucoup d'achats de protection, donc de la crainte.
+V: sentiment-de-marche, put, call
+
+## buy-the-rumor | Buy the rumor, sell the news | fondamentale | Buy the rumor, sell the news
+= acheter la rumeur, vendre la nouvelle; buy the rumor
+D: Adage : un événement attendu est déjà intégré dans les prix ; quand il survient, les prises de bénéfices font souvent baisser le prix.
+E: Une baisse de taux largement anticipée fait parfois baisser les actions le jour de l'annonce.
+V: consensus, sentiment-de-marche
+
+## ebitda | EBITDA (EBE) | fondamentale | EBITDA
+= EBITDA
+D: Résultat avant intérêts, impôts, dépréciations et amortissements, proche de l'excédent brut d'exploitation. Utilisé dans le ratio valeur d'entreprise / EBITDA.
+E: Une entreprise très endettée peut avoir un bon EBITDA mais un résultat net faible à cause des intérêts.
+V: resultat-net, per
+
+## ifo-zew | Indices IFO et ZEW | fondamentale | IFO / ZEW indices
+= IFO; ZEW
+D: Enquêtes allemandes de confiance : IFO auprès des entreprises, ZEW auprès des analystes et investisseurs. Suivies comme indicateurs avancés de l'économie de la zone euro.
+E: Une chute du ZEW plus forte que prévu peut peser sur l'euro.
+V: pmi, calendrier-economique
+
+% ===================================================================== GESTION DU RISQUE
+## gestion-du-risque | Gestion du risque | risque | Risk management
+= gestion du risque
+D: Ensemble des règles qui limitent les pertes : risque par trade, taille de position, stops, exposition totale, corrélation, limites de perte. Priorité absolue du trader.
+E: Ne jamais risquer plus de 1 % du capital sur un trade, ni plus de 2 % sur une même idée.
+V: risque-par-trade, taille-de-position, stop-loss, drawdown
+
+## asymetrie-pertes | Asymétrie des pertes et des gains | risque | Loss recovery asymmetry
+= asymétrie
+D: Pour compenser une perte P, il faut un gain de P ÷ (1 − P) : l'effort de récupération croît très vite avec la perte.
+E: −50 % exige +100 % ; −20 % exige +25 %.
+V: drawdown, gestion-du-risque
+
+## risque-par-trade | Risque par trade | risque | Risk per trade
+= risque par trade
+D: Perte maximale prévue si le stop est touché, en pourcentage du capital. Convention prudente : 0,5 à 2 %. À distinguer du montant investi.
+E: Capital de 10 000 €, risque de 1 % : 100 € de perte prévue au maximum.
+V: regle-des-1-2, taille-de-position, stop-loss
+
+## regle-des-1-2 | Règle des 1 à 2 % | risque | 1-2% rule
+= règle des 1 à 2 %; règle des 1-2 %
+D: Convention de prudence consistant à ne pas risquer plus de 1 à 2 % du capital par trade. Ce n'est pas une loi démontrée, mais elle protège des séries de pertes.
+E: Après 10 pertes à 1 %, il reste 9 044 € sur 10 000 € ; à 10 %, 3 487 €.
+V: risque-par-trade, critere-de-kelly
+
+## taille-de-position | Taille de position | risque | Position size
+= taille de position; tailles de position; taille de la position
+D: Quantité à trader, calculée à partir du risque accepté et de la distance au stop : taille = risque ÷ (distance × valeur unitaire), arrondie vers le bas.
+E: Risque 200 €, stop à 1,70 € : 117 actions.
+V: risque-par-trade, stop-loss, valeur-du-pip
+
+## stop-loss | Stop loss | risque | Stop-loss
+= stop loss; stops loss; stop-loss
+D: Niveau où l'on coupe une position perdante, placé là où l'hypothèse du trade est invalidée (structure, ATR, temps). Ne jamais l'éloigner.
+E: Achat à 103,60 avec stop sous le dernier creux à 101,83.
+V: ordre-stop, take-profit, taille-de-position, atr
+
+## take-profit | Take profit (objectif) | risque | Take profit / Profit target
+= take profit; objectif de gain
+D: Niveau où l'on prévoit d'encaisser le gain : niveau technique, multiple du risque, sortie partielle ou trailing stop.
+E: Entrée 50, stop 48, take profit 56 : objectif à 3R.
+V: stop-loss, ratio-risque-rendement, oco
+
+## multiple-r | R (multiple du risque) | risque | R-multiple
+= -
+D: Unité de mesure d'un trade en multiples du risque initial. Un gain de 2R vaut deux fois la somme risquée.
+E: Risque de 100 € et gain de 250 € : +2,5R.
+V: ratio-risque-rendement, esperance-mathematique
+
+## ratio-risque-rendement | Ratio risque/rendement | risque | Risk/reward ratio
+= ratio risque/rendement; risque/rendement; R/R
+D: Rapport entre le gain visé et le risque. Le taux de réussite minimal sans frais est 1 ÷ (1 + R). Un bon ratio seul ne garantit rien.
+E: Risque 2, gain visé 6 : ratio 1:3, seuil de réussite 25 %.
+V: multiple-r, taux-de-reussite, esperance-mathematique
+
+## taux-de-reussite | Taux de réussite (win rate) | risque | Win rate / Hit rate
+= taux de réussite
+D: Pourcentage de trades gagnants. À lire toujours avec le gain moyen et la perte moyenne : un taux élevé peut cacher une stratégie perdante.
+E: 70 % de réussite avec +0,8R / −2R : espérance −0,04R.
+V: esperance-mathematique, ratio-risque-rendement
+
+## esperance-mathematique | Espérance mathématique | risque | Expectancy / Expected value
+= espérance mathématique; espérance
+D: Gain moyen attendu par trade sur un grand nombre de trades : réussite × gain moyen − échec × perte moyenne, après frais. Condition nécessaire pour gagner à long terme.
+E: 44 % × 2,1R − 56 % × 1R = +0,364R par trade.
+V: taux-de-reussite, profit-factor, multiple-r
+
+## drawdown | Drawdown | risque | Drawdown
+= drawdown; drawdowns
+D: Baisse du capital depuis son plus haut précédent. Le drawdown maximal est la pire baisse du pic au creux sur une période.
+E: Pic à 11 200 €, creux à 9 100 € : drawdown de 18,75 %.
+V: asymetrie-pertes, drawdown-maximal
+
+## drawdown-maximal | Drawdown maximal | risque | Maximum drawdown
+= drawdown maximal; drawdown max
+D: Plus forte baisse observée du pic au creux. Indicateur clé de la « douleur » d'une stratégie ; il faut s'attendre à pire en réel qu'en backtest.
+E: Capital 6 100 € puis 5 200 € : drawdown maximal de 14,8 %.
+V: drawdown, ratio-de-calmar
+
+## serie-de-pertes | Série de pertes | risque | Losing streak
+= série de pertes; séries de pertes; pertes consécutives
+D: Succession de trades perdants. Inévitable sur un grand nombre de trades, même avec une stratégie gagnante.
+E: Avec 45 % de réussite, une série d'au moins 8 pertes a environ 53 % de chances de survenir en 200 trades.
+V: risque-de-ruine, drawdown
+
+## risque-de-ruine | Risque de ruine | risque | Risk of ruin
+= risque de ruine
+D: Probabilité de perdre une part du capital telle qu'on ne peut plus continuer. Il augmente très vite avec le risque par trade. Les formules reposent sur des hypothèses irréalistes.
+E: Pari 55 % / 45 % à mise fixe de 10 % du capital : (0,45 ÷ 0,55)^10 ≈ 13 %.
+V: serie-de-pertes, risque-par-trade
+
+## critere-de-kelly | Critère de Kelly | risque | Kelly criterion
+= critère de Kelly; Kelly
+D: Formule f = p − (1 − p) ÷ R donnant la fraction du capital qui maximise la croissance à long terme si l'on connaît parfaitement les probabilités. En pratique, trop agressive.
+E: p = 0,45 et R = 1,5 : f ≈ 8,3 % par trade, bien au-delà de ce qu'utilisent les professionnels.
+V: risque-par-trade, regle-des-1-2
+
+## correlation | Corrélation | risque | Correlation
+= corrélation; corrélations; corrélées; corrélés
+D: Tendance de deux actifs à évoluer ensemble, mesurée entre −1 et +1. Des positions corrélées concentrent le risque ; les corrélations montent souvent en crise.
+E: Deux positions à 1 % avec une corrélation de 0,8 : risque combiné ≈ 1,90 %.
+V: diversification, exposition
+
+## diversification | Diversification | risque | Diversification
+= diversification; diversifié
+D: Répartition du risque entre des positions peu corrélées, pour réduire la variabilité globale. Elle ne fonctionne que si les corrélations restent faibles.
+E: Acheter EUR/USD et vendre USD/CHF n'est pas une diversification : c'est deux fois le même pari.
+V: correlation
+
+## couverture | Couverture | risque | Hedging
+= couverture; se couvrir; couvrir
+D: Prise d'une position destinée à compenser le risque d'une autre position ou d'une activité.
+E: Une entreprise qui sera payée en dollars vend ces dollars à terme pour fixer son taux de change.
+V: forward, put, produit-derive
+
+## limite-de-perte | Limites de perte (journalière, hebdomadaire) | risque | Daily / weekly loss limit
+= limite de perte; limites de perte; limite journalière; perte maximale journalière
+D: Seuils de perte décidés à l'avance au-delà desquels on cesse de trader pour la journée, la semaine, ou l'on réduit la taille.
+E: Limite journalière de 2 % : après deux pertes de 1 %, arrêt jusqu'au lendemain.
+V: gestion-du-risque, revenge-trading
+
+## risque-de-contrepartie | Risque de contrepartie | risque | Counterparty risk
+= risque de contrepartie
+D: Risque que la partie avec laquelle on a conclu un contrat (courtier, émetteur) ne puisse pas honorer ses engagements.
+E: Avec un CFD, si le courtier fait faillite, la protection dépend de la ségrégation des fonds et des mécanismes de garantie.
+V: gre-a-gre, segregation-des-fonds
+
+% ===================================================================== STRATÉGIE (classée en gestion du risque)
+## plan-de-trading | Plan de trading | risque | Trading plan
+= plan de trading
+D: Document écrit qui définit marchés, setups, règles d'entrée et de sortie, taille, limites et routine. Il sert de référence pour juger chaque décision.
+E: « Setup A : pullback sur EMA 20 en tendance haussière journalière, stop sous le creux + 0,5 ATR, objectif 2R, risque 1 %. »
+V: setup, journal-de-trading, checklist
+
+## backtest | Backtest | risque | Backtesting
+= backtest; backtests; backtesting
+D: Application de règles de trading sur des données passées pour en mesurer les résultats, frais et slippage compris.
+E: 150 trades simulés : espérance brute +0,25R, nette +0,17R.
+V: forward-test, surapprentissage, biais-du-survivant
+
+## forward-test | Forward test | risque | Forward testing / Paper trading
+= forward test; forward testing; paper trading
+D: Application d'une stratégie en temps réel, sur compte démo ou à très petite taille, pour vérifier les résultats du backtest dans des conditions réelles.
+E: 40 trades en démo : espérance proche de zéro alors que le backtest donnait +0,26R.
+V: backtest, compte-demo
+
+## hors-echantillon | Test hors échantillon | risque | Out-of-sample test
+= hors échantillon
+D: Test d'une stratégie sur des données qui n'ont pas servi à la concevoir. Indispensable pour détecter le surapprentissage.
+E: Optimiser sur 2015-2021, puis tester une seule fois sur 2022-2024.
+V: surapprentissage, backtest
+
+## surapprentissage | Surapprentissage | risque | Overfitting / Curve fitting
+= surapprentissage; suroptimisée; suroptimisés; suroptimisation
+D: Ajustement excessif d'une stratégie aux données passées : elle « apprend » le bruit et échoue sur des données nouvelles.
+E: Profit factor de 2,4 avec une SMA 37 mais de 1,0 avec 35 ou 40.
+V: hors-echantillon, backtest, biais-de-selection
+
+## biais-du-survivant | Biais du survivant | risque | Survivorship bias
+= biais du survivant
+D: Erreur consistant à n'étudier que ce qui a « survécu » (actions encore cotées, fonds encore ouverts, traders encore actifs), ce qui surestime les performances.
+E: Tester une stratégie sur les membres actuels d'un indice ignore les sociétés sorties après de fortes baisses.
+V: backtest, biais-de-selection
+
+## biais-d-anticipation | Biais d'anticipation (look-ahead) | risque | Look-ahead bias
+= biais d'anticipation; look-ahead
+D: Utilisation, dans un test, d'une information qui n'était pas disponible au moment de la décision.
+E: Décider d'acheter à l'ouverture en utilisant la clôture du même jour.
+V: backtest
+
+## biais-de-selection | Biais de sélection | risque | Selection bias / Data snooping
+= biais de sélection
+D: Ne retenir que la période, le marché ou la variante qui donne de bons résultats parmi de nombreux essais.
+E: Tester 1 000 combinaisons de paramètres et ne montrer que la meilleure.
+V: surapprentissage, biais-du-survivant
+
+## profit-factor | Profit factor | risque | Profit factor
+= profit factor
+D: Gains bruts divisés par pertes brutes. Supérieur à 1 : la stratégie gagne ; au-delà de 2 sur longue période, méfiance (surapprentissage ?).
+E: Gains 14,5R, pertes 11,5R : profit factor ≈ 1,26.
+V: esperance-mathematique, drawdown-maximal
+
+## ratio-de-sharpe | Ratio de Sharpe | risque | Sharpe ratio
+= ratio de Sharpe; Sharpe
+D: Rendement moyen au-dessus du taux sans risque, divisé par l'écart-type des rendements ; mesure du rendement par unité de risque. S'annualise par √12 pour des données mensuelles.
+E: Moyenne 0,667 %, taux sans risque 0,25 %, écart-type 1,239 % par mois : Sharpe ≈ 1,16 annualisé.
+V: ratio-de-calmar, ecart-type
+
+## ratio-de-calmar | Ratio de Calmar | risque | Calmar ratio
+= ratio de Calmar; Sortino
+D: Rendement annuel divisé par le drawdown maximal. Variante du raisonnement « rendement par unité de risque », comme le ratio de Sortino qui ne pénalise que la volatilité baissière.
+E: 12 % de rendement annuel pour 20 % de drawdown maximal : Calmar de 0,6.
+V: ratio-de-sharpe, drawdown-maximal
+
+## erreur-type | Erreur type et taille d'échantillon | risque | Standard error / Sample size
+= erreur type; taille d'échantillon; intervalle de confiance
+D: Incertitude sur une moyenne mesurée : écart-type ÷ √n. L'intervalle de confiance à 95 % vaut environ ± 1,96 erreur type.
+E: 20 trades, écart-type 1,48R : erreur type ≈ 0,33R ; espérance de +0,15R compatible avec zéro.
+V: esperance-mathematique, backtest
+
+## setup | Setup | risque | Setup
+= setup; setups
+D: Configuration de marché précise, définie dans le plan de trading, qui autorise une entrée.
+E: « Pullback sur EMA 20 en tendance haussière avec RSI au-dessus de 40 ».
+V: plan-de-trading, checklist
+
+% ===================================================================== PSYCHOLOGIE
+## peur-avidite | Peur et avidité | psychologie | Fear and greed
+= peur et avidité; avidité
+D: Les deux émotions dominantes du trading : la peur fait couper les gains trop tôt ou empêche d'agir ; l'avidité fait grossir les positions et viser trop loin.
+E: Sortir à +0,8R par peur alors que le plan visait +1,5R.
+V: fomo, aversion-a-la-perte, discipline
+
+## fomo | FOMO | psychologie | Fear Of Missing Out
+= FOMO
+D: Peur de rater un mouvement, qui pousse à entrer en retard, sans setup, souvent avec un mauvais ratio risque/rendement.
+E: Acheter après une hausse de 4 ATR avec un stop à 4,5 ATR et un objectif à 2 ATR.
+V: peur-avidite, surtrading
+
+## revenge-trading | Revenge trading (trading de revanche) | psychologie | Revenge trading
+= revenge trading; trading de revanche; revanche
+D: Reprendre immédiatement une position, souvent plus grosse, après une perte, pour « se refaire ». Une cause majeure de journées catastrophiques.
+E: Deux pertes de 1 %, puis un trade à 3 % de risque : 5 % de perte au lieu de 2 %.
+V: limite-de-perte, tilt
+
+## surtrading | Surtrading | psychologie | Overtrading
+= surtrading
+D: Trader trop souvent, hors de son plan, par ennui, excitation ou pour atteindre un objectif de gain. Multiplie les frais et les erreurs.
+E: 6 trades impulsifs par semaine à −0,3R effacent 4 trades planifiés à +0,2R.
+V: fomo, revenge-trading, frais-de-transaction
+
+## tilt | Tilt | psychologie | Tilt
+= tilt
+D: État émotionnel (frustration, colère, euphorie) dans lequel on ne respecte plus ses règles. Terme venu du poker.
+E: Après une perte injuste, un trader en tilt enchaîne les trades sans setup.
+V: revenge-trading, discipline
+
+## biais-cognitif | Biais cognitif | psychologie | Cognitive bias
+= biais cognitif; biais cognitifs
+D: Raccourci de pensée qui fausse le jugement de façon systématique et prévisible, étudié notamment par Kahneman et Tversky.
+E: Le biais de confirmation, l'ancrage, l'excès de confiance.
+V: biais-de-confirmation, ancrage, aversion-a-la-perte
+
+## biais-de-confirmation | Biais de confirmation | psychologie | Confirmation bias
+= biais de confirmation
+D: Tendance à chercher et retenir les informations qui confirment ce que l'on pense déjà, et à ignorer les autres.
+E: Ne lire que les analyses haussières sur une action que l'on détient.
+V: biais-cognitif, surcharge-indicateurs
+
+## ancrage | Ancrage | psychologie | Anchoring
+= ancrage
+D: Tendance à rester accroché à un chiffre de référence (prix d'achat, ancien sommet) sans rapport avec la situation actuelle.
+E: « J'attends que l'action revienne à mon prix d'achat de 50 € pour vendre. »
+V: biais-cognitif, aversion-a-la-perte
+
+## aversion-a-la-perte | Aversion à la perte | psychologie | Loss aversion
+= aversion à la perte
+D: Une perte pèse psychologiquement plus qu'un gain équivalent (environ deux fois selon la théorie des perspectives). Elle pousse à refuser de couper ses pertes.
+E: Refuser un pari à 50 % de +150 € / −100 €, pourtant favorable.
+V: effet-de-disposition, theorie-des-perspectives
+
+## theorie-des-perspectives | Théorie des perspectives | psychologie | Prospect theory
+= théorie des perspectives
+D: Théorie de Kahneman et Tversky (1979) décrivant comment les individus évaluent gains et pertes par rapport à un point de référence, avec une aversion marquée pour les pertes.
+E: Elle explique pourquoi beaucoup de traders gardent leurs positions perdantes.
+V: aversion-a-la-perte, biais-cognitif
+
+## effet-de-disposition | Effet de disposition | psychologie | Disposition effect
+= effet de disposition
+D: Tendance à vendre trop vite les positions gagnantes et à garder les perdantes. Documentée sur des comptes réels (Odean, 1998).
+E: Vendre une action à +5 % et en garder une autre à −20 % « en attendant qu'elle remonte ».
+V: aversion-a-la-perte, ancrage
+
+## exces-de-confiance | Excès de confiance | psychologie | Overconfidence
+= excès de confiance
+D: Surestimation de ses compétences ou de la précision de ses prévisions, souvent après une série de gains.
+E: Doubler sa taille après 6 trades gagnants.
+V: biais-de-recence, biais-cognitif
+
+## biais-de-recence | Biais de récence | psychologie | Recency bias
+= biais de récence
+D: Tendance à surpondérer les événements récents par rapport à l'ensemble des données.
+E: Abandonner une méthode testée sur 300 trades après 4 pertes.
+V: exces-de-confiance, erreur-type
+
+## erreur-du-joueur | Erreur du joueur | psychologie | Gambler's fallacy
+= erreur du joueur
+D: Croyance qu'après une série d'événements, l'événement inverse devient « dû ». Des trades indépendants n'ont pas de mémoire.
+E: « Après 5 pertes, la suivante sera forcément gagnante. »
+V: serie-de-pertes, biais-cognitif
+
+## illusion-de-controle | Illusion de contrôle | psychologie | Illusion of control
+= illusion de contrôle
+D: Croyance de maîtriser des résultats qui dépendent largement du hasard.
+E: Penser qu'en surveillant l'écran en permanence, on influence l'issue d'un trade.
+V: biais-cognitif
+
+## biais-retrospectif | Biais rétrospectif | psychologie | Hindsight bias
+= biais rétrospectif
+D: Impression, après coup, que l'événement était prévisible. Il fait surestimer la fiabilité des figures et des signaux.
+E: Repérer facilement les têtes-épaules « qui ont marché » sur un vieux graphique.
+V: figure-chartiste, apophenie
+
+## discipline | Discipline | psychologie | Discipline
+= discipline
+D: Capacité à appliquer son plan et ses règles, surtout quand on n'en a pas envie. Elle repose sur des règles écrites, une routine et un risque supportable.
+E: Prendre un trade conforme au plan juste après deux pertes, à la taille prévue, ni plus ni moins.
+V: routine, checklist, plan-de-trading
+
+## routine | Routine de trading | psychologie | Trading routine
+= routine
+D: Suite d'actions répétées avant, pendant et après la séance (calendrier, niveaux, journal), qui réduit les décisions prises sous le coup de l'émotion.
+E: Chaque soir : mise à jour des niveaux, calendrier du lendemain, journal.
+V: discipline, checklist, journal-de-trading
+
+## checklist | Checklist | psychologie | Pre-trade checklist
+= checklist
+D: Liste de vérifications à faire avant chaque trade ; un seul « non » signifie : pas de trade.
+E: Setup du plan ? Stop logique ? Taille calculée ? Annonce à venir ? État émotionnel neutre ?
+V: routine, plan-de-trading
+
+## journal-de-trading | Journal de trading | psychologie | Trading journal
+= journal de trading; journal
+D: Registre de chaque trade (plan, exécution, résultat, émotion, respect du plan) analysé régulièrement pour repérer ce qui coûte de l'argent.
+E: Le journal révèle que les trades pris après 16 h perdent en moyenne 0,47R.
+V: plan-de-trading, discipline, multiple-r
+
+% ===================================================================== RÉGLEMENTATION & FISCALITÉ
+## amf | AMF (Autorité des marchés financiers) | reglementation | French Financial Markets Authority
+= AMF
+D: Autorité française qui régule les marchés financiers, protège les épargnants, publie des listes noires de sites non autorisés et autorise les prestataires de cryptoactifs.
+E: Consulter les listes noires de l'AMF avant d'ouvrir un compte chez un courtier inconnu.
+V: liste-noire, acpr, regafi, esma
+
+## acpr | ACPR | reglementation | French Prudential Supervision and Resolution Authority
+= ACPR
+D: Autorité de contrôle prudentiel et de résolution, adossée à la Banque de France, qui agrée et surveille banques, assurances et entreprises d'investissement.
+E: Les établissements agréés figurent dans le registre REGAFI.
+V: regafi, amf
+
+## esma | ESMA | reglementation | European Securities and Markets Authority
+= ESMA
+D: Autorité européenne des marchés financiers. En 2018, elle a imposé des mesures sur les CFD pour les particuliers (leviers plafonnés, protection contre le solde négatif…), reprises au niveau national.
+E: L'ESMA citait 74 à 89 % de comptes de particuliers perdants sur les CFD.
+V: amf, cfd, protection-solde-negatif
+
+## regafi | REGAFI | reglementation | Register of financial agents (France)
+= REGAFI
+D: Registre officiel des établissements autorisés à fournir des services bancaires, de paiement ou d'investissement en France, y compris via le passeport européen.
+E: Vérifier le nom exact, l'adresse et le site d'un courtier dans REGAFI.
+V: acpr, passeport-europeen, societe-clone
+
+## orias | ORIAS | reglementation | French register of intermediaries
+= ORIAS
+D: Registre des intermédiaires en assurance, banque et finance (dont les conseillers en investissements financiers).
+E: Un « conseiller » qui propose un conseil personnalisé doit y être immatriculé.
+V: amf, regafi
+
+## liste-noire | Liste noire de l'AMF | reglementation | AMF blacklist
+= liste noire; listes noires
+D: Listes publiées par l'AMF de sites et entités proposant sans autorisation des investissements (Forex, CFD, cryptoactifs, biens divers).
+E: Un site de trading qui promet 5 % par mois figure souvent sur une liste noire.
+V: amf, arnaque-ponzi, societe-clone
+
+## passeport-europeen | Passeport européen | reglementation | EU passporting
+= passeport européen
+D: Mécanisme permettant à un établissement agréé dans un pays de l'UE de proposer ses services dans les autres pays membres.
+E: Un courtier chypriote peut servir des clients français s'il dispose du passeport, visible dans REGAFI.
+V: regafi
+
+## mica | MiCA | reglementation | Markets in Crypto-Assets Regulation
+= MiCA
+D: Règlement européen encadrant les cryptoactifs et leurs prestataires, applicable depuis fin 2024 avec des périodes transitoires : agrément obligatoire, règles sur les stablecoins.
+E: Une plateforme de cryptoactifs servant des clients européens doit être agréée au titre de MiCA.
+V: cryptoactif, amf, stablecoin
+
+## protection-solde-negatif | Protection contre le solde négatif | reglementation | Negative balance protection
+= protection contre le solde négatif
+D: Règle européenne pour les clients particuliers en CFD : la perte totale ne peut pas dépasser les fonds déposés sur le compte.
+E: Un gap qui ferait perdre 6 000 € sur un compte de 5 000 € est plafonné à 5 000 €.
+V: cfd, esma, liquidation
+
+## client-professionnel | Client professionnel | reglementation | Professional client
+= client professionnel; clients professionnels
+D: Catégorie de client bénéficiant de moins de protections réglementaires (leviers plus élevés autorisés, pas de protection contre le solde négatif sur les CFD). Des critères d'expérience et de patrimoine s'appliquent.
+E: Accepter le statut professionnel pour un levier de 100 : on perd les protections des particuliers.
+V: esma, cfd
+
+## avertissement-cfd | Avertissement standardisé sur les CFD | reglementation | CFD risk warning
+= avertissement standardisé
+D: Mention obligatoire des courtiers en CFD indiquant le pourcentage de leurs clients particuliers qui perdent de l'argent.
+E: « 76 % des comptes d'investisseurs particuliers perdent de l'argent lors de la négociation de CFD avec ce fournisseur. »
+V: cfd, esma
+
+## segregation-des-fonds | Ségrégation des fonds | reglementation | Client money segregation
+= ségrégation des fonds
+D: Obligation de conserver l'argent des clients séparément de celui du courtier, pour le protéger en cas de faillite.
+E: Les fonds ségrégués ne servent pas à rembourser les créanciers du courtier.
+V: risque-de-contrepartie, fgdr
+
+## fgdr | Garantie des dépôts et des titres (FGDR) | reglementation | Deposit and investor guarantee scheme
+= FGDR
+D: Fonds de garantie français qui indemnise, dans certaines limites fixées par la réglementation, les clients d'un établissement défaillant (espèces et titres). D'autres pays ont leur propre mécanisme.
+E: Plafonds et conditions : à vérifier sur le site du FGDR.
+V: segregation-des-fonds
+
+## dic | DIC (document d'informations clés) | reglementation | KID (Key Information Document)
+= DIC; document d'informations clés
+D: Document réglementaire de quelques pages décrivant un produit financier : objectifs, risques, scénarios de performance, coûts.
+E: Lire le DIC d'un ETF pour vérifier son indice, sa réplication et ses frais.
+V: etf, ucits
+
+## ucits | UCITS (OPCVM) | reglementation | UCITS
+= UCITS; OPCVM
+D: Cadre réglementaire européen des fonds ouverts au public (organismes de placement collectif en valeurs mobilières), avec des règles de diversification et de protection.
+E: La plupart des ETF vendus aux particuliers européens sont conformes UCITS.
+V: etf, dic
+
+## cto | CTO (compte-titres ordinaire) | reglementation | Ordinary securities account
+= CTO; compte-titres ordinaire; compte-titres
+D: Compte pouvant détenir presque tous les titres cotés, sans plafond ni durée, aux gains imposés selon le régime de droit commun.
+E: Des actions américaines, des obligations ou des turbos se détiennent dans un CTO.
+V: pea, plus-value, ifu
+
+## pea | PEA (plan d'épargne en actions) | reglementation | French equity savings plan (PEA)
+= PEA; plan d'épargne en actions; PEA-PME
+D: Enveloppe fiscale pour les actions européennes et les fonds éligibles, avec un plafond de versements et une exonération d'impôt sur le revenu (hors prélèvements sociaux) après une durée minimale. Exclut CFD, Forex, dérivés, turbos, cryptoactifs.
+E: Un ETF « monde » synthétique éligible peut y être logé ; un turbo, non.
+V: cto, prelevements-sociaux
+
+## plus-value | Plus-value / moins-value | reglementation | Capital gain / loss
+= plus-value; plus-values; moins-value; moins-values
+D: Différence positive (plus-value) ou négative (moins-value) entre prix de cession et prix d'acquisition, frais compris. Imposée sur le solde net annuel ; les moins-values sont reportables pendant une durée limitée.
+E: Plus-values 3 500 €, moins-values 1 200 €, report 800 € : solde imposable 1 500 €.
+V: pfu, prix-moyen-pondere, cto
+
+## pfu | PFU (prélèvement forfaitaire unique) | reglementation | Flat tax
+= PFU; prélèvement forfaitaire unique; flat tax
+D: Imposition forfaitaire par défaut des revenus du capital (impôt sur le revenu + prélèvements sociaux). Ses taux sont fixés par la loi et évoluent : à vérifier sur impots.gouv.fr.
+E: Sauf option pour le barème, les plus-values de l'année sont imposées au PFU.
+V: bareme-progressif, prelevements-sociaux, plus-value
+
+## bareme-progressif | Barème progressif (option) | reglementation | Progressive income tax scale (option)
+= barème progressif; barème
+D: Alternative au PFU : imposition des revenus du capital selon les tranches de l'impôt sur le revenu, sur option globale pour l'année.
+E: L'option pour le barème s'applique à tous les revenus du capital de l'année, pas à un seul.
+V: pfu
+
+## prelevements-sociaux | Prélèvements sociaux | reglementation | Social contributions
+= prélèvements sociaux
+D: Contributions sociales prélevées sur les revenus du capital, y compris dans un PEA après la durée minimale. Taux fixés par la loi, susceptibles d'évoluer.
+E: Un gain retiré d'un PEA ancien reste soumis aux prélèvements sociaux.
+V: pfu, pea
+
+## prix-moyen-pondere | Prix moyen pondéré d'acquisition | reglementation | Weighted average cost
+= prix moyen pondéré
+D: Méthode française de calcul du prix de revient de titres identiques achetés en plusieurs fois : coût total ÷ nombre de titres.
+E: 50 actions à 40 € et 30 à 46 € : prix moyen de 42,25 €.
+V: plus-value, avis-d-opere
+
+## ifu | IFU (imprimé fiscal unique) | reglementation | Annual tax statement
+= IFU
+D: Récapitulatif annuel des revenus et cessions envoyé par les établissements financiers établis en France, pour aider à remplir la déclaration de revenus.
+E: Avec un courtier étranger, pas d'IFU : il faut tout calculer soi-même.
+V: cto, compte-etranger
+
+## compte-etranger | Déclaration des comptes à l'étranger | reglementation | Foreign account reporting
+= comptes à l'étranger; compte à l'étranger; 3916
+D: Obligation pour un résident fiscal français de déclarer chaque année les comptes (bancaires, de courtage, d'actifs numériques) ouverts, détenus, utilisés ou clos à l'étranger, même vides. Amendes par compte non déclaré.
+E: Un compte chez un courtier chypriote fermé en juin doit quand même être déclaré.
+V: ifu, regafi
+
+## bofip | BOFiP | reglementation | Official tax doctrine (France)
+= BOFiP
+D: Bulletin officiel des finances publiques : base documentaire où l'administration fiscale publie sa doctrine.
+E: Vérifier dans le BOFiP comment est traitée une opération particulière.
+V: pfu, compte-etranger
+
+## societe-clone | Société clone | reglementation | Clone firm
+= société clone; sociétés clones
+D: Escroquerie qui usurpe le nom, le logo, voire le numéro d'agrément d'un établissement réellement autorisé.
+E: Un faux conseiller se présente sous le nom d'une banque connue mais donne un site et un IBAN différents.
+V: liste-noire, regafi
+
+## arnaque-ponzi | Pyramide de Ponzi | reglementation | Ponzi scheme
+= Ponzi; pyramide de Ponzi; pyramides de Ponzi
+D: Escroquerie qui verse des « rendements » aux premiers investisseurs avec l'argent des nouveaux, sans activité réelle ; elle s'effondre quand les dépôts ralentissent.
+E: 5 % par mois promis sur 1 M€ : 600 000 € à trouver chaque année auprès de nouveaux clients.
+V: liste-noire, arnaque-au-recouvrement
+
+## arnaque-au-recouvrement | Arnaque au recouvrement | reglementation | Recovery scam
+= arnaque au recouvrement; arnaques au recouvrement
+D: Seconde escroquerie visant des victimes d'une première arnaque, à qui l'on promet de récupérer leurs fonds contre paiement.
+E: Un faux avocat demande 2 000 € de « frais de procédure » pour récupérer des fonds perdus.
+V: arnaque-ponzi, liste-noire
+
+## taxe-transactions | Taxe sur les transactions financières | reglementation | Financial Transaction Tax (France)
+= taxe sur les transactions financières
+D: Taxe française prélevée à l'achat d'actions de grandes sociétés françaises, au-delà d'un seuil de capitalisation. Taux et liste des sociétés concernées : à vérifier.
+E: L'achat d'actions d'une grande société du CAC 40 supporte cette taxe, pas l'achat d'une petite capitalisation.
+V: frais-de-transaction, action
+
+% ===================================================================== JARGON & ABRÉVIATIONS
+## bull-bear | Bull / bear | jargon | Bull / Bear
+= bull; bear
+D: Bull (taureau) : acheteur ou marché haussier. Bear (ours) : vendeur ou marché baissier. On parle de bull market et de bear market.
+E: Un bear market est souvent défini comme une baisse de plus de 20 % depuis le sommet (convention).
+V: bullish-bearish, tendance
+
+## bullish-bearish | Bullish / bearish | jargon | Bullish / Bearish
+= bullish; bearish
+D: Haussier / baissier, pour qualifier une opinion, une configuration ou un marché.
+E: « Je suis bearish sur l'euro à court terme. »
+V: bull-bear
+
+## long | Long / short | jargon | Long / Short
+= -
+D: Être long : être acheteur (gagner à la hausse). Être short : être vendeur (gagner à la baisse).
+E: « Je suis long EUR/USD et short sur le pétrole. »
+V: position-longue, position-courte
+
+## ath | ATH / ATL | jargon | All-Time High / All-Time Low
+= ATH; ATL
+D: Plus haut historique (ATH) et plus bas historique (ATL) d'un actif.
+E: « L'indice a fait un nouvel ATH ce matin. »
+V: resistance
+
+## hodl | HODL | jargon | HODL (Hold On for Dear Life)
+= HODL
+D: Jargon crypto issu d'une faute de frappe de « hold » : conserver ses cryptoactifs quoi qu'il arrive, sans vendre dans les baisses.
+E: « HODL » est souvent invoqué pendant les krachs… y compris pour ne pas reconnaître une perte.
+V: cryptoactif, ancrage
+
+## scalp | Scalp / scalping | jargon | Scalp / Scalping
+= scalping; scalper; scalpers; scalp
+D: Trade très court (secondes à minutes) visant un tout petit gain ; le scalping est le style qui en enchaîne beaucoup.
+E: Viser 5 pips avec 1,5 pip de coûts impose 65 % de réussite.
+V: day-trading, frais-de-transaction, hft
+
+## day-trading | Day trading | jargon | Day trading
+= day trading; day trader; day traders; intraday
+D: Style de trading où toutes les positions sont ouvertes et fermées dans la journée.
+E: 3 trades par jour, 250 jours par an : 750 trades et des frais considérables.
+V: scalp, swing-trading
+
+## swing-trading | Swing trading | jargon | Swing trading
+= swing trading; swing trader
+D: Style de trading visant des mouvements de quelques jours à quelques semaines, souvent compatible avec une activité professionnelle.
+E: Analyse le soir, ordres placés pour le lendemain, positions de 5 jours.
+V: day-trading, position-trading
+
+## position-trading | Position trading | jargon | Position trading
+= position trading
+D: Style de trading à horizon de plusieurs semaines à plusieurs mois, proche de l'investissement, avec des stops larges.
+E: Suivre une tendance de 4 mois avec un ETF au comptant plutôt qu'avec un CFD.
+V: swing-trading
+
+## breakout | Breakout | jargon | Breakout
+= breakout; breakouts
+D: Cassure d'un niveau ou d'une figure, souvent utilisée comme signal d'entrée.
+E: « Breakout de la résistance à 100 avec du volume. »
+V: cassure, fakeout
+
+## fakeout | Fakeout | jargon | Fakeout
+= fakeout
+D: Jargon pour une fausse cassure.
+E: « Encore un fakeout : le prix est revenu dans le range en 10 minutes. »
+V: fausse-cassure, breakout
+
+## dip | Dip / BTFD | jargon | Buy the dip
+= buy the dip; dip
+D: Dip : repli temporaire. « Buy the dip » : acheter les replis. Dans une vraie tendance baissière, cela revient à « attraper un couteau qui tombe ».
+E: Acheter chaque baisse de 5 % d'un indice en tendance haussière.
+V: pullback, tendance
+
+## rally-selloff | Rally / sell-off / krach | jargon | Rally / Sell-off / Crash
+= rally; sell-off; krach; krachs
+D: Rally : forte hausse. Sell-off : vague de ventes. Krach : chute brutale et importante des marchés.
+E: Le krach d'octobre 1987 : environ −22 % en une séance sur le Dow Jones.
+V: volatilite, risk-on-risk-off
+
+## pnl | PnL (P&L) | jargon | Profit and Loss
+= PnL
+D: Profit and Loss : gain ou perte, latent (position ouverte) ou réalisé (position fermée).
+E: PnL latent de +320 € sur la position en cours.
+V: drawdown
+
+## edge | Edge (avantage) | jargon | Edge
+= edge
+D: Avantage statistique d'une stratégie, qui se traduit par une espérance positive après frais, mesurée sur un échantillon suffisant.
+E: « Ma stratégie a un edge de +0,15R par trade sur 300 trades. »
+V: esperance-mathematique, backtest
+
+## fud | FUD | jargon | Fear, Uncertainty and Doubt
+= FUD
+D: Peur, incertitude et doute : rumeurs ou informations négatives (parfois volontairement diffusées) qui poussent à vendre.
+E: Une fausse rumeur d'interdiction d'un cryptoactif provoque du FUD.
+V: sentiment-de-marche, pump-and-dump
+
+## pump-and-dump | Pump and dump | jargon | Pump and dump
+= pump and dump
+D: Manipulation consistant à faire monter artificiellement un actif peu liquide (promotion, rumeurs) pour revendre aux acheteurs attirés. Illégale.
+E: Un petit cryptoactif promu sur des groupes privés qui monte de 300 % puis s'effondre.
+V: arnaque-ponzi, liquidite
+
+## whale | Whale (baleine) | jargon | Whale
+= baleine; baleines
+D: Intervenant détenant une position très importante, capable de faire bouger un marché, notamment sur les cryptoactifs.
+E: Le transfert d'une baleine vers une plateforme est parfois interprété comme une vente à venir.
+V: institutionnels, liquidite
+
+## chasse-aux-stops | Chasse aux stops | jargon | Stop hunt
+= chasse aux stops
+D: Mouvement de prix qui atteint une zone où de nombreux stops sont placés, puis repart. L'idée d'une manipulation délibérée est souvent invoquée mais rarement démontrable.
+E: Une mèche juste sous un support évident, puis un rebond.
+V: stop-loss, fausse-cassure
+
+## compte-demo | Compte démo | jargon | Demo account / Paper trading account
+= compte démo; comptes démo; compte de démonstration; démo
+D: Compte de trading avec de l'argent fictif, pour apprendre une plateforme et tester une stratégie. Exécution souvent idéalisée et absence de pression émotionnelle : ses résultats sont nécessaires, pas suffisants.
+E: Régler le capital démo à 5 000 € si l'on prévoit un compte réel de 5 000 €.
+V: forward-test, plan-de-trading
+
+## dca | DCA (investissement programmé) | jargon | Dollar-Cost Averaging
+= DCA
+D: Investir un montant fixe à intervalles réguliers, quel que soit le prix, pour lisser le prix d'achat.
+E: Acheter pour 200 € d'un ETF chaque mois.
+V: etf, position-trading
+
+## bagholder | Bagholder | jargon | Bagholder
+= bagholder
+D: Personne qui conserve une position fortement perdante, souvent achetée au sommet, en espérant un retour au prix d'achat.
+E: Acheter au sommet d'un pump and dump et attendre des années.
+V: ancrage, effet-de-disposition
+
+## rekt | Rekt | jargon | Rekt (wrecked)
+D: Argot pour un trader qui a subi une perte très lourde, souvent par liquidation.
+E: « Levier ×50, mèche de 3 % : rekt. »
+V: liquidation, effet-de-levier
+
+## risk-reward-rr | R:R | jargon | Risk:Reward
+= R:R
+D: Notation courante du ratio risque/rendement (par exemple 1:3).
+E: « Setup à 1:2,5 minimum. »
+V: ratio-risque-rendement
+
+## yolo | YOLO | jargon | You Only Live Once
+= YOLO
+D: Jargon pour une prise de risque démesurée sur une seule position, à l'opposé de toute gestion du risque.
+E: Mettre tout son compte sur des options très hors de la monnaie la veille de résultats.
+V: gestion-du-risque, risque-par-trade

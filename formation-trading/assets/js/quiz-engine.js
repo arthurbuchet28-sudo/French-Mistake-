@@ -24,7 +24,7 @@
     zone.innerHTML = "";
     ordre = Q.questions.map(function (q, i) {
       var choix = q.c.map(function (_, k) { return k; });
-      return { i: i, choix: melange ? melanger(choix) : choix };
+      return { i: i, choix: melanger(choix) }; // choix toujours mélangés ; ordre des questions mélangé seulement au « Recommencer »
     });
     if (melange) melanger(ordre);
 
