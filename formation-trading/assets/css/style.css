@@ -270,6 +270,8 @@ figure.schema svg.graph { display: block; width: 100%; height: auto; }
 .g-l3 { stroke: var(--l3); stroke-width: 1.8; fill: none; stroke-dasharray: 6 4; }
 .g-l4 { stroke: var(--l4); stroke-width: 2; fill: none; }
 .g-l5 { stroke: var(--l5); stroke-width: 2; fill: none; }
+.g-lh { stroke: var(--haus); stroke-width: 2.2; fill: none; }
+.g-lb { stroke: var(--bais); stroke-width: 2.2; fill: none; }
 .g-plein { stroke-dasharray: none; }
 .g-fin { stroke-width: 1.2; opacity: .55; }
 .g-res { stroke: var(--bais); stroke-width: 2; fill: none; stroke-dasharray: 7 4; }

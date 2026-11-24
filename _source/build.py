@@ -224,6 +224,14 @@ BLOCKS = {
 }
 
 
+def check_blocks(s, where):
+    for tag in list(BLOCKS) + ["x-corr", "x-fig"]:
+        o = len(re.findall(rf"<{tag}[\s>]", s))
+        c = s.count(f"</{tag}>")
+        if o != c:
+            warn(f"{where} : balise {tag} ouverte {o} fois, fermée {c} fois")
+
+
 def expand_blocks(s):
     def open_block(m):
         tag, attrs = m.group(1), m.group(2) or ""
@@ -381,6 +389,7 @@ def build_module(i, m):
     for j, (lid, titre, body) in enumerate(m.LECONS, 1):
         sid = f"lecon-{m.NUM}-{j}"
         toc.append(f'<li><a href="#{sid}">{m.NUM}.{j} {esc(titre)}</a></li>')
+        check_blocks(body, f"leçon {m.NUM}.{j}")
         body = expand_blocks(body)
         body = autolink(body, "../", m.NUM, set())
         secs.append(f'<section class="lecon" id="{sid}">\n<h2><span class="lecon-num">{m.NUM}.{j}</span> {esc(titre)}</h2>\n{body}\n</section>')

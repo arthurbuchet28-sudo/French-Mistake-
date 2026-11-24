@@ -217,7 +217,7 @@ def candles(ohlc, w=640, h=280, label="Graphique en chandeliers", lines=(), zone
 # ---------------------------------------------------------------------------
 def plot(series, w=640, h=260, label="Graphique", xr=None, yr=None, xticks=None, yticks=None,
          hlines=(), vlines=(), xlabel="", ylabel="", zones=(), marks=(), legend=True,
-         xfmt=None, yfmt=None, texts=()):
+         xfmt=None, yfmt=None, texts=(), legend_xy=None):
     L, R, T, B = 52, 16, 16, 34
     xs = [x for s in series for x in s["x"]]
     ys = [y for s in series for y in s["y"] if y is not None]
@@ -264,7 +264,7 @@ def plot(series, w=640, h=260, label="Graphique", xr=None, yr=None, xticks=None,
     for vl in vlines:
         p.append(line(X(vl["x"]), T, X(vl["x"]), h - B, vl.get("cls", "g-l3")))
         if vl.get("label"):
-            p.append(t(X(vl["x"]) + 4, T + 12, vl["label"], "g-txt g-petit"))
+            p.append(t(X(vl["x"]) + 4, T + vl.get("ly", 12), vl["label"], "g-txt g-petit"))
     for s in series:
         kind = s.get("kind", "line")
         cls = s.get("cls", "g-l1")
@@ -305,14 +305,15 @@ def plot(series, w=640, h=260, label="Graphique", xr=None, yr=None, xticks=None,
         p.append(f'<text x="12" y="{(T+h-B)/2:.1f}" class="g-txt g-petit" text-anchor="middle" transform="rotate(-90 12 {(T+h-B)/2:.1f})">{escape(ylabel)}</text>')
     if legend:
         k = 0
+        lx, ly = legend_xy or (L, T)
         for s in series:
             if s.get("label"):
-                y = T + 6 + k * 15
+                y = ly + 6 + k * 15
                 if s.get("kind") == "bar":
-                    p.append(f'<rect x="{L+10}" y="{y-5}" width="14" height="9" class="{s.get("cls","g-l1")}"/>')
+                    p.append(f'<rect x="{lx+10}" y="{y-5}" width="14" height="9" class="{s.get("cls","g-l1")}"/>')
                 else:
-                    p.append(line(L + 8, y, L + 28, y, s.get("cls", "g-l1")))
-                p.append(t(L + 32, y + 4, s["label"], "g-txt g-petit"))
+                    p.append(line(lx + 8, y, lx + 28, y, s.get("cls", "g-l1")))
+                p.append(t(lx + 32, y + 4, s["label"], "g-txt g-petit"))
                 k += 1
     return svg(w, h, "".join(p), label)
 
