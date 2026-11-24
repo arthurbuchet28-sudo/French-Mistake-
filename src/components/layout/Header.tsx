@@ -36,7 +36,7 @@ export function Header() {
       )}
       <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-x-4 gap-y-2 px-3 py-2 sm:px-4">
         <Link to="/" className="flex items-center gap-2">
-          <img src="./favicon.svg" alt="" className="h-7 w-7" />
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b0f17'/%3E%3Cpath d='M5 23l7-8 5 5 10-12' stroke='%2322c55e' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" alt="" className="h-7 w-7" />
           <span className="hidden font-semibold tracking-tight text-white sm:inline">Bourse École</span>
         </Link>
 

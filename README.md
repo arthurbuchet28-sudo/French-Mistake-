@@ -17,7 +17,10 @@ Autres commandes :
 npm test          # tests unitaires (Vitest)
 npm run build     # build de production dans dist/
 npm run preview   # servir le build
+npm run build:single  # version en un seul fichier HTML (dist-single/bourse-ecole.html)
 ```
+
+La version « fichier unique » contient tout le JavaScript et le CSS : elle peut être ouverte ou publiée comme une simple page web, sans serveur.
 
 ## Comment jouer
 

@@ -7,7 +7,8 @@ export default defineConfig({
   base: './',
   build: {
     rollupOptions: {
-      output: {
+      // SINGLE_FILE=1 : version en un seul fichier (scripts/build-single.mjs)
+      output: process.env.SINGLE_FILE === '1' ? { inlineDynamicImports: true } : {
         manualChunks: {
           react: ['react', 'react-dom', 'react-router-dom', 'zustand'],
           recharts: ['recharts'],
