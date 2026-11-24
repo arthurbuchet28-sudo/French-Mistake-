@@ -153,6 +153,15 @@ def candles(ohlc, w=640, h=280, label="Graphique en chandeliers", lines=(), zone
                 top, bot = Y(max(o, c)), Y(min(o, c))
                 parts.append(f'<rect x="{x-cw/2:.1f}" y="{top:.1f}" width="{cw:.1f}" height="{max(1.2,bot-top):.1f}" class="{cls}"/>')
     for ov in overlays:
+        if "values2" in ov:
+            pts_a, pts_b = [], []
+            for i, (a, b) in enumerate(zip(ov["values"], ov["values2"])):
+                if a is not None and b is not None:
+                    pts_a.append(f"{X(i):.1f},{Y(a):.1f}")
+                    pts_b.append(f"{X(i):.1f},{Y(b):.1f}")
+            if pts_a:
+                parts.append(f'<polygon points="{" ".join(pts_a + pts_b[::-1])}" class="{ov.get("cls_fill", "g-zone")}"/>')
+            continue
         segs, cur = [], []
         for i, v in enumerate(ov["values"]):
             if v is None:
@@ -322,3 +331,131 @@ def table(headers, rows, cls="tableau"):
     th = "".join(f"<th>{h}</th>" for h in headers)
     trs = "".join("<tr>" + "".join(f"<td>{c}</td>" for c in r) + "</tr>" for r in rows)
     return f'<div class="tableau-defile"><table class="{cls}"><thead><tr>{th}</tr></thead><tbody>{trs}</tbody></table></div>'
+
+
+# ---------------------------------------------------------------------------
+# Indicateurs techniques (calculs réels, utilisés pour les schémas)
+# ---------------------------------------------------------------------------
+def rsi(closes, n=14):
+    """RSI avec lissage de Wilder."""
+    res = [None] * len(closes)
+    if len(closes) <= n:
+        return res
+    gains = [max(closes[i] - closes[i - 1], 0) for i in range(1, len(closes))]
+    pertes = [max(closes[i - 1] - closes[i], 0) for i in range(1, len(closes))]
+    ag, ap = sum(gains[:n]) / n, sum(pertes[:n]) / n
+    for i in range(n, len(closes)):
+        if i > n:
+            ag = (ag * (n - 1) + gains[i - 1]) / n
+            ap = (ap * (n - 1) + pertes[i - 1]) / n
+        res[i] = 100.0 if ap == 0 else 100 - 100 / (1 + ag / ap)
+    return res
+
+
+def stochastique(ohlc, n=14, d=3):
+    k = [None] * len(ohlc)
+    for i in range(n - 1, len(ohlc)):
+        hh = max(c[1] for c in ohlc[i - n + 1:i + 1])
+        ll = min(c[2] for c in ohlc[i - n + 1:i + 1])
+        k[i] = 50.0 if hh == ll else (ohlc[i][3] - ll) / (hh - ll) * 100
+    dd = [None] * len(ohlc)
+    for i in range(len(ohlc)):
+        w = k[max(0, i - d + 1):i + 1]
+        if len(w) == d and None not in w:
+            dd[i] = sum(w) / d
+    return k, dd
+
+
+def bollinger(closes, n=20, m=2):
+    mid, up, lo = [None] * len(closes), [None] * len(closes), [None] * len(closes)
+    for i in range(n - 1, len(closes)):
+        w = closes[i - n + 1:i + 1]
+        mu = sum(w) / n
+        sd = (sum((x - mu) ** 2 for x in w) / n) ** 0.5  # écart-type de population (convention usuelle)
+        mid[i], up[i], lo[i] = mu, mu + m * sd, mu - m * sd
+    return mid, up, lo
+
+
+def atr(ohlc, n=14):
+    tr = [ohlc[0][1] - ohlc[0][2]]
+    for i in range(1, len(ohlc)):
+        h, l, pc = ohlc[i][1], ohlc[i][2], ohlc[i - 1][3]
+        tr.append(max(h - l, abs(h - pc), abs(l - pc)))
+    res = [None] * len(ohlc)
+    if len(ohlc) < n:
+        return res
+    a = sum(tr[:n]) / n
+    res[n - 1] = a
+    for i in range(n, len(ohlc)):
+        a = (a * (n - 1) + tr[i]) / n
+        res[i] = a
+    return res
+
+
+def macd(closes, f=12, s=26, sig=9):
+    ef, es = ema(closes, f), ema(closes, s)
+    m = [None if a is None or b is None else a - b for a, b in zip(ef, es)]
+    first = next(i for i, v in enumerate(m) if v is not None)
+    sg = [None] * first + ema(m[first:], sig)
+    hist = [None if a is None or b is None else a - b for a, b in zip(m, sg)]
+    return m, sg, hist
+
+
+def correlation(a, b):
+    pts = [(x, y) for x, y in zip(a, b) if x is not None and y is not None]
+    n = len(pts)
+    mx = sum(p[0] for p in pts) / n
+    my = sum(p[1] for p in pts) / n
+    cov = sum((x - mx) * (y - my) for x, y in pts)
+    vx = sum((x - mx) ** 2 for x, _ in pts)
+    vy = sum((y - my) ** 2 for _, y in pts)
+    return cov / (vx * vy) ** 0.5
+
+
+def panneau(series, n, w=640, h=130, yr=(0, 100), hlines=(), label="Indicateur", titre="", yticks=None, dec=None, zones=()):
+    """Panneau d'indicateur aligné horizontalement sur candles() (mêmes marges)."""
+    L, R, T, B = 8, 52, 16, 8
+    step = (w - L - R) / n
+    y0, y1 = yr
+
+    def X(i):
+        return L + step * (i + 0.5)
+
+    def Y(v):
+        return T + (y1 - v) / (y1 - y0) * (h - T - B)
+    p = []
+    for z in zones:
+        ya, yb = Y(max(z["y1"], z["y2"])), Y(min(z["y1"], z["y2"]))
+        p.append(f'<rect x="{L}" y="{ya:.1f}" width="{w-L-R}" height="{yb-ya:.1f}" class="{z.get("cls","g-zone")}"/>')
+    for tk in (yticks if yticks is not None else nice_ticks(y0, y1, 3)):
+        p.append(line(L, Y(tk), w - R, Y(tk), "g-grille"))
+        p.append(t(w - R + 4, Y(tk) + 4, fmt(tk, dec), "g-txt g-petit"))
+    for hl in hlines:
+        p.append(line(L, Y(hl["y"]), w - R, Y(hl["y"]), hl.get("cls", "g-l3")))
+    for s in series:
+        if s.get("kind") == "bar":
+            bw = step * 0.6
+            for i, v in enumerate(s["values"]):
+                if v is None:
+                    continue
+                ya, yb = Y(max(0, v)), Y(min(0, v))
+                c = s.get("cls", "g-barre-h") if v >= 0 else s.get("cls_neg", "g-barre-b")
+                p.append(f'<rect x="{X(i)-bw/2:.1f}" y="{ya:.1f}" width="{bw:.1f}" height="{max(0.6, yb-ya):.1f}" class="{c}"/>')
+        else:
+            segs, cur = [], []
+            for i, v in enumerate(s["values"]):
+                if v is None:
+                    if cur:
+                        segs.append(cur)
+                    cur = []
+                else:
+                    cur.append(f"{X(i):.1f},{Y(v):.1f}")
+            if cur:
+                segs.append(cur)
+            for sg in segs:
+                p.append(f'<polyline points="{" ".join(sg)}" class="{s.get("cls","g-l1")}"/>')
+    p.append(line(L, h - B, w - R, h - B, "g-axe"))
+    x = L + 4
+    if titre:
+        p.append(t(x, T - 4, titre, "g-txt g-fort"))
+    return svg(w, h, "".join(p), label)
