@@ -74,7 +74,7 @@ def path_from(points, seed=1, noise=0.6, wick=0.6, vol_base=None):
         o = prev + rnd.uniform(-noise * 0.3, noise * 0.3)
         hi = max(o, c) + rnd.uniform(0.1, 1) * wick
         lo = min(o, c) - rnd.uniform(0.1, 1) * wick
-        out.append((round(o, 2), round(hi, 2), round(lo, 2), round(c, 2)))
+        out.append((round(o, 6), round(hi, 6), round(lo, 6), round(c, 6)))
         prev = c
     return out
 
@@ -279,8 +279,9 @@ def plot(series, w=640, h=260, label="Graphique", xr=None, yr=None, xticks=None,
         cls = s.get("cls", "g-l1")
         if kind == "bar":
             bw = s.get("bw", (w - L - R) / max(1, len(s["x"])) * 0.6)
+            base = 0 if y0 <= 0 <= y1 else y0
             for x, y in zip(s["x"], s["y"]):
-                ya, yb = Y(max(0, y)), Y(min(0, y))
+                ya, yb = Y(max(base, y)), Y(min(base, y))
                 c = cls if y >= 0 else s.get("cls_neg", cls)
                 p.append(f'<rect x="{X(x)-bw/2:.1f}" y="{ya:.1f}" width="{bw:.1f}" height="{max(0.8,yb-ya):.1f}" class="{c}"/>')
         elif kind == "points":
